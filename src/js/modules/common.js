@@ -4,7 +4,7 @@
 
 var common = {
     mobileManu: function() {
-        console.log('here will be mobileManu function')
+ 
     }
 };
 
