@@ -1,0 +1,82 @@
+.prefooter-banner {
+    position: relative;
+    padding-bottom: 37.5%;
+    @include media('<tablet') {
+        padding-bottom: 45%;
+    }
+    @include media('<650px') {
+    	padding: 40px 0 0 0;
+        height: 515px;
+    }
+    &__image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+    &__caption {
+        position: absolute;
+        top: 50%;
+        right: 13%;
+        transform: translateY(-50%);
+        max-width: 35%;
+        color: $white;
+        text-align: center;
+        margin-top: 20px;
+        padding: 0 10px;
+        @include media('<desktop') {
+            margin-top: 0;
+        }
+        @include media('<tablet') {
+            right: 7%;
+        }
+        @include media('<650px') {
+            position: static;
+            max-width: 334px;
+            margin: 0 auto;
+            transform: translate(0);
+        }
+        .btn {
+			@include media('<650px') {
+				display: none;
+			}
+        }
+    }
+    &__title {
+        font-size: 44px;
+        font-weight: 400;
+        margin-bottom: 5px;
+        @include media('<widescreen') {
+            font-size: 37px;
+        }
+        @include media('<desktop') {
+            font-size: 30px;
+        }
+    }
+    &__sub-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 35px;
+        @include media('<widescreen') {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        @include media('<desktop') {
+            font-size: 16px;
+        }
+    }
+}
+
+.prefooter-banner__image {
+    background-image: url(../images/pre-footer-banner.jpg);
+    @include media('<tablet') {
+        background-image: url(../images/pre-footer-banner_768.jpg);
+    }
+    @include media('<650px') {
+        background-image: url(../images/pre-footer-banner_480.jpg);
+    }
+}
