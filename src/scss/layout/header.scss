@@ -4,11 +4,227 @@
     left: 0;
     right: 0;
     background-color: $white;
-    padding: 10px;
+    padding: 17px 0;
+    max-width: 1920;
+    margin: 0 auto;
+    z-index: 100;
     &-inner {
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .mobile-items {
         display: none;
+        @include media('<tablet') {
+            display: block;
+        }
+    }
+    .menu-opener {
+        background-color: red;
+        display: none;
+        position: absolute;
+        right: 34px;
+        top: 50%;
+        transform: translateY(-50%);
+        align-items: center;
+        height: 16px;
+        font-size: 14px;
+        cursor: pointer;
+        @include media('<tablet') {
+            display: flex;
+            display: block;
+        }
+        @include media('<phone') {
+          right: 10px;
+          font-size: 12px;
+        }
+        .open-btn {
+            opacity: 1;
+            visibility: visible;
+            @include animate(opacity visibility);
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-right: 25px;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 18px;
+                height: 7px;
+                border: 2px solid $red;
+                border-left: none;
+                border-right: none;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                height: 2px;
+                top: 11px;
+                right: 9px;
+                width: 9px;
+                background-color: $red;
+            }
+        }
+        .close-btn {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-right: 25px;
+            @include animate(opacity visibility);
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                width: 18px;
+                height: 2px;
+                transform: rotate(45deg);
+                right: 0;
+                top: 50%;
+                background-color: $red;
+            }
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .logo {
+        width: 165px;
+        margin-right: 48px;
+        padding: 0;
+        @include animate(opacity);
+        @include media('<widescreen') {
+            margin-right: 30px;
+            width: 161px;
+        }
+        @include media('<desktop') {
+            margin-right: 20px;
+        }
+        @include media('<tablet') {
+            margin-right: 0;
+        }
+        &:hover {
+            opacity: .8;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $black;
+        font-size: 14px;
+        margin-right: 47px;
+        @include animate(color);
+        @include media('<widescreen') {
+            margin-right: 30px;
+        }
+        @include media('<desktop') {
+            margin-right: 17px;
+            font-size: 12px;
+        }
+        @include media('<tablet') {
+            color: $white;
+            font-size: 22px;
+            padding: 15px;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+        &:hover {
+            color: $red;
+            @include media('<tablet') {
+                color: $white;
+                opacity: .7;
+            }
+        }
+        &.has-icon {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 0;
+            @include media('<tablet') {
+                justify-content: center;
+                flex-direction: row-reverse;
+            }
+            i {
+                font-size: 18px;
+                margin-left: 6px;
+                color: $red;
+                @include media('<tablet') {
+                    color: inherit;
+                    margin-right:10px;
+                }
+            }
+        }
+    }
+    .main-nav {
+        @include media('<tablet') {
+            opacity: 0;
+            visibility: hidden;
+            position: fixed;
+            top: 89px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: translateY(-100%);
+            background-color: $red;
+            padding: 33px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include animate(transform opacity visibility);
+            overflow: auto
+        }
+    }
+    .additional-links {
+        @extend %listreset;
+        text-align: center;
+        a {
+            font-size: 16px;
+        }
+        li {
+            padding: 10px;
+        }
+    }
+    .social-menu {
+        @extend %listreset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        color: $white;
+        padding:40px 0 21px;
+        a {
+            margin: 0;
+        }
+        i {
+            font-size: 32px;
+        }
+        li {
+            padding: 0 5px;
+        }
+    }
+}
+
+.menu-opened {
+    .header {
+        .main-nav {
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+        }
+        .close-btn {
+            opacity: 1;
+            visibility: visible;
+        }
+        .open-btn {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 }

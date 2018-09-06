@@ -4,7 +4,11 @@
 
 var common = {
     mobileManu: function() {
- 
+        const $opener = $('.menu-opener');
+        const $body = $('body');
+        $opener.on('click', () => {
+            $body.toggleClass('menu-opened');
+        });
     }
 };
 
