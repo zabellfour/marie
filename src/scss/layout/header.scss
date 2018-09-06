@@ -1,0 +1,14 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    padding: 10px;
+    &-inner {
+        display: flex;
+    }
+    .mobile-items {
+        display: none;
+    }
+}
