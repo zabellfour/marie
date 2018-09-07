@@ -9,6 +9,14 @@ var common = {
         $opener.on('click', () => {
             $body.toggleClass('menu-opened');
         });
+    },
+    heroSlider: function() {
+        $('.hero-slider').owlCarousel({
+            items:1,
+            dotsContainer: '.pagination-holder',
+            loop:true,
+
+        });
     }
 };
 

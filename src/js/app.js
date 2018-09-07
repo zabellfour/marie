@@ -11,6 +11,7 @@ import common from './modules/common';
   // When DOM is ready
   $(() => {
     common.mobileManu();
+    common.heroSlider();
   });
 
 })(jQuery);
