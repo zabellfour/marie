@@ -1,6 +1,7 @@
 .prefooter-banner {
     position: relative;
     padding-bottom: 37.5%;
+    margin-bottom: 50px;
     @include media('<tablet') {
         padding-bottom: 45%;
     }
