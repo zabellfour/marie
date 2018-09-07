@@ -1,0 +1,122 @@
+.footer {
+    background-color: #fff;
+    .additional-links {
+        @extend %listreset;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 30px 0;
+        border-top: 1px solid $light-gray;
+        @include media('<desktop') {
+            font-size: 14px;
+        }
+        li {
+            margin: 0 15px;
+            text-align: center;
+            margin-bottom: 15px;
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+        a {
+            @include animate (color);
+            color: $gray2;
+            text-decoration: none;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}
+
+.footer-inner {
+    padding: 20px 0 0 0;
+    .logo {
+        @include animate(opacity);
+        width: 176px;
+        display: block;
+        margin: 0 auto 8px;
+        &:hover {
+            opacity: .8;
+        }
+    }
+    .single-text {
+        text-decoration: none;
+        color: $gray1;
+        text-align: center;
+        font-size: 15px;
+        margin: 0 auto 40px;
+        @include media('<tablet') {
+            margin: 0 auto 30px;
+        }
+    }
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        font-weight: 600;
+        @include media('<desktop') {
+            margin: 0 -20px 30px -20px;
+            font-size: 14px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 15px;
+        }
+        a {
+            @include animate(color);
+            padding: 0 25px;
+            text-decoration: none;
+            color: $black;
+            text-align: center;
+            @include media('<desktop') {
+                padding: 0 20px;
+            }
+            @include media('<tablet') {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+    .social-block {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        .title {
+            margin-bottom: 10px;
+            font-family: $font-felt;
+            font-size: 37px;
+            color: $red;
+        }
+    }
+    .social-menu {
+        @extend %listreset;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        li {
+            margin: 0 15px;
+        }
+        a {
+            text-decoration: none;
+        }
+        i {
+            font-size: 36px;
+        }
+        .icon-facebook {
+            color: #4065b7;
+        }
+        .icon-instagram {
+            background: linear-gradient(45deg, #fed809, #ed1c24, #b82cbc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .icon-youtube {
+            font-size: 42px;
+        }
+    }
+}
