@@ -11,12 +11,19 @@ var common = {
         });
     },
     heroSlider: function() {
-        $('.hero-slider').owlCarousel({
-            items:1,
-            dotsContainer: '.pagination-holder',
-            loop:true,
-
+        const slider = $('.hero-slider');
+        slider.owlCarousel({
+            items: 1,
+            autoplay: true,
+            loop: true,
+            animateOut: 'fadeOut',
+            dots: true,
+            mouseDrag: false,
+            touchDrag: false,
+            autoplayTimeout: 7000,
         });
+
+
     }
 };
 
