@@ -1,12 +1,26 @@
+.prefooter {
+    padding: 0 4.5%;
+    @include media('<desktop') {
+        padding: 0 2.6%;
+    }
+    @include media('<phone') {
+        padding: 0 7px;
+    }
+}
+
 .prefooter-banner {
-    position: relative;
-    padding-bottom: 37.5%;
+    position: relative; 
+    // padding-bottom: 37.5%;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 9% 13% 9% 0;
     @include media('<tablet') {
-        padding-bottom: 45%;
+        // padding-bottom: 45%;
+        padding: 9% 3% 9% 0;
     }
     @include media('<650px') {
-    	padding: 40px 0 0 0;
+        padding: 40px 0 0 0;
         height: 515px;
     }
     &__image {
@@ -20,20 +34,20 @@
         background-repeat: no-repeat;
     }
     &__caption {
-        position: absolute;
-        top: 50%;
-        right: 13%;
-        transform: translateY(-50%);
-        max-width: 35%;
+        position: relative; // position: absolute;
+        // top: 50%;
+        // right: 13%;
+        // transform: translateY(-50%);
+        max-width: 40%;
         color: $white;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 15px;
         padding: 0 10px;
         @include media('<desktop') {
             margin-top: 0;
         }
         @include media('<tablet') {
-            right: 7%;
+            // right: 7%;
         }
         @include media('<650px') {
             position: static;
@@ -42,9 +56,9 @@
             transform: translate(0);
         }
         .btn {
-			@include media('<650px') {
-				display: none;
-			}
+            @include media('<650px') {
+                display: none;
+            }
         }
     }
     &__title {

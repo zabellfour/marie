@@ -1,0 +1,65 @@
+.filter-head
+	h1.filter-title
+		span.title-row Les
+		span.title-row.cursive.marked-red bons
+		span.title-row produits de Marie :
+	.search-field
+		form
+			input(type="search" placeholder="Rechercher un plat Marie...")
+			button(type="submit").search-btn
+				i.icon-search
+	.filter-block
+		.filter-block__column
+			span.title CATÉGORIE
+			ul.filter-block__list
+				li.active
+					a(href="/") Tout
+				li
+					a(href="/") Pizzas
+				li
+					a(href="/") Quiches et tartes
+				li
+					a(href="/") Plats cuisinés
+				li
+					a(href="/") Burgers
+				li
+					a(href="/") Pâtes à dérouler
+				li
+					a(href="/") Desserts
+		.filter-block__column
+			span.title RAYON
+			ul.filter-block__list
+				li.active
+					a(href="/") Tout
+				li
+					a(href="/") Rayon frais
+				li
+					a(href="/") Rayon surgelés
+		.filter-block__column
+			span.title À BASE DE
+			ul.filter-block__list
+				li.active
+					a(href="/") Tout
+				li
+					a(href="/") Légumes
+				li
+					a(href="/") Viandes
+				li
+					a(href="/") Poissons
+				li
+					a(href="/") Pâtes
+				li
+					a(href="/") Fromage
+		.filter-block__column
+			span.title NOMBRE DE PERSONNES
+			ul.filter-block__list
+				li.active
+					a(href="/") Tout
+				li
+					a(href="/") Solo
+				li
+					a(href="/") Duo
+				li
+					a(href="/") En famille / entre amis
+				li
+					a(href="/") Déjeuner entre collègues

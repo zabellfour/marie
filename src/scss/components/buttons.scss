@@ -1,6 +1,7 @@
 .btn {
 	@include animate (color background-color);
 	display: flex;
+	width: 100%;
 	max-width: 176px;
 	justify-content: center;
 	align-items: center;
@@ -31,4 +32,10 @@
 			color: $white;
 		}
 	}
+}
+
+.btn-holder {
+	display: flex;
+	width: 100%;
+	justify-content: center;
 }

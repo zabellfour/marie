@@ -1,0 +1,14 @@
+mixin productsItems(items)
+	.products-row
+		each item in items
+			a(href=`${item.Link}`).products-row__item.text-center
+				if item.label
+					span.label #{item.label}
+				if item.imageSrc
+					.image-holder
+						img(src=`${item.imageSrc}`, alt=`${item.imageTitle}`)
+				.text
+					if item.title
+						h2.title #{item.title}
+					if item.description
+						p.description #{item.description}

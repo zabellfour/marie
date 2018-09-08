@@ -1,0 +1,30 @@
+.filter-content
+	.products-wrapper
+		.products-category-label
+			img(src="assets/images/products/plats-cuisines.png", alt="plats-cuisines")
+			.title-holder
+				h2.title
+					span.title-row Les
+					span.title-row.cursive.marked-red Plats cuisinés
+					span.title-row 5 produits
+		include products-row-1.pug
+	.products-wrapper
+		.products-category-label
+			img(src="assets/images/products/pizzas.png", alt="plats-cuisines")
+			.title-holder
+				h2.title
+					span.title-row Les
+					span.title-row.cursive.marked-red Pizzas
+					span.title-row 5 produits
+		include products-row-2.pug
+	.products-wrapper
+		.products-category-label
+			img(src="assets/images/products/pates.png", alt="plats-cuisines")
+			.title-holder
+				h2.title
+					span.title-row Les
+					span.title-row.cursive.marked-red Pâtes à dérouler
+					span.title-row 5 produits
+		include products-row-3.pug
+	.btn-holder
+		a(href="/").btn.btn-red VOIR TOUT
