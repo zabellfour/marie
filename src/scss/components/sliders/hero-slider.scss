@@ -17,7 +17,7 @@
             bottom: 215px;
         }
         @include media('<tablet') {
-            bottom: 241px;
+            bottom: 217px;
         }
         .owl-dot {
             outline: none;
@@ -40,10 +40,9 @@
                 display: block;
                 position: relative;
                 overflow: hidden;
-                
                 @include media('<tablet') {
                     width: 50px;
-                    max-width:10vw;
+                    max-width: 10vw;
                 }
                 &:after {
                     content: '';
@@ -61,6 +60,7 @@
         position: absolute;
         top: calc(100% - 95px);
         max-width: 620px;
+        width: 100%;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -80,6 +80,9 @@
             max-width: 90vw;
             top: calc(100% - 120px);
             padding-top: 45px;
+        }
+        @include media('<640px') {
+            max-width: 92vw;
         }
         p {
             line-height: 1.5;
@@ -128,10 +131,31 @@
             pointer-events: none;
             border: 2px solid $red;
         }
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            top: -7px;
+            left: -12px;
+            right: -90px;
+            bottom: -20px;
+            background-image: url('../images/sliders/shadow-decoration.png');
+            background-size: 100% 100%;
+            z-index: -1;
+            @include media('<tablet') {
+                right:-65px;
+            }
+            @include media('<phone') {
+                right:-44px;
+            }
+        }
     }
     .owl-stage-outer {
         padding-bottom: 162px;
         overflow: visible;
+        @include media('<tablet') {
+            padding-bottom: 138px;
+        }
     }
 }
 
