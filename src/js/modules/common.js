@@ -24,6 +24,12 @@ var common = {
         });
 
 
+    },
+    accordion: function(){
+        let $tab = $('.tab-pane');
+            $tab.on('click', function(){
+            $(this).toggleClass('open');
+        });
     }
 };
 

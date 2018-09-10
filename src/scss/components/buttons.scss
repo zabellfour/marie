@@ -32,6 +32,9 @@
 			color: $white;
 		}
 	}
+	&-long {
+		max-width: 375px;
+	}
 }
 
 .btn-holder {
