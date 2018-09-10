@@ -2,24 +2,118 @@
     .decoration-section {
         display: flex;
         flex-wrap: wrap;
+        position: relative;
+        .positioned-images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            pointer-events: none;
+            img {
+                position: absolute;
+                &.img1 {
+                    left: -61px;
+                    top: -91px;
+                    @include media('<widescreen') {
+                        left: -40px;
+                        top: -80px;
+                        max-width: 300px;
+                    }
+                    @include media('<desktop') {
+                        display: none;
+                    }
+                }
+                &.img2 {
+                    top: -57px;
+                    right: -54px;
+                    @include media('<widescreen') {
+                        max-width: 400px;
+                    }
+                    @include media('<desktop') {
+                        display: none;
+                    }
+                }
+                &.img3 {
+                    top: 60px;
+                    left: 56%;
+                    @include media('<desktop') {
+                        left: 60%;
+                    }
+                    @include media('<tablet') {
+                        left: auto;
+                        right:-32px;
+                    }
+                    @include media('<phone') {
+                        top:0;
+                    }
+                }
+                &.img4 {
+                    bottom: -35px;
+                    left: 39px;
+                    @include media('<desktop') {
+                        bottom: -243px;
+                        left: -12px;
+                    }
+                }
+                &.img5 {
+                    top: 36.5%;
+                    left: calc(100% + (100vw - 1274px)/2);
+                    transform: translateX(-100%);
+                    @include media('<1306px') {
+                        width: 500px;
+                        left: calc(100% + 15px);
+                    }
+                    @include media('<desktop') {
+                        display: none;
+                    }
+                }
+            }
+        }
         .decoration-col {
             position: relative;
             width: 50%;
-            padding-top: 24px;
+            padding-top: 20px;
             .label-box {
                 margin: 0 auto -20px;
                 z-index: 2;
             }
-            .positioned-images {
-                img {
+            .wshadow {
+                z-index: 1;
+                position: relative;
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
+                &:before {
+                    content: '';
                     position: absolute;
-                    &.img1 {
-                        left: -64px;
-                        top: -80px;
+                    top: 0px;
+                    right: 23px;
+                    width: 160px;
+                    height: 50%;
+                    background-color: rgba(0, 0, 0, 0.25);
+                    box-shadow: 37px -15px 50px 0 rgba(0, 0, 0, 0.25);
+                    // background-color: rgba(0, 0, 0, .3);
+                    z-index: -2 !important;
+                    transform: rotate(10deg);
+                    border-radius: 100% 0 0 0;
+                    @include media('<widescreen') {
+                        right: 33px;
                     }
-                    &.img2 {
-                        bottom: 0;
-                        left: 0;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    right: 23px;
+                    width: 160px;
+                    background-color: rgba(0, 0, 0, 0.25);
+                    height: 50%;
+                    box-shadow: 37px -15px 50px 0 rgba(0, 0, 0, 0.25);
+                    border-radius: 0 0 0 100%;
+                    // background-color: rgba(0, 0, 0, .3);
+                    z-index: -2 !important;
+                    transform: rotate(-10deg);
+                    @include media('<widescreen') {
+                        right: 33px;
                     }
                 }
             }
@@ -28,26 +122,265 @@
                 background-color: $white;
                 position: relative;
                 z-index: 1;
-                margin-bottom: 30px;
-            }
-        }
-        &.decoration-section {
-            .bottom-text {
-                position: relative;
-                padding-left: 35%;
-                padding-top: 60px;
-                .img-holder {
-                    width: 45%;
-                    position: absolute;
-                   right:65%;
-                    top:20px
+                margin-bottom: 34px;
+                @include media('<desktop') {
+                    padding-left: 27px;
+                    padding-right: 25px;
                 }
             }
         }
-    }
-}
+        &.decoration-section1 {
+            @include media('<desktop') {
+                padding-top: 23px;
+            }
+            .decoration-col {
+                &.col-l {
+                    width: 51%;
+                    padding-left: 6%;
+                    @include media('<desktop') {
+                        width: 100%;
+                        padding: 0 5% 0 17.5%;
+                    }
+                    @include media('<640px') {
+                        padding: 0 7px;
+                    }
+                    .wshadow .text-holder{
+                        @include media('<640px') {
+                            margin-bottom: 543px;
+                        }
+                    }
+                }
+                &.col-r {
+                    padding-top: 132px;
+                    width: 49%;
+                    padding-left: 6.2%;
+                    @include media('<desktop') {
+                        padding: 0;
+                        position: absolute;
+                        bottom: 74px;
+                        right: 19px;
+                        z-index: 2;
+                        width: auto;
+                    }
+                    @include media('<tablet') {
+                        right: 5px;
+                        bottom: 74px;
+                    }
+                    @include media('<640px') {
+                        bottom:200px;
+                        left:7%;
+                        right:7%;
+                        
+                    }
+                    @include media('<phone') {
+                        left: 10px;
+                        right:10px;
+                        bottom:235px;
+                    }
+                    br{
+                        @include media('<640px') {display: none;}
+                    }
+                }
+            }
+            .text-small {
+                @include media('<640px') {
+                 text-align: center;
+                }
+                img {
+                    padding-left: 16px;
+                    display: inline-block;
+                    margin-bottom: -47px;
+                    @include media('<640px') {
+                        margin: 0 60px -60px 0;
+                        padding:0;
+                    }
+                }
+                .text-box {
+                    background-color: $white;
+                    padding: 13px 5px;
+                    text-align: center;
+                    max-width: 294px;
+                    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3);
+                    line-height: 1.5;
+                    position: relative;
+                    z-index: 2;
+                    @include media('<desktop') {
+                        padding: 13px 19px;
+                    }
+                    @include media('<640px') {
+                            max-width: 381px;
+                            margin: 0 auto;
+                    }
+                    @include media('<phone') {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    .decorated-title {
+                        font-weight: 400;
+                        font-family: $font-felt;
+                        font-size: 32px;
+                        color: $red;
+                        letter-spacing: -0.8px;
+                        margin-bottom: 2px;
+                        line-height: 1;
+                        margin-bottom: 7px;
+                    }
+                }
+            }
+            .bottom-text {
+                position: relative;
+                padding-left: 42%;
+                padding-top: 22px;
+                @include media('<640px') {
+                    padding-left: 0;
+                }
+                p {
+                    margin-bottom: 8px !important;
+                }
+                .img-holder {
+                    width: 66%;
+                    position: absolute;
+                    right: 63%;
+                    top: -3px;
+                    @include media('<1306px') {
+                        width: 60%;
+                        right: 60%;
+                    }
+                    @include media('<desktop') {
+                        width: 50%;
+                        right: 62%;
+                        top: 15px;
+                    }
+                    @include media('<840px') {
+                        width: 65%;
+                    }
+                    @include media('<640px') {
+                        width: 341px;
+                        top: calc(100% + 0px);
+                        left: 52%;
+                        bottom:auto;
+                        transform: translateX(-50%);
+                        position: absolute;
+                        margin: 0;
+                    }
+                    img {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                    .img-caption {
+                        position: absolute;
+                        top: 78%;
+                        left: 41px;
+                        line-height: 1.4;
+                        right: 10px;
+                        font-size: 14px;
+                        letter-spacing: -0.5px;
+                        @include media('<1306px') {
+                            left: 30px;
+                            right: 10px;
+                            font-size: 11px;
+                            top: 75%;
+                        }
+                        @include media('<desktop') {
+                            left: 11%;
+                            font-size: 14px;
+                        }
+                        @include media('<840px') {
+                            top: 78%;
+                        }
+                        @include media('<tablet') {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                p:last-child {
+                    margin-bottom: 0;
+                }
+                .marked {
+                    color: $red;
+                }
+            }
+            .text-holder {
+                margin-top: 5px;
+                line-height: 1.6;
+                @include media('<640px') {
+                    padding-bottom: 48px;
+                }
+                p {
+                    margin-bottom: 24px;
+                    @include media('<640px') {
+                        margin-bottom: 14px;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .label-box {
+                transform: translateX(-15px);
+                @include media('<desktop') {
+                    margin-left: 0;
+                    transform: translateX(-93px);
+                }
+                @include media('<640px') {
+                    transform: translateX(0);
+                    margin: 0 auto -22px;
+                }
+            }
+            .decorated-red {
+                padding: 36px 26px;
+                font-size: 14px;
+                line-height: 1.45;
+                background-color: transparent;
+                color: $white;
+                max-width: 364px;
+                float: right;
+                margin-right: -21%;
+                font-weight: 300;
+                position: relative;
+                margin-bottom: 10px;
+                @include media('<desktop') {
+                    margin-right: 0;
+                    margin: 0 0 0 -19%;
+                    float: left;
+                    transform: translateY(15vw);
+                    max-width: 410px;
+                    padding-bottom: 55px;
+                }
+                @include media('<tablet') {
+                    margin-left: -25%;
+                }
+                @include media('<640px') {
+                    margin: 0 auto;
+                    max-width:406px;
+                    float: none;
+                }
+                @include media('<phone') {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 139px;
+                    height: 44px;
+                    background-size: 100% 100%;
+                    opacity: .79;
+                    top: -13px;
+                    left: 170px;
+                    transform: translateX(-50%);
+                    @include background-svg('
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
 
-.custom-container {
-    max-width: 1306px;
-    margin: 0 auto;
+                }
+                strong {
+                    font-weight: bold;
+                }
+                background-size: 100% 100%;
+                @include background-svg('
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#e11c1b" points="0,6 95,0 100,87 1,92  " /> </svg>');
+
+            }
+        }
+    }
 }
