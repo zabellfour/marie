@@ -167,3 +167,12 @@
         width: 100%;
     }
 }
+
+.hero-slider.produit .owl-stage-outer{
+    @include media('<desktop') {
+        padding-bottom: 150px;
+    }
+    @include media('<tablet') {
+        padding-bottom: 125px;
+    }
+}

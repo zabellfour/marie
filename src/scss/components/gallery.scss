@@ -1,25 +1,42 @@
 .gallery {
-    &-row {
-        height: 500px;
+    @include media('<desktop') {
+        padding: 0 2.6%;
+    }
+    @include media('<phone') {
+        padding: 0 7px;
+    }
+    &-holder {
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 2%;
-        &:nth-child(2n) {
-            .gallery-item {
-                width: 66%;
-                &:first-child {
-                    width: 32%;
-                }
-            }
+        margin-bottom: 55px;
+        @include media('<tablet') {
+            margin-bottom: 35px;
         }
     }
     &-item {
+        height: 500px;
         width: 32%;
+        margin-bottom: 2%;
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
         position: relative;
+        @include media('<desktop') {
+            height: 410px;
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+        }
+        @include media('<tablet') {
+            height: 330px;
+        }
+        @include media('<640px') {
+            height: 266px;
+        }
+        @include media('<phone') {
+            width: 100%;
+        }
         &:before {
             @include animate (opacity);
             content: '';
@@ -30,8 +47,11 @@
             bottom: 0;
             background: rgba(0, 0, 0, .3);
         }
-        &:first-child {
+        &.wide {
             width: 66%;
+            @include media('<desktop') {
+                width: 100%;
+            }
         }
         &:hover {
             &:before {
@@ -50,6 +70,9 @@
         font-size: 34px;
         color: $white;
         font-weight: 600;
+        @include media('<tablet') {
+            font-size: 29px;
+        }
         .cursive {
             display: inline-block;
             width: 100%;
