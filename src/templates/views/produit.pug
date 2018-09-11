@@ -1,5 +1,8 @@
 extends ../partials/layouts/main-layout.pug
 
 block main
+	.banner(style="background-image: url(assets/images/produit-banner.jpg);")
+	include ../partials/components/banner-produit.pug
+	include ../partials/components/product-detail.pug
 	include ../partials/components/text-with-images.pug
 	include ../partials/components/product-info.pug

@@ -85,11 +85,12 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         .title {
             margin-bottom: 10px;
             font-family: $font-felt;
             font-size: 37px;
+            line-height: 1;
             color: $red;
         }
     }
