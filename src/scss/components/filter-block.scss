@@ -126,10 +126,10 @@
             min-height: 330px;
         }
         @include media ('<940px') {
-            width: calc(33.33% - 12px);
+            width: calc(33.33% - 10px);
         }
         @include media ('<640px') {
-            width: calc(50% - 12px);
+            width: calc(50% - 8px);
             min-height: 320px;
         }
         @include media ('<414px') {
@@ -201,10 +201,10 @@
             width: calc(25% - 12px);
         }
         @include media ('<940px') {
-            width: calc(33.33% - 12px);
+            width: calc(33.33% - 10px);
         }
         @include media ('<640px') {
-            width: calc(50% - 12px);
+            width: calc(50% - 8px);
             min-height: 320px;
         }
         @include media ('<414px') {
@@ -231,14 +231,15 @@
             margin: 0 0 15px 15px;
         }
         @include media ('<desktop') {
-            width: calc(25% - 12px);
+            width: calc(25% - 11px);
             min-height: 330px;
         }
         @include media ('<940px') {
-            width: calc(33.33% - 12px);
+            width: calc(33.33% - 10px);
+            padding: 36px 13px 10px 13px;
         }
         @include media ('<640px') {
-            width: calc(50% - 12px);
+            width: calc(50% - 8px);
             min-height: 320px;
         }
         @include media ('<414px') {
@@ -282,6 +283,9 @@
             @include media ('<640px') {
                 margin-left: 0;
             }
+        }
+        .text {
+            width: 100%;
         }
         .title {
             font-size: 17px;
