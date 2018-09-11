@@ -3,73 +3,6 @@
         display: flex;
         flex-wrap: wrap;
         position: relative;
-        .positioned-images {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            pointer-events: none;
-            img {
-                position: absolute;
-                &.img1 {
-                    left: -61px;
-                    top: -91px;
-                    @include media('<widescreen') {
-                        left: -40px;
-                        top: -80px;
-                        max-width: 300px;
-                    }
-                    @include media('<desktop') {
-                        display: none;
-                    }
-                }
-                &.img2 {
-                    top: -57px;
-                    right: -54px;
-                    @include media('<widescreen') {
-                        max-width: 400px;
-                    }
-                    @include media('<desktop') {
-                        display: none;
-                    }
-                }
-                &.img3 {
-                    top: 60px;
-                    left: 56%;
-                    @include media('<desktop') {
-                        left: 60%;
-                    }
-                    @include media('<tablet') {
-                        left: auto;
-                        right:-32px;
-                    }
-                    @include media('<phone') {
-                        top:0;
-                    }
-                }
-                &.img4 {
-                    bottom: -35px;
-                    left: 39px;
-                    @include media('<desktop') {
-                        bottom: -243px;
-                        left: -12px;
-                    }
-                }
-                &.img5 {
-                    top: 36.5%;
-                    left: calc(100% + (100vw - 1274px)/2);
-                    transform: translateX(-100%);
-                    @include media('<1306px') {
-                        width: 500px;
-                        left: calc(100% + 15px);
-                    }
-                    @include media('<desktop') {
-                        display: none;
-                    }
-                }
-            }
-        }
         .decoration-col {
             position: relative;
             width: 50%;
@@ -133,6 +66,73 @@
             @include media('<desktop') {
                 padding-top: 23px;
             }
+            .positioned-images {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                pointer-events: none;
+                img {
+                    position: absolute;
+                    &.img1 {
+                        left: -61px;
+                        top: -91px;
+                        @include media('<widescreen') {
+                            left: -40px;
+                            top: -80px;
+                            max-width: 300px;
+                        }
+                        @include media('<desktop') {
+                            display: none;
+                        }
+                    }
+                    &.img2 {
+                        top: -57px;
+                        right: -54px;
+                        @include media('<widescreen') {
+                            max-width: 400px;
+                        }
+                        @include media('<desktop') {
+                            display: none;
+                        }
+                    }
+                    &.img3 {
+                        top: 60px;
+                        left: 56%;
+                        @include media('<desktop') {
+                            left: 60%;
+                        }
+                        @include media('<tablet') {
+                            left: auto;
+                            right: -32px;
+                        }
+                        @include media('<phone') {
+                            top: 0;
+                        }
+                    }
+                    &.img4 {
+                        bottom: -35px;
+                        left: 39px;
+                        @include media('<desktop') {
+                            bottom: -243px;
+                            left: -12px;
+                        }
+                    }
+                    &.img5 {
+                        top: 36.5%;
+                        left: calc(100% + (100vw - 1274px)/2);
+                        transform: translateX(-100%);
+                        @include media('<1306px') {
+                            width: 500px;
+                            left: calc(100% + 15px);
+                        }
+                        @include media('<desktop') {
+                            display: none;
+                        }
+                    }
+                }
+            }
             .decoration-col {
                 &.col-l {
                     width: 51%;
@@ -144,7 +144,7 @@
                     @include media('<640px') {
                         padding: 0 7px;
                     }
-                    .wshadow .text-holder{
+                    .wshadow .text-holder {
                         @include media('<640px') {
                             margin-bottom: 543px;
                         }
@@ -167,24 +167,25 @@
                         bottom: 74px;
                     }
                     @include media('<640px') {
-                        bottom:200px;
-                        left:7%;
-                        right:7%;
-                        
+                        bottom: 200px;
+                        left: 7%;
+                        right: 7%;
                     }
                     @include media('<phone') {
                         left: 10px;
-                        right:10px;
-                        bottom:235px;
+                        right: 10px;
+                        bottom: 235px;
                     }
-                    br{
-                        @include media('<640px') {display: none;}
+                    br {
+                        @include media('<640px') {
+                            display: none;
+                        }
                     }
                 }
             }
             .text-small {
                 @include media('<640px') {
-                 text-align: center;
+                    text-align: center;
                 }
                 img {
                     padding-left: 16px;
@@ -192,7 +193,7 @@
                     margin-bottom: -47px;
                     @include media('<640px') {
                         margin: 0 60px -60px 0;
-                        padding:0;
+                        padding: 0;
                     }
                 }
                 .text-box {
@@ -208,8 +209,8 @@
                         padding: 13px 19px;
                     }
                     @include media('<640px') {
-                            max-width: 381px;
-                            margin: 0 auto;
+                        max-width: 381px;
+                        margin: 0 auto;
                     }
                     @include media('<phone') {
                         padding-left: 10px;
@@ -258,7 +259,7 @@
                         width: 341px;
                         top: calc(100% + 0px);
                         left: 52%;
-                        bottom:auto;
+                        bottom: auto;
                         transform: translateX(-50%);
                         position: absolute;
                         margin: 0;
@@ -352,7 +353,7 @@
                 }
                 @include media('<640px') {
                     margin: 0 auto;
-                    max-width:406px;
+                    max-width: 406px;
                     float: none;
                 }
                 @include media('<phone') {
@@ -380,6 +381,306 @@
                 @include background-svg('
  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#e11c1b" points="0,6 95,0 100,87 1,92  " /> </svg>');
 
+            }
+        }
+        &.decoration-section2 {
+            position: relative;
+            @include media('<desktop') {
+                flex-direction: column-reverse;
+                padding:0 15px;
+            }
+            .col-l {
+                padding: 0;
+                width: 40%;
+                margin-top: 60px;
+                @include media('<desktop') {
+                    width:100%;
+                }
+                .img-holder {
+                    margin-left: 37px;
+                    margin-bottom: -30px;
+                    z-index: 10;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 87px;
+                        height: 171px;
+                        background-size: 100% 100%;
+                        opacity: .79;
+                        bottom: -30px;
+                        left: 225px;
+                        z-index: 10;
+                        @include background-svg('
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="0,7.5 48,0 100,92 48,100  " /> </svg>');
+
+                    }
+                }
+                .text-holder {
+                    margin-left: -15px;
+                    padding: 40px 16px 12px;
+                }
+            }
+            .col-r {
+                padding: 0;
+                width: 55%;
+                @include media('<desktop') {
+                    width:100%;
+                    padding-top:116px;
+                }
+                .label-box {
+                    margin-left: 22%;
+                    @include media('<desktop') {
+                     margin-right:0;
+                     margin-left:auto;
+                    }
+                }
+                .text-holder {
+                    padding: 36px 31px;
+                    line-height: 1.5;
+                    p {
+                        margin-bottom: 27px;
+                        &:last-of-type {
+                            margin-bottom: 7px;
+                            ;
+                        }
+                    }
+                    .marked {
+                        color: $red;
+                    }
+                }
+            }
+            .img-row {
+                position: relative;
+                @include media('<desktop') {
+                    
+                    position: absolute;
+                    bottom:0;
+                    left:0;
+                    right:0;
+                }
+                .info-hand {
+                    top: -70px;
+                    position: absolute;
+                    width: 885px;
+                    right: calc(100% + (100vw - 1274px)/2);
+                    transform: translateX(100%);
+                    @include media('<desktop') {
+                        display: none;
+                    }
+                    @include media('<1306px') {
+                        right: calc(100% + 15px);
+                        width:700px;
+                    }
+                    .text-holder {
+                        position: absolute;
+                        right: 130px;
+                        width: 30%;
+                        top: 50%;
+                        text-align: center;
+                        transform: translateY(-60%);
+                        line-height: 1.6;
+                        @include media('<1306px') {
+                            right: 86px;
+    width: 31%;
+                        }
+                        strong {
+                            color: $red;
+                        }
+                    }
+                }
+                width:100%;
+                text-align: right;
+                img {
+                    display: inline-block;
+                }
+                .img3 {
+                    margin-top: -30px;
+                    margin-right: -80px;
+                }
+                .img2 {
+                    margin-top: 0px;
+                    margin-right: -37px;
+                }
+            }
+            .positioned-images {
+                position: absolute;
+                pointer-events: none;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                .img1 {
+                    position: absolute;
+                    top: -91px;
+                    right: 103px;
+                    @include media('<desktop') {
+                        top: -71px;
+                        right: -8px;
+                    }
+                }
+            }
+            .decorated-red {
+                padding: 36px 26px;
+                font-size: 14px;
+                line-height: 1.45;
+                background-color: transparent;
+                color: $white;
+                max-width: 437px;
+                font-weight: 300;
+                position: relative;
+                margin-bottom: 10px;
+                strong {
+                    font-weight: bold;
+                }
+                background-size: 100% 100%;
+                @include background-svg('
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#e11c1b" points="0,0 100,0 100,100 0,100  " /> </svg>');
+
+            }
+        }
+        &.decoration-section3 {
+            position: relative;
+            .col-l {
+                padding: 0 0 0 73px;
+                width: 51%;
+                position: relative;
+                .label-box {
+                    margin-right: 30px;
+                    margin-top: -17px;
+                }
+                .text-holder {
+                    padding: 36px 31px;
+                    line-height: 1.5;
+                    p {
+                        margin-bottom: 27px;
+                        &:last-of-type {
+                            margin-bottom: 7px;
+                            ;
+                        }
+                    }
+                    .marked {
+                        color: $red;
+                    }
+                }
+                .decorated-images {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    .img1 {
+                        position: absolute;
+                        left: -109px;
+                        top: -132px;
+                        z-index: 5;
+                    }
+                    .img2 {
+                        position: absolute;
+                        top: 74%;
+                        z-index: 5;
+                        left: -55px;
+                    }
+                }
+            }
+            .col-r {
+                padding: 0;
+                position: relative;
+                text-align: center;
+                width: 49%;
+                .product-img {
+                    transform: translateX(52px);
+                }
+                .decorated-images {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    .info-hand {
+                        img {
+                            widows: 100%;
+                        }
+                        position: absolute;
+                        left: -100px;
+                        width: 682px;
+                        top: 48.5%;
+                        left: calc(100% + (100vw - 1274px)/2);
+                        transform: translateX(-100%);
+                        @include media('<1306px') {
+                            left: calc(100% + 15px);
+                            width:550px;
+                        }
+                        @include media('<widescreen') {
+                            left: calc(100% + 60px);
+                        }
+                        .text-holder {
+                            position: absolute;
+                            top: 96px;
+                            left: 41px;
+                            width: 383px;
+                            height: 30px;
+                            text-align: center;
+                            @include media('<1306px') {
+                                top: 68px;
+                                left: 32px;
+                                width: 310px;
+                                height: 30px;
+                            }
+                            strong {
+                                color: red;
+                            }
+                        }
+                    }
+                    .img2 {
+                        position: absolute;
+                        top: 7%;
+                        left: 25px;
+                    }
+                }
+            }
+            .bottom-row {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 48px 0 0 50px;
+                font-size: 14px;
+                line-height: 1.5;
+                justify-content: flex-start;
+                margin-bottom: -88px;
+                @include media('<widescreen') {
+                 margin: 0;
+                }
+                .decorated-red {
+                    position: relative;
+                    max-width: 614px;
+                    padding: 30px 50px 30px 80px;
+                    transform: translate(-106px, -38px);
+                    z-index: -1;
+                    position: relative;
+                    color: $white;
+                    background-color: $red;
+                    &:before {
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 139px;
+                            height: 44px;
+                            background-size: 100% 100%;
+                            opacity: .79;
+                            top: -13px;
+                            left: 170px;
+                            transform: translateX(-50%);
+                            @include background-svg('
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
+
+                        }
+                        transform: translateX(-50%) scaleX(-1);
+                        @include background-svg('
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
+
+                    }
+                }
             }
         }
     }
