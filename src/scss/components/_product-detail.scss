@@ -1,31 +1,43 @@
 .product-detail {
-	transform: translateY(-137px);
+    transform: translateY(-137px);
     margin-bottom: -137px;
     &__header {
-    	@extend %clearfix;
+        @extend %clearfix;
         padding: 0 13% 0 10%;
         margin-bottom: 40px;
     }
     &__image {
-    	float: left;
-        width: 362px;
+        float: left;
+        max-width: 362px;
         position: relative;
+        @include media('<desktop') {
+            float: none;
+            margin: 0 auto;
+        }
         &:after {
-        	content: '';
-        	position: absolute;
-        	height: 50%;
-        	width: 100%;
-        	bottom: 0;
-        	left: 0;
-        	right: 0;
-        	box-shadow: 0px 15px 35px 5px rgba(153,153,153,1);
+            content: '';
+            position: absolute;
+            height: 50%;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0px 15px 35px 5px rgba(153, 153, 153, 1);
+            z-index: -1;
         }
     }
     &__text {
-    	float: left;
+        float: left;
         width: calc(100% - 362px);
         padding: 150px 15px 15px 35px;
         font-size: 16px;
+        @include media('<desktop') {
+            float: none;
+            width: 100%;
+            margin: 0 auto;
+            padding: 50px 0 0 0;
+            text-align: center;
+        }
         .title {
             font-size: 52px;
             margin-bottom: 0;
@@ -56,6 +68,10 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        @include media('<desktop') {
+            width: 100%;
+            margin-bottom: 20px;
+        }
         &:first-child {
             .item-info {
                 display: flex;
@@ -72,11 +88,14 @@
         &:last-child {
             width: calc(26% - 20px);
             align-content: center;
+            @include media('<desktop') {
+                width: 100%;
+            }
             .item-info {
                 text-align: center;
                 width: 100%;
                 &:first-child {
-                	margin-bottom: 8px;
+                    margin-bottom: 8px;
                 }
                 i {
                     margin-right: 10px;

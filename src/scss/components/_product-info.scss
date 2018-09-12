@@ -8,6 +8,9 @@
 		.left-side,.right-side {
 			width: 50%;
 			position: relative;
+			@include media('<desktop') {
+				width: 100%;
+			}
 		}
 		.left-side {
 			padding-left: 4.5%;
