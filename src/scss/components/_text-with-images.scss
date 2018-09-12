@@ -1,20 +1,27 @@
 .text-with-images {
-	padding: 100px 0;
+	padding: 6.5% 4.5% 0;
+	@include media('<desktop') {
+        padding: 6.5% 2.6%;
+    }
+    @include media('<phone') {
+        padding: 6.5% 7px;
+    }
 }
 
 .text-images-holder {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 60px;
 	.images-side {
 		width: 50%;
 		position: relative;
+		transform: translateY(-30px);
+		margin-bottom: -70px;
 		@include media('<tablet') {
-			margin: 0 auto 30px;
+			transform: translateY(0);
+			margin: 0 auto -70px;
 		}
 		.image-box {
-			height: 250px;
-			width: 400px;
+			max-width: 455px;
 			position: relative;
 			@include media('<widescreen'){
 				height: 200px;
@@ -28,33 +35,33 @@
 				
 			}
 			&.rotate-left {
-				transform: rotate(-7deg);
-				img {
-					transform: rotate(-5deg);
-				}
+				transform: rotate(-8deg) translateX(-30px);
+				// img {
+				// 	transform: rotate(-5deg);
+				// }
 			}
 			&.rotate-right {
-				transform: rotate(7deg);
-				left: 30%;
+				transform: rotate(4deg) translateY(-60px);
+				left: 26%;
 			}
-			&:before, &:after {
-			        z-index: -1;
-				    position: absolute;
-				    content: "";
-				    top: 25px;
-				    right: 30px;
-				    height: 80%;
-				    width: 20px;
-				    background: $gray2;
-				    box-shadow: 15px -5px 25px $gray2;
-				    transform: rotate(13deg);
-			}
-			&:after {
-			    transform: rotate(-13deg);
-			    top: auto;
-			    bottom: 15px;
-			    box-shadow: 15px 0px 25px $gray2;
-			}
+			// &:before, &:after {
+			//         z-index: -1;
+			// 	    position: absolute;
+			// 	    content: "";
+			// 	    top: 25px;
+			// 	    right: 30px;
+			// 	    height: 80%;
+			// 	    width: 20px;
+			// 	    background: $gray2;
+			// 	    box-shadow: 15px -5px 25px $gray2;
+			// 	    transform: rotate(13deg);
+			// }
+			// &:after {
+			//     transform: rotate(-13deg);
+			//     top: auto;
+			//     bottom: 15px;
+			//     box-shadow: 15px 0px 25px $gray2;
+			// }
 		}
 		.image-frame {
 			display: flex;
@@ -70,11 +77,10 @@
 		.image-holder {
 			display: flex;
 			width: 100%;
-			height: 100%;
 			align-items: center;
 			justify-content: center;
 			overflow: hidden;
-			background-color: $white;
+			// background-color: $white;
 			img {
 				display: block;
 				width: 100%;
@@ -84,12 +90,13 @@
 	}
 	.text-side {
 		width: 50%;
-		padding-left: 30px;
+		padding-left: 20px;
+		letter-spacing: -0.1px;
 		@include media('<tablet') {
 			width: 100%;
 		}
 		.title {
-			transform: translateX(-50%);
+			transform: translateX(-52%);
 			@include media('<tablet') {
 					transform: translateX(0);
 				}
@@ -99,6 +106,7 @@
 				}
 			}
 			.cursive {
+				line-height: .7;
 				@include media('<desktop') {
 					font-size: 50px;
 				}
@@ -109,7 +117,7 @@
 				font-size: 14px;
 			}
 			p {
-				margin-bottom: 30px;
+				margin-bottom: 25px;
 				line-height: 2;
 				@include media('<desktop') {
 					margin-bottom: 15px;
