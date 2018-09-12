@@ -7,7 +7,7 @@
 
 .container {
     width: 100%;
-    max-width: 1306px;
+    max-width: 100%;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -52,5 +52,15 @@ body {
         @include media ('<phone') {
             font-size: 58px;
         }
+    }
+}
+
+.additional-indents {
+    padding: 0 4.5%;
+    @include media('<tablet') {
+        padding: 0 2.6%;
+    }
+    @include media('<640px') {
+        padding: 0 7px;
     }
 }

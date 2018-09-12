@@ -1,7 +1,12 @@
+
+
 .thumb-grid {
     padding: 0 4.5%;
     margin-bottom: 27px;
-    @include media('<desktop') {
+    img{
+        max-width: 100%;
+    }
+    @include media('<tablet') {
         padding: 0 2.6%;
         margin-bottom: 0;
     }
@@ -17,6 +22,7 @@
         flex-wrap: wrap;
     }
     .thumb-col {
+        width: 100%;
       a{
         text-decoration: none;
       }
@@ -52,7 +58,7 @@
         }
         &.col-33 {
             width: 32.4%;
-            @include media('<desktop') {
+            @include media('<tablet') {
                 width: 49%;
             }
             @include media('<640px') {
@@ -61,7 +67,7 @@
         }
         &.col-66 {
             width: 66.3%;
-            @include media('<desktop') {
+            @include media('<tablet') {
                 width: 49%;
             }
             @include media('<640px') {
@@ -72,7 +78,7 @@
         &.col-66 {
             .descr-holder {
                 padding: 22px 30px 30px;
-                @include media('<desktop') {
+                @include media('<tablet') {
                   padding:26px 34px 9px 30px;
                 }
                 @include media('<tablet') {
@@ -87,7 +93,7 @@
             }
         }
         &.tablet-100 {
-            @include media('<desktop') {
+            @include media('<tablet') {
                 width: 100%;
             }
         }
@@ -105,7 +111,7 @@
         .descr-holder {
             padding: 37px 68px 21px;
             color: $gray;
-            @include media('<desktop') {
+            @include media('<tablet') {
               padding:27px 29px 13px;
             }
        
@@ -123,7 +129,7 @@
             text-align: center;
             margin-bottom: 30px;
             padding-top: 10px;
-            @include media('<desktop') {
+            @include media('<tablet') {
               padding-top: 30px;
             }
             @include media('<tablet') {

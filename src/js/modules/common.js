@@ -17,6 +17,7 @@ var common = {
             mouseDrag: false,
             touchDrag: false,
             autoplayTimeout: 7000,
+            responsiveRefreshRate: 1
         });
 
 
@@ -27,6 +28,7 @@ var common = {
             $(this).toggleClass('open');
         });
     }
+    
 };
 
 
