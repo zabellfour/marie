@@ -13,6 +13,7 @@ import common from './modules/common';
     common.mobileManu();
     common.heroSlider();
     common.accordion();
+    
   });
 
 })(jQuery);
