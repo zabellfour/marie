@@ -1,20 +1,24 @@
 .product-info {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 100px 0 200px;
-	.split-container {
-		display: flex;
-		flex-wrap: wrap;
-		.left-side,.right-side {
-			width: 50%;
-			position: relative;
-			@include media('<desktop') {
-				width: 100%;
-			}
-		}
-		.left-side {
-			padding-left: 4.5%;
-		}
-	}
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8.5% 4.5% 8%;
+    @include media('<desktop') {
+        padding: 8.5% 4.5% 400px;
+    }
+    .split-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .left-side,
+        .right-side {
+            width: 48%;
+            position: relative;
+            @include media('<desktop') {
+                width: 100%;
+            }
+        }
+        .left-side {
+            padding-left: 1.5%;
+        }
+    }
 }
-

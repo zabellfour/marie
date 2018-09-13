@@ -6,10 +6,9 @@
 			width: 100%;
 			position: relative;
 			line-height: 72px;
+			font-size: 21px;
+			font-weight: 600;
 			border-bottom: 1px solid $light-gray;
-			&:last-child {
-				border-bottom: 0;
-			}
 			&:hover {
 				cursor: pointer;
 			}
@@ -22,7 +21,7 @@
 			display: block;
 			width: 12px;
 			height: 12px;
-			right: 35px;
+			right: 5px;
 			&:before {
 				content: '';
 				position: absolute;
@@ -49,6 +48,11 @@
 			}
 			.tab-pane__open-close:after {
 				transform: rotate(90deg);
+			}
+		}
+		&:last-child {
+			.tab-pane__name {
+				border-bottom: 0;
 			}
 		}
 	}
