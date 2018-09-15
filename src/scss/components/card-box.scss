@@ -1,0 +1,41 @@
+.info-card {
+    max-width: 390px;
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5);
+    position: absolute;
+    right: 145px;
+    top: -30px;
+    @include media('<1440px') {
+        right: 26%;
+    }
+    @include media('<widescreen') {
+        right: 15%;
+    }
+    @include media('<desktop') {
+        right: 145px;
+        top: 30px;
+    }
+    @include media('<tablet') {
+        right: 5%;
+    }
+    .inner-card {
+        padding: 3px 15px 13px;
+        color: $white;
+        background-color: $red;
+        box-shadow: 0 0 0 9px $red;
+        border: 2px solid rgba(255, 255, 255, .3);
+        position: relative;
+        img {
+            margin-bottom: 5px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 282px;
+            height: 282px;
+            left: calc(100% - 51px);
+            bottom: -94px;
+            background-image: url(../images/hand-decor.png);
+        }
+    }
+}
