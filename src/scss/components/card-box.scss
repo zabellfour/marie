@@ -2,7 +2,7 @@
     max-width: 390px;
     box-shadow: 0 0 50px 5px rgba(0, 0, 0, .5);
     position: absolute;
-    right: 145px;
+    right: 165px;
     top: -30px;
     @include media('<1440px') {
         right: 26%;
@@ -11,8 +11,9 @@
         right: 15%;
     }
     @include media('<desktop') {
-        right: 145px;
-        top: 30px;
+        max-width: 412px;
+        right: 150px;
+        top: 33px;
     }
     @include media('<tablet') {
         right: 5%;
@@ -23,9 +24,26 @@
         background-color: $red;
         box-shadow: 0 0 0 9px $red;
         border: 2px solid rgba(255, 255, 255, .3);
+        font-size: 15px;
         position: relative;
-        img {
-            margin-bottom: 5px;
+        @include media('<desktop') {
+            font-size: 18px;
+            padding: 3px 25px 13px;
+        }
+        .img-holder {
+            max-width: 128px;
+            margin: 0 auto 5px;
+            @include media('<desktop') {
+                max-width: 160px;
+                margin: 10px auto 20px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        p {
+            line-height: 1.4;
         }
         &:after {
             content: '';
@@ -36,6 +54,23 @@
             left: calc(100% - 51px);
             bottom: -94px;
             background-image: url(../images/hand-decor.png);
+        }
+        .btn {
+            @include media('<desktop') {
+                display: none;
+            }
+        }
+        .desktop-text {
+            @include media('<desktop') {
+                display: none;
+            }
+        }
+        .tablet-text {
+            display: none;
+            @include media('<desktop') {
+                display: block;
+                margin-bottom: 65px;
+            }
         }
     }
 }
