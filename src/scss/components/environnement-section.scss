@@ -318,7 +318,7 @@
             left: 254px;
             transform: translateX(-50%);
             @include background-svg('
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
 
         }
     }
@@ -346,7 +346,7 @@
             left: 3px;
             transform: translateX(-50%);
             @include background-svg('
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: pace="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="0,5 98.6,0 100,95 4,100  " /> </svg>');
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:pace="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="0,5 98.6,0 100,95 4,100  " /> </svg>');
 
         }
         &:after {
@@ -360,7 +360,7 @@
             right: -34px;
             transform: translateX(-50%);
             @include background-svg('
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,0 100,2 97,105 1.4,100  " /> </svg>');
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,0 100,2 97,105 1.4,100  " /> </svg>');
 
         }
         .title {
