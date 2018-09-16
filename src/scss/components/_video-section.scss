@@ -1,0 +1,177 @@
+.video-section {
+    padding: 0 4.5% 15%;
+    .h1 {
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+    &__head {
+        margin-bottom: 40px;
+    }
+    &__inner {
+        padding: 30px 0 245px;
+        position: relative;
+        @include media('<1440px') {
+            padding: 30px 0 19.5%;
+        }
+    }
+    &__bg-image {
+        position: absolute;
+    }
+    .vide-holder {
+        position: relative;
+        z-index: 1;
+        @include media('<1440px') {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .youtube-link {
+            @include animate (opacity);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 76px;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            color: #ed1c24;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+            text-decoration: none;
+            }
+    }
+    .bottom-card {
+        max-width: 1060px;
+        margin: 0 auto;
+        background-color: $red;
+        padding: 40px 50px;
+        position: relative;
+        text-align: left;
+        z-index: 1;
+        @include media('<1440px') {
+            width: 84%;
+        }
+        &__text {
+            max-width: 70%;
+            color: $white;
+            font-size: 19px;
+            @include media('<1440px') {
+                font-size: 1.3vw;
+            }
+            .title {
+                font-weight: 600;
+                font-size: 38px;
+                @include media('<1440px') {
+                    font-size: 2.5vw;
+                }
+            }
+            .big {
+                font-size: 70px;
+                @include media('<1440px') {
+                    font-size: 5vw;
+                }
+            }
+            .unmarked-list {
+                @extend %listreset;
+                text-align: left;
+                li {
+                    line-height: 1.6;
+                }
+            }
+        }
+        &__decor {
+            position: absolute;
+            right: -152px;
+            top: 70px;
+            @include media('<1440px') {
+               width: 47%;
+               top: 40px;
+               right: -14.33%;
+            }
+        }
+    }
+    .image-pos-1 {
+        top: 0;
+        left: -60px;
+        img {
+            &:last-child{
+                display: none;
+            }
+        }
+        @include media('<1440px') {
+            width: 22%;
+        }
+        @include media('<desktop') {
+            img {
+                &:last-child{
+                    display: block;
+                }
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+    }
+    .image-pos-2 {
+        top: 0;
+        right: -40px;
+        img {
+            &:last-child{
+                display: none;
+            }
+        }
+        @include media('<1440px') {
+            width: 26%;
+        }
+        @include media('<desktop') {
+            img {
+                &:last-child{
+                    display: block;
+                }
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+    }
+    .image-pos-3 {
+        top: 60%;
+        transform: translateY(-50%);
+        left: -95px;
+        @include media('<1440px') {
+            width: 28%;
+        }
+    }
+    .image-pos-4 {
+        bottom: -160px;
+        left: -50;
+        @include media('<1440px') {
+            width: 16%;
+            left: -3%;
+        }
+    }
+    .image-pos-5 {
+        left: 18%;
+        bottom: 25px;
+        @include media('<1440px') {
+            width: 18%;
+        }
+    }
+    .image-pos-6 {
+        left: 36%;
+        bottom: 0;
+        @include media('<1440px') {
+            width: 13%;
+        }
+    }
+    .image-pos-7 {
+        right: -55px;
+        bottom: -85px;
+        @include media('<1440px') {
+            width: 55%;
+        }
+    }
+}
