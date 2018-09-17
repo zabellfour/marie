@@ -1,0 +1,113 @@
+.nutrition-section {
+    .text-top {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 66px 50px 0;
+        margin-bottom: -20px;
+        position: relative;
+        line-height: 1.5;
+        @include media('<desktop') {}
+        @include media('<640px') {}
+        p {
+            margin-bottom: 30px;
+        }
+        .section-headline {
+            line-height: 1;
+            margin: 0 auto;
+        }
+        .decor-img {
+            @include media('<phone') {
+                position: absolute;
+                right: -25%;
+                top: 0px;
+                width: 180px;
+            }
+        }
+        .h1 {
+            line-height: .7;
+            font-size: 105px;
+            margin: 0 auto 35px;
+            @include media('<desktop') {}
+            @include media('<640px') {
+                font-size: 85px;
+            }
+        }
+        .h4 {
+            line-height: .6;
+            font-size: 54px;
+            margin-bottom: 0;
+            @include media('<640px') {
+                font-size: 44px;
+            }
+        }
+    }
+    .split-section {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        .col-l,
+        .col-r {
+            width: 50%;
+            position: relative;
+        }
+        .text {
+            margin-bottom: 40px;
+        }
+        .botom-text {
+            padding-left: 33%;
+        }
+        .decor-image {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        .note-holder {
+            display: inline-block;
+            position: relative;
+            .note-text {
+                padding: 40px 0 0 0;
+                position: absolute;
+                max-width: 310px;
+                right: 50px;
+                top: 0;
+                .title {
+                    font-size: 26px;
+                    line-height: 1;
+                }
+                .sub-title {
+                    font-size: 60px;
+                    line-height: .6;
+                }
+                p {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+
+.score-section {
+    position: relative;
+    .single-text {
+        padding: 25px 0;
+        border-top: 3px solid $red;
+        border-bottom: 3px solid $red;
+    }
+    .image-holder-a, .image-holder-b {
+        position: absolute;
+        top: 0;
+        width: 24%;
+    }
+    .image-holder-a {
+        left: 8%;
+        top: -50%;
+    }
+    .image-holder-b {
+        left: 13%;
+        top: auto;
+        bottom: 75%;
+        z-index: 1;
+    }
+}
