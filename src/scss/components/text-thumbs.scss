@@ -3,12 +3,16 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 25px;
-    @include media('<desktop') {
+    font-size: 15px;
+    @include media('<widescreen') {
        justify-content: space-between;
     }
+    @include media('<tablet') {
+        padding: 25px 2.6% 0;
+    }
     .merged-thumbs {
-        width: 48%;
-        @include media('<desktop') {
+        width: 50%;
+        @include media('<widescreen') {
             width: 100%;
             margin-bottom: 40px;
         }
@@ -18,17 +22,24 @@
         flex-wrap: wrap;
         justify-content: center;
         padding: 25px 25px 20px;
-        width: 24%;
-        margin-left: 2%;
+        width: 23.5%;
+        margin-left: 1.5%;
         background-color: $red;
         color: $white;
         position: relative;
-        @include media('<desktop') {
+        @include media('<widescreen') {
             width: 49%;
+            min-height: 332px;
             margin-left: 0;
         }
         .thumb-inner {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
             position: relative;
+            @include media('<tablet') {
+                text-align: center;
+            }
             &:before, &:after {
                 content: '';
                 position: absolute;
@@ -49,6 +60,18 @@
                 right: 33%;
                 transform: translateX(50%) rotate(0.4deg);
                 z-index: -1;
+            }
+        }
+        &__title {
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 40px;
+            @include media('<desktop') {
+                text-align: left;
+            }
+            @include media('<tablet') {
+                text-align: center;
+                margin-bottom: 15px;
             }
         }
         &:before {
@@ -72,12 +95,23 @@
             }
         }
     }
+    .btn {
+        align-self: flex-end;
+        color: $black;
+        max-width: 140px;
+        height: 40px;
+        margin-top: auto;
+        &:hover {
+            color: $white;
+        }
+    }
 }
 
 .merged-thumbs {
     display: flex;
     justify-content: space-between;
     color: $white;
+    background-color: $red;
     position: relative;
     z-index: 1;
     &:before, &:after {
@@ -103,51 +137,68 @@
     }
     .thumb {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         width: 33.33%;
-        justify-content: center;
-        padding: 25px 25px 20px;
+        padding: 25px 4.33% 20px;
         position: relative;
         background-color: $red;
+        @include media('<widescreen') {
+            min-height: 332px; 
+        }
+        @include media('<desktop') {
+            padding: 18px 5.5% 20px;
+        }
+        @include media('<tablet') {
+            text-align: center;
+            padding: 18px 2.5% 20px;
+        }
         &:nth-child(2) {
             &:before {
                 content: '';
                 position: absolute;
-                width: 80px;
+                width: 86px;
                 height: 26px;
                 background-size: 100% 100%;
                 opacity: .19;
                 top: -13px;
                 left: 50%;
                 transform-origin: left;
-                transform: rotate(5deg) translateX(-50%);
+                transform: rotate(10deg) translateX(-50%);
                 background: $black; // box-shadow: 0px 0px 0px 2px $black;
                 //        @include background-svg('
                 // <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
             }
         }
         &__title-holder {
-            width: 120px;
-            height: 90px;
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
             flex-wrap: wrap;
-            background-image: url(../images/name-holder.svg);
+            // background-image: url(../images/name-holder.svg);
             background-size: contain;
             background-position: 50% 50%;
             background-repeat: no-repeat;
             margin-bottom: 12px;
+            padding: 0 15px;
+            width: 140px;
+            position: relative;
+            margin: 0 auto 8px;
+            @include media('<tablet') {
+                width: 136px;
+            }
             .title {
                 font-size: 34px;
                 font-weight: 400;
                 line-height: .7;
+                position: relative;
+                margin-bottom: 10px;
             }
             .subtitle {
                 font-size: 12px;
                 display: inline-block;
                 color: $black;
+                position: relative;
             }
             .number-decorated {
                 display: inline-block;
@@ -169,8 +220,29 @@
                 }
             }
         }
+        // &__title-text {
+        //     position: absolute;
+        //     left: 50%;
+        //     top: 50%;
+        //     transform: translate(-50%, -50%);
+        // }
+        &__title-decor {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
         &__text {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            line-height: 1.3;
         }
     }
 }
