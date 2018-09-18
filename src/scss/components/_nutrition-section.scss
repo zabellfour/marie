@@ -48,6 +48,7 @@
         margin-bottom: 40px;
         .col-l,
         .col-r {
+            @extend %clearfix;
             width: 50%;
             position: relative;
         }
@@ -57,11 +58,19 @@
         .botom-text {
             padding-left: 33%;
         }
-        .decor-image {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            z-index: -1;
+        .col-l {
+            .decor-image {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+        }
+        .col-r {
+            .decor-image {
+                width: 84%;
+                transform: translate(75px, -65px); 
+            }
         }
         .note-holder {
             display: inline-block;
@@ -85,17 +94,76 @@
                 }
             }
         }
+        .decorated-red-text {
+            padding: 30px 30px;
+            background-color: transparent;
+            color: #fff;
+            float: right;
+            max-width: 452px;
+            font-weight: 600;
+            position: relative;
+            margin-bottom: 10px;
+            background-size: 100% 100%;
+            position: relative;
+            clear: both;
+            text-align: center;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 139px;
+                height: 44px;
+                background-size: 100% 100%;
+                opacity: .79;
+                top: -24px;
+                left: 50%;
+                transform: translateX(-50%);
+                @include background-svg('
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
+
+                }
+            @include background-svg('
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#e11c1b" points="0,0 99.5,3 100,100 0.5,97  " /> </svg>');
+            .title {
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+        }
+        .sticker-bg-text {
+            font-size: 16px;
+            max-width: 450px;
+            padding: 170px 70px 90px;
+            background-size: 100% 100%;
+            background-image: url(../images/decorations/sticker.png);
+            float: right;
+            transform: translate(-40px, -140px);
+            position: relative;
+            z-index: -1;
+            .title {
+                font-size: 60px;
+                line-height: .6;
+            }
+            .subtitle {
+                font-size: 26px;
+                line-height: .7;
+                font-weight: 600;
+            }
+        }
+        .image-holder {
+
+        }
     }
 }
 
 .score-section {
     position: relative;
+    margin-bottom: 70px;
     .single-text {
         padding: 25px 0;
         border-top: 3px solid $red;
         border-bottom: 3px solid $red;
     }
-    .image-holder-a, .image-holder-b {
+    .image-holder-a,
+    .image-holder-b {
         position: absolute;
         top: 0;
         width: 24%;
