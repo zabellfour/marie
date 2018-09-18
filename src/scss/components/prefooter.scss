@@ -1,9 +1,12 @@
 .prefooter {
     padding: 0 4.5%;
     @include media('<desktop') {
+        padding: 0 4.5%;
+    }
+    @include media('<tablet') {
         padding: 0 2.6%;
     }
-    @include media('<phone') {
+    @include media('<640px') {
         padding: 0 7px;
     }
 }

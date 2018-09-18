@@ -96,16 +96,18 @@
         margin-right: 48px;
         padding: 0;
         @include animate(opacity);
-        @include media('<widescreen') {
-            margin-right: 30px;
-            width: 161px;
-        }
-        @include media('<desktop') {
-            margin-right: 20px;
-        }
+        // @include media('<widescreen') {
+        //     margin-right: 30px;
+        //     width: 161px;
+        // }
+        // @include media('<desktop') {
+        //     margin-right: 20px;
+        // }
         @include media('<tablet') {
-            margin-right: 0;
-        }
+          //   margin-right: 0;
+          margin-right: 20px;
+              width: 161px;
+         }
         &:hover {
             opacity: .8;
         }
@@ -121,14 +123,18 @@
         font-size: 14px;
         margin-right: 47px;
         @include animate(color);
-        @include media('<widescreen') {
-            margin-right: 30px;
-        }
-        @include media('<desktop') {
-            margin-right: 17px;
-            font-size: 12px;
-        }
+        // @include media('<widescreen') {
+        //     margin-right: 30px;
+        // }
+        // @include media('<desktop') {
+        //     margin-right: 17px;
+        //     font-size: 12px;
+        // }
         @include media('<tablet') {
+        //remove   
+                margin-right: 17px;
+                font-size: 12px;
+          // --remove
             color: $white;
             font-size: 22px;
             padding: 15px;
