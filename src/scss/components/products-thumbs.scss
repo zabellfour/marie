@@ -31,6 +31,11 @@
 		background-color: $white;
 		box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
 		position: relative;
+		@include animate(transform);
+		transform: scale(1);
+		&:hover{
+			transform: scale(1.03);
+		}
 		@include media('<desktop') {
 	        width: 32%;
 	        &:last-child {
