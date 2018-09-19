@@ -13,6 +13,7 @@ import common from './modules/common';
         common.mobileManu();
         common.heroSlider();
         common.accordion();
+        common.animation();
         $(document).ready(function() {
             $(window).resize();
         });
@@ -23,13 +24,14 @@ import common from './modules/common';
             var h = $(window).height();
             var scale;
             if (w >= 768 && w < 1920) {
-                var wspec = 1966;
+                var wspec = 1920;
                 scale = w / wspec;
             } else {
                 scale = 1;
+                mobileDelta = 0;
             }
-            $(".font-resp .wrapper").css('-webkit-transform', 'scale(' + scale + ')');
-            $(".font-resp .wrapper").css('-moz-transform', 'scale(' + scale + ')');
+            $(".font-resp .wrapper").css('transform', 'scale(' + scale + ')').css('margin', -mobileDelta/2);
+            
 
         });
 

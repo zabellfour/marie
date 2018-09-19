@@ -213,7 +213,8 @@
         }
     }
     &__item {
-        @include animate (box-shadow) width: 15.55%;
+        @include animate (box-shadow transform);
+        width: 15.55%;
         min-height: 290px;
         padding: 36px 1.25% 10px 1.25%;
         display: flex;
@@ -226,6 +227,10 @@
         margin: 0 0 1.33% 1.33%;
         box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
         position: relative;
+        transform: scale(1);
+        &:hover{
+            transform:scale(1.03);
+        }
         @include media ('<widescreen') {
             width: calc(20% - 12px);
             margin: 0 0 15px 15px;

@@ -23,6 +23,18 @@
     }
     .thumb-col {
         width: 100%;
+        @include animate(transform);
+        transform: scale(1);
+        @include media('<tablet') {
+            
+            //transition: none !important;
+        }
+        &.animated{
+            transform: scale(1.03);
+        }
+        &:hover{
+            transform: scale(1.03)
+        }
       a{
         text-decoration: none;
       }
