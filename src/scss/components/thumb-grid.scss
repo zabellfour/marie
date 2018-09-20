@@ -20,6 +20,11 @@
         flex-wrap: wrap;
     }
     .thumb-col {
+        &[class^="col-"] {
+            @include media('<tablet') {
+                display: flex !important;
+            }
+        }
         &.without-hover {
             &:hover {
                 transform: scale(1) !important;
