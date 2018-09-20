@@ -4,15 +4,20 @@
     flex-wrap: wrap;
     margin-bottom: 25px;
     font-size: 15px;
-    @include media('<widescreen') {
-       justify-content: space-between;
-    }
+    // @include media('<widescreen') {
+    //    justify-content: space-between;
+    // }
     @include media('<tablet') {
+        justify-content: space-between;
         padding: 25px 2.6% 0;
     }
     .merged-thumbs {
         width: 50%;
-        @include media('<widescreen') {
+        // @include media('<widescreen') {
+        //     width: 100%;
+        //     margin-bottom: 40px;
+        // }
+        @include media('<tablet') {
             width: 100%;
             margin-bottom: 40px;
         }
@@ -27,7 +32,12 @@
         background-color: $red;
         color: $white;
         position: relative;
-        @include media('<widescreen') {
+        // @include media('<widescreen') {
+        //     width: 49%;
+        //     min-height: 332px;
+        //     margin-left: 0;
+        // }
+         @include media('<tablet') {
             width: 49%;
             min-height: 332px;
             margin-left: 0;
@@ -66,9 +76,9 @@
             text-align: center;
             line-height: 1;
             margin-bottom: 40px;
-            @include media('<desktop') {
-                text-align: left;
-            }
+            // @include media('<desktop') {
+            //     text-align: left;
+            // }
             @include media('<tablet') {
                 text-align: center;
                 margin-bottom: 15px;
@@ -142,13 +152,14 @@
         padding: 25px 4.33% 20px;
         position: relative;
         background-color: $red;
-        @include media('<widescreen') {
-            min-height: 332px; 
-        }
-        @include media('<desktop') {
-            padding: 18px 5.5% 20px;
-        }
+        // @include media('<widescreen') {
+        //     min-height: 332px; 
+        // }
+        // @include media('<desktop') {
+        //     padding: 18px 5.5% 20px;
+        // }
         @include media('<tablet') {
+            min-height: 332px; 
             text-align: center;
             padding: 18px 2.5% 20px;
         }

@@ -118,9 +118,9 @@
             color: $white;
             margin: 0;
             font-weight: 400;
-            @include media('<desktop') {
-                font-size: 30px;
-            }
+            // @include media('<desktop') {
+            //     font-size: 30px;
+            // }
             @include media('<tablet') {
                 padding: 0 15px 0 35px;
                 font-size: 40px;
@@ -142,9 +142,9 @@
                 margin-bottom: 10px;
                 color: $dark;
                 font-weight: 600;
-                @include media('<desktop') {
-                    font-size: 18px;
-                }
+                // @include media('<desktop') {
+                //     font-size: 18px;
+                // }
                 @include media('<tablet') {
                     font-size: 24px;
                 }

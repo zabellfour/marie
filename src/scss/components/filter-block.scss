@@ -1,6 +1,9 @@
 
 .product-filter {
-    @include media('<desktop') {
+    // @include media('<desktop') {
+    //     padding: 0 2.6%;
+    // }
+    @include media('<tablet') {
         padding: 0 2.6%;
     }
     @include media('<phone') {
@@ -10,7 +13,10 @@
 
 .filter-head {
     padding: 30px 0;
-    @include media('<desktop') {
+    // @include media('<desktop') {
+    //     padding: 15px 0;
+    // }
+    @include media('<tablet') {
         padding: 15px 0;
     }
     @include media('<phone') {
@@ -57,7 +63,10 @@
     font-size: 15px;
     background-color: $red;
     padding: 36px 45px 16px;
-    @include media('<desktop') {
+    // @include media('<desktop') {
+    //     padding: 46px 30px 16px;
+    // }
+    @include media('<tablet') {
         padding: 46px 30px 16px;
     }
     .title {
@@ -68,7 +77,11 @@
     }
     &__column {
         width: 18%;
-        @include media('<desktop') {
+        // @include media('<desktop') {
+        //     width: 48%;
+        //     margin-bottom: 20px;
+        // }
+        @include media('<tablet') {
             width: 48%;
             margin-bottom: 20px;
         }
@@ -105,7 +118,10 @@
     .products-wrapper {
         position: relative;
         margin-bottom: 55px;
-        @include media('<desktop') {
+        // @include media('<desktop') {
+        //     margin-bottom: 40px;
+        // }
+        @include media('<tablet') {
             margin-bottom: 40px;
         }
     }
@@ -117,16 +133,20 @@
         height: 290px;
         margin-bottom: 1.33%;
         box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
-        @include media ('<widescreen') {
-            width: calc(20% - 12px);
-            margin: 0 15px 20px 0;
-        }
-        @include media ('<desktop') {
-            width: calc(25% - 12px);
-            min-height: 330px;
-        }
-        @include media ('<940px') {
+        // @include media ('<widescreen') {
+        //     width: calc(20% - 12px);
+        //     margin: 0 15px 20px 0;
+        // }
+        // @include media ('<desktop') {
+        //     width: calc(25% - 12px);
+        //     min-height: 330px;
+        // }
+        // @include media ('<940px') {
+        //     width: calc(33.33% - 10px);
+        // }
+        @include media ('<tablet') {
             width: calc(33.33% - 10px);
+            min-height: 330px;
         }
         @include media ('<640px') {
             width: calc(50% - 8px);
@@ -193,15 +213,19 @@
         display: block;
         width: 15.55%;
         margin: 0 0 1.33% 0;
-        @include media ('<widescreen') {
-            width: calc(20% - 12px);
-            margin: 0 0 15px 0;
-        }
-        @include media ('<desktop') {
-            width: calc(25% - 12px);
-        }
-        @include media ('<940px') {
+        // @include media ('<widescreen') {
+        //     width: calc(20% - 12px);
+        //     margin: 0 0 15px 0;
+        // }
+        // @include media ('<desktop') {
+        //     width: calc(25% - 12px);
+        // }
+        // @include media ('<940px') {
+        //     width: calc(33.33% - 10px);
+        // }
+        @include media ('<tablet') {
             width: calc(33.33% - 10px);
+            margin: 0 0 15px 0;
         }
         @include media ('<640px') {
             width: calc(50% - 8px);
@@ -231,17 +255,23 @@
         &:hover{
             transform:scale(1.03);
         }
-        @include media ('<widescreen') {
-            width: calc(20% - 12px);
-            margin: 0 0 15px 15px;
-        }
-        @include media ('<desktop') {
-            width: calc(25% - 11px);
-            min-height: 330px;
-        }
-        @include media ('<940px') {
+        // @include media ('<widescreen') {
+        //     width: calc(20% - 12px);
+        //     margin: 0 0 15px 15px;
+        // }
+        // @include media ('<desktop') {
+        //     width: calc(25% - 11px);
+        //     min-height: 330px;
+        // }
+        // @include media ('<940px') {
+        //     width: calc(33.33% - 10px);
+        //     padding: 36px 13px 10px 13px;
+        // }
+        @include media ('<tablet') {
             width: calc(33.33% - 10px);
             padding: 36px 13px 10px 13px;
+            min-height: 330px;
+            margin: 0 0 15px 15px;
         }
         @include media ('<640px') {
             width: calc(50% - 8px);
@@ -256,28 +286,37 @@
         }
         &:nth-child(6n) {
             margin-left: 0;
-            @include media ('<widescreen') {
-                margin-left: 15px;
-            }
+            // @include media ('<widescreen') {
+            //     margin-left: 15px;
+            // }
         }
         &:nth-child(5n) {
-            @include media ('<widescreen') {
-                margin-left: 0;
-            }
-            @include media ('<desktop') {
+            // @include media ('<widescreen') {
+            //     margin-left: 0;
+            // }
+            // @include media ('<desktop') {
+            //     margin-left: 15px;
+            // }
+            @include media ('<tablet') {
                 margin-left: 15px;
             }
         }
         &:nth-child(4n) {
-            @include media ('<desktop') {
-                margin-left: 0;
-            }
-            @include media ('<940px') {
+            // @include media ('<desktop') {
+            //     margin-left: 0;
+            // }
+            // @include media ('<940px') {
+            //     margin-left: 15px;
+            // }
+            @include media ('<tablet') {
                 margin-left: 15px;
             }
         }
         &:nth-child(3n) {
-            @include media ('<940px') {
+            // @include media ('<940px') {
+            //     margin-left: 0;
+            // }
+            @include media ('<tablet') {
                 margin-left: 0;
             }
             @include media ('<640px') {
@@ -308,7 +347,11 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            @include media ('<desktop') {
+            // @include media ('<desktop') {
+            //     width: 180px;
+            //     height: 150px;
+            // }
+            @include media ('<tablet') {
                 width: 180px;
                 height: 150px;
             }
@@ -333,7 +376,11 @@
             background-position: 50% 50%;
             background-repeat: no-repeat;
             text-align: center;
-            @include media ('<desktop') {
+            // @include media ('<desktop') {
+            //     font-size: 28px;
+            //     top: 16px;
+            // }
+            @include media ('<tablet') {
                 font-size: 28px;
                 top: 16px;
             }

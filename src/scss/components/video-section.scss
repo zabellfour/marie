@@ -1,6 +1,9 @@
 .video-section {
     padding: 0 4.5% 11%;
-    @include media('<desktop') {
+    // @include media('<desktop') {
+    //     padding: 0 4.5% 8%;
+    // }
+    @include media('<tablet') {
         padding: 0 4.5% 8%;
     }
     .h1 {
@@ -14,10 +17,13 @@
     &__inner {
         padding: 30px 0 245px;
         position: relative;
-        @include media('<1440px') {
-            padding: 30px 0 19.5%;
-        }
-        @include media('<desktop') {
+        // @include media('<1440px') {
+        //     padding: 30px 0 19.5%;
+        // }
+        // @include media('<desktop') {
+        //     padding: 30px 0 300px;
+        // }
+        @include media('<tablet') {
             padding: 30px 0 300px;
         }
     }
@@ -27,12 +33,15 @@
     .vide-holder {
         position: relative;
         z-index: 1;
-        @include media('<1440px') {
-            width: 80%;
-            margin: 0 auto;
-            @include media('<desktop') {
-                width: 100%;
-            }
+        // @include media('<1440px') {
+        //     width: 80%;
+        //     margin: 0 auto;
+        // }
+        // @include media('<desktop') {
+        //     width: 100%;
+        // }
+        @include media('<tablet') {
+            width: 100%;
         }
         .youtube-link {
             @include animate (opacity);
@@ -65,42 +74,53 @@
         position: relative;
         text-align: left;
         z-index: 1;
-        @include media('<1440px') {
-            width: 84%;
-        }
-        @include media('<desktop') {
-            width: 100%;
-        }
+        // @include media('<1440px') {
+        //     width: 84%;
+        // }
+        // @include media('<desktop') {
+        //     width: 100%;
+        // }
         @include media('<tablet') {
+            width: 100%;
             padding: 40px 30px 30px;
         }
         &__text {
             max-width: 70%;
             color: $white;
             font-size: 19px;
-            @include media('<1440px') {
-                font-size: 1.3vw;
-            }
-            @include media('<desktop') {
+            // @include media('<1440px') {
+            //     font-size: 1.3vw;
+            // }
+            // @include media('<desktop') {
+            //     font-size: 19px;
+            //     max-width: none;
+            // }
+            @include media('<tablet') {
                 font-size: 19px;
                 max-width: none;
             }
             .title {
                 font-weight: 600;
                 font-size: 38px;
-                @include media('<1440px') {
-                    font-size: 2.5vw;
-                }
-                @include media('<desktop') {
+                // @include media('<1440px') {
+                //     font-size: 2.5vw;
+                // }
+                // @include media('<desktop') {
+                //     font-size: 38px;
+                // }
+                @include media('<tablet') {
                     font-size: 38px;
                 }
             }
             .big {
                 font-size: 70px;
-                @include media('<1440px') {
-                    font-size: 5vw;
-                }
-                @include media('<desktop') {
+                // @include media('<1440px') {
+                //     font-size: 5vw;
+                // }
+                // @include media('<desktop') {
+                //     font-size: 70px;
+                // }
+                @include media('<tablet') {
                     font-size: 70px;
                 }
             }
@@ -121,7 +141,10 @@
                top: 40px;
                right: -14.33%;
             }
-            @include media('<desktop') {
+            // @include media('<desktop') {
+            //    display: none;
+            // }
+            @include media('<tablet') {
                display: none;
             }
         }
@@ -134,10 +157,23 @@
                 display: none;
             }
         }
-        @include media('<1440px') {
-            width: 22%;
-        }
-        @include media('<desktop') {
+        // @include media('<1440px') {
+        //     width: 22%;
+        // }
+        // @include media('<desktop') {
+        //     width: auto;
+        //     top: -30px;
+        //     left: -75px;
+        //     img {
+        //         &:last-child{
+        //             display: block;
+        //         }
+        //         &:first-child {
+        //             display: none;
+        //         }
+        //     }
+        // }
+        @include media('<tablet') {
             width: auto;
             top: -30px;
             left: -75px;
@@ -160,10 +196,24 @@
                 display: none;
             }
         }
-        @include media('<1440px') {
-            width: 26%;
-        }
-        @include media('<desktop') {
+        // @include media('<1440px') {
+        //     width: 26%;
+        // }
+        // @include media('<desktop') {
+        //     width: auto;
+        //     top: -45px;
+        //     right: -67px;
+        //     transform: rotate(12deg);
+        //     img {
+        //         &:last-child{
+        //             display: block;
+        //         }
+        //         &:first-child {
+        //             display: none;
+        //         }
+        //     }
+        // }
+        @include media('<tablet') {
             width: auto;
             top: -45px;
             right: -67px;
@@ -182,10 +232,15 @@
         top: 60%;
         transform: translateY(-50%);
         left: -95px;
-        @include media('<1440px') {
-            width: 28%;
-        }
-        @include media('<desktop') {
+        // @include media('<1440px') {
+        //     width: 28%;
+        // }
+        // @include media('<desktop') {
+        //     width: auto;
+        //     top: 43%;
+        //     left: -180px;
+        // }
+        @include media('<tablet') {
             width: auto;
             top: 43%;
             left: -180px;
@@ -194,11 +249,15 @@
     .image-pos-4 {
         bottom: -160px;
         left: -50;
-        @include media('<1440px') {
-            width: 16%;
-            left: -3%;
-        }
-        @include media('<desktop') {
+        // @include media('<1440px') {
+        //     width: 16%;
+        //     left: -3%;
+        // }
+        // @include media('<desktop') {
+        //     width: auto;
+        //     bottom: -120px;
+        // }
+        @include media('<tablet') {
             width: auto;
             bottom: -120px;
         }
@@ -209,16 +268,18 @@
     .image-pos-5 {
         left: 18%;
         bottom: 25px;
-        @include media('<1440px') {
-            width: 18%;
-        }
-        @include media('<desktop') {
-            width: auto;
-            left: -13%;
-            bottom: 45px;
-        }
+        // @include media('<1440px') {
+        //     width: 18%;
+        // }
+        // @include media('<desktop') {
+        //     width: auto;
+        //     left: -13%;
+        //     bottom: 45px;
+        // }
         @include media('<tablet') {
             left: 44px;
+            width: auto;
+            bottom: 45px;
         }
         @include media('<phone') {
             width: 45%;
@@ -227,16 +288,18 @@
     .image-pos-6 {
         left: 36%;
         bottom: 0;
-        @include media('<1440px') {
-            width: 13%;
-        }
-        @include media('<desktop') {
-            width: auto;
-            left: 25%;
-            bottom: 42px;
-        }
+        // @include media('<1440px') {
+        //     width: 13%;
+        // }
+        // @include media('<desktop') {
+        //     width: auto;
+        //     left: 25%;
+        //     bottom: 42px;
+        // }
         @include media('<tablet') {
+            width: auto;
             left: 260px;
+            bottom: 42px;
         }
         @include media('<phone') {
             width: 34%;
@@ -246,14 +309,14 @@
     .image-pos-7 {
         right: -55px;
         bottom: -85px;
-        @include media('<1440px') {
-            width: 55%;
-        }
-        @include media('<desktop') {
-            width: 85%;
-            right: -315px;
-            bottom: 60px;
-        }
+        // @include media('<1440px') {
+        //     width: 55%;
+        // }
+        // @include media('<desktop') {
+        //     width: 85%;
+        //     right: -315px;
+        //     bottom: 60px;
+        // }
         @include media('<tablet') {
             width: 90%;
             right: -280px;

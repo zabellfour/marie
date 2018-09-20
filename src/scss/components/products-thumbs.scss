@@ -1,6 +1,9 @@
 .products-thumbs {
 	padding: 0 4.5%;
-	@include media('<desktop') {
+	// @include media('<desktop') {
+ //        padding: 0 2.6%;
+ //    }
+ 	@include media('<tablet') {
         padding: 0 2.6%;
     }
     @include media('<phone') {
@@ -11,14 +14,20 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		@include media('<desktop') {
+		// @include media('<desktop') {
+		// 	padding-bottom: 55px;
+		// }
+		@include media('<tablet') {
 			padding-bottom: 55px;
 		}
 	}
 	&__title {
 		font-size: 30px;
 		margin-bottom: 100px;
-		@include media('<desktop') {
+		// @include media('<desktop') {
+		// 	margin-bottom: 110px;
+		// }
+		@include media('<tablet') {
 			margin-bottom: 110px;
 		}
 	}
@@ -36,14 +45,17 @@
 		&:hover{
 			transform: scale(1.03);
 		}
-		@include media('<desktop') {
-	        width: 32%;
-	        &:last-child {
-	        	display: none;
-	        }
-	    }
+		// @include media('<desktop') {
+	 //        width: 32%;
+	 //        &:last-child {
+	 //        	display: none;
+	 //        }
+	 //    }
 	    @include media('<tablet') {
 			width: 48%;
+			&:last-child {
+	        	display: none;
+	        }
 			&:nth-child(3) {
 	        	display: none;
 	        }
@@ -63,7 +75,10 @@
 			height: 195px;
 			max-width: 214px;
 			margin: 0 auto 45px;
-			@include media('<desktop') {
+			// @include media('<desktop') {
+			// 	height: 150px;
+			// }
+			@include media('<tablet') {
 				height: 150px;
 			}
 			img {
