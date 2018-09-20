@@ -114,7 +114,7 @@ body {
 //         transform: translate(-50%, -50%);
 //         transform-origin: center center;
 // }
-body.font-resp {
+body{
     padding-top: 0;
     .wrapper {
         padding: 90px 0 0 0;
@@ -150,15 +150,6 @@ body.font-resp {
 
 .section-headline {}
 
-@keyframes zoom103 {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.03);
-    }
-}
-
 @keyframes swing {
     20% {
         transform: rotate(5deg);
@@ -179,6 +170,8 @@ body.font-resp {
 
 .swing {
     animation-name: swing;
+    opacity:1 !important;
+    visibility: visible !important; 
 }
 
 @keyframes slideInRight {
@@ -198,4 +191,93 @@ body.font-resp {
     animation-name: slideInRight;
     opacity: 0;
     animation-fill-mode: forwards;
+}
+
+.animation-tablet {
+    @include media('>=tablet') {
+        transform: scale(1) !important;
+    }
+}
+
+@keyframes zoom103 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+.thumb-col .zoom103 {
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation-fill-mode: forwards;
+    background-color: $white;
+    @include media('<tablet') {
+        animation-name: zoom103;
+    }
+    transform: scale(1) !important;
+}
+
+.product-thumb.zoom103 {
+    @include media('>=tablet') {
+        
+        @include animate(transform) ;
+        transform: scale(1) !important;
+        opacity: 1 !important ;
+        visibility: visible !important;
+        &:hover {
+            transform: scale(1.03) !important;
+        }
+    }
+    @include media('<tablet') {
+        opacity: 1 !important;
+        visibility: visible !important;
+        animation-fill-mode: forwards;
+        background-color: $white;
+        animation-name: zoom103;
+        transform: scale(1) !important;
+    }
+}
+
+.inspiration-col.zoom103 {
+    @include media('>=tablet') {
+        
+        @include animate(transform) ;
+        transform: scale(1) !important;
+        opacity: 1 !important ;
+        visibility: visible !important;
+        &:hover {
+            transform: scale(1.03) !important;
+        }
+    }
+    @include media('<tablet') {
+        opacity: 1 !important;
+        visibility: visible !important;
+        animation-fill-mode: forwards;
+        background-color: $white;
+        animation-name: zoom103;
+        transform: scale(1) !important;
+    }
+}
+
+.products-row__item.text-center.wow.zoom103{
+    @include media('>=tablet') {
+        
+        @include animate(transform box-shadow) ;
+        transform: scale(1) !important;
+        opacity: 1 !important ;
+        visibility: visible !important;
+        &:hover {
+            transform: scale(1.03) !important;
+        }
+    }
+    @include media('<tablet') {
+        opacity: 1 !important;
+        visibility: visible !important;
+        animation-fill-mode: forwards;
+        background-color: $white;
+        animation-name: zoom103;
+        transform: scale(1) !important;
+    }
 }

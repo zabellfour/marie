@@ -30,7 +30,7 @@ import common from './modules/common';
                 scale = 1;
                 mobileDelta = 0;
             }
-            $(".font-resp .wrapper").css('transform', 'scale(' + scale + ')').css('margin', -mobileDelta/2);
+            $(".wrapper").css('transform', 'scale(' + scale + ')').css('margin', -mobileDelta/2);
             
 
         });

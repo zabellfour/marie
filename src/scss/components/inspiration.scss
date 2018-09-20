@@ -1,6 +1,9 @@
 .inspiration-block {
     padding: 0 17px;
     @include media('<desktop') {
+      //  padding: 0;
+    }
+    @include media('<tablet') {
         padding: 0;
     }
     @include media('<phone') {
@@ -11,6 +14,9 @@
         margin: 0 auto 50px;
         padding-top: 0;
         @include media('<desktop') {
+           // margin-bottom: 30px;
+        }
+        @include media('<tablet') {
             margin-bottom: 30px;
         }
         @include media('<640px') {
@@ -23,6 +29,10 @@
             justify-content: space-between;
             margin-bottom: 80px;
             @include media('<desktop') {
+                // flex-wrap: wrap;
+                // margin-bottom: 27px;
+            }
+            @include media('<tablet') {
                 flex-wrap: wrap;
                 margin-bottom: 27px;
             }
@@ -36,6 +46,12 @@
             align-items: center;
             justify-content: center;
             @include media('<desktop') {
+                // width: 32%;
+                // padding-top: 44px;
+                // margin-bottom: 20px;
+                // min-height: 327px;
+            }
+            @include media('<tablet') {
                 width: 32%;
                 padding-top: 44px;
                 margin-bottom: 20px;
@@ -117,18 +133,24 @@
   }
     .gallery-item:last-child {
         @include media('<desktop') {
+           // display: none;
+        }
+        @include media('<tablet') {
             display: none;
         }
     }
     .additional-indents {
-        @include media('<desktop') {
-        padding:0 ;
+        // @include media('<desktop') {
+        //     padding:0 ;
+        // }
+        @include media('<tablet') {
+            padding:0 ;
         }
     }
     .container{
-      @include media('<desktop') {
-       padding: 0 15px;
-      }
+    //   @include media('<desktop') {
+    //    padding: 0 15px;
+    //   }
       @include media('<tablet') {
         padding:0;
       }
