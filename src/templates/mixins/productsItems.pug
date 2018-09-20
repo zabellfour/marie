@@ -1,7 +1,7 @@
 mixin productsItems(items)
 	.products-row
 		each item in items
-			a(href=`${item.Link}`).products-row__item.text-center
+			a(href=`${item.Link}`).products-row__item.text-center.wow.zoom103.animation-tablet(data-wow-duration="0.8s" data-wow-delay="s" data-wow-offset="250")
 				if item.label
 					span.label #{item.label}
 				if item.imageSrc
