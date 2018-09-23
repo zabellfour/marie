@@ -78,6 +78,9 @@
 			top: 13%;
 			font-size: 16px;
 		}
+		@include media('<phone') {
+			font-size: 14px;
+		}
 	}
 	.title {
 		width: 100%;
