@@ -4,10 +4,13 @@
     left: 0;
     right: 0;
     background-color: $white;
-    padding: 17px 0;
+    padding: .9vw 0;
     max-width: 1920;
     margin: 0 auto;
     z-index: 100;
+    @include media('<tablet') {
+        padding: 17px 0;
+    }
     &-inner {
         display: flex;
         align-items: center;
@@ -35,8 +38,8 @@
             display: block;
         }
         @include media('<phone') {
-          right: 10px;
-          font-size: 12px;
+            right: 10px;
+            font-size: 12px;
         }
         .open-btn {
             opacity: 1;
@@ -92,8 +95,8 @@
         }
     }
     .logo {
-        width: 165px;
-        margin-right: 48px;
+        width: 8.55vw;
+        margin-right: 2.5vw;
         padding: 0;
         @include animate(opacity);
         // @include media('<widescreen') {
@@ -104,10 +107,10 @@
         //     margin-right: 20px;
         // }
         @include media('<tablet') {
-          //   margin-right: 0;
-          margin-right: 20px;
-              width: 161px;
-         }
+            //   margin-right: 0;
+            margin-right: 20px;
+            width: 161px;
+        }
         &:hover {
             opacity: .8;
         }
@@ -121,7 +124,8 @@
         text-decoration: none;
         color: $black;
         font-size: 14px;
-        margin-right: 47px;
+        margin-right: 2.5vw;
+        font-size: .75vw;
         @include animate(color);
         // @include media('<widescreen') {
         //     margin-right: 30px;
@@ -131,10 +135,10 @@
         //     font-size: 12px;
         // }
         @include media('<tablet') {
-        //remove   
-                margin-right: 17px;
-                font-size: 12px;
-          // --remove
+            //remove   
+            margin-right: 17px;
+            font-size: 12px;
+            // --remove
             color: $white;
             font-size: 22px;
             padding: 15px;
@@ -158,12 +162,12 @@
                 flex-direction: row-reverse;
             }
             i {
-                font-size: 18px;
+                font-size: 1.1vw;
                 margin-left: 6px;
                 color: $red;
                 @include media('<tablet') {
                     color: inherit;
-                    margin-right:10px;
+                    margin-right: 10px;
                 }
             }
         }
@@ -202,9 +206,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-  
         color: $white;
-        padding:40px 0 21px;
+        padding: 40px 0 21px;
         a {
             margin: 0;
         }

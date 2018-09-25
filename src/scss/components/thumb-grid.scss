@@ -20,6 +20,17 @@
         flex-wrap: wrap;
     }
     .thumb-col {
+        @include media('<tablet') {
+            
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+        .wow{
+            @include media('<tablet') {
+                width:100%;
+            }
+        }
         &[class^="col-"] {
             @include media('<tablet') {
                 display: flex !important;
@@ -40,7 +51,10 @@
             transform: scale(1.03);
         }
         &:hover {
-            transform: scale(1.03)
+            @include media('>=tablet') {
+                transform: scale(1.03)
+            }
+
         }
         a {
             text-decoration: none;
@@ -121,6 +135,7 @@
             background-color: $red;
             padding: 0px 21px;
             color: $white;
+            width: 100%;
             margin: 0;
             font-weight: 400;
             // @include media('<desktop') {

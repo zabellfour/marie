@@ -4,6 +4,7 @@
 // Feel free with using ES6 here.
 
 import common from './modules/common';
+import { wrap } from 'module';
 
 (($) => {
     'use strict';
@@ -18,7 +19,10 @@ import common from './modules/common';
         $(document).ready(function() {
             $(window).resize();
         });
-
+        // $('body').matchHeight({
+        //     target: $('.wrapper'),
+        //     property: 'min-height',
+        // });
         // $(window).load(function() {
         //     common.masonry();
         // });
@@ -28,15 +32,19 @@ import common from './modules/common';
             var w = $(window).width() + mobileDelta;
             var h = $(window).height();
             var scale;
+            var hw = $('.wrapper').height();
             if (w >= 768 && w < 1920) {
                 var wspec = 1920;
                 scale = w / wspec;
+                console.log(hw)
+     //           $('body').height(hw * scale);
+                
             } else {
                 scale = 1;
                 mobileDelta = 0;
             }
-            $(".wrapper").css('transform', 'scale(' + scale + ')').css('margin', -mobileDelta/2);
-            
+            $(".wrapper").css('transform', 'scale(' + scale + ')').css('margin', -mobileDelta / 2);
+
 
         });
 

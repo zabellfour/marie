@@ -8,4 +8,5 @@ module.exports = [
   './node_modules/wowjs/dist/wow.js',
   './node_modules/masonry-layout/dist/masonry.pkgd.js',
   './node_modules/imagesloaded/imagesloaded.pkgd.js',
+  './node_modules/jquery-match-height/dist/jquery.matchHeight.js',
 ];

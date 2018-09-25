@@ -176,6 +176,7 @@
             }
             @include media('<tablet') {
                 right: 5px;
+                margin: 0 auto;
             }
             @include media('<640px') {
                 margin: 0 -35px;
@@ -209,7 +210,7 @@
             margin-right: 63px;
         }
         @include media('<640px') {
-            padding-top: 251px;
+            padding-top: 173px;
             margin-right: 0;
         }
         .hand-img {
@@ -230,13 +231,17 @@
             // }
             @include media('<tablet') {
                 top: -8px;
-                left: -273px;
+                left: -177px;
+            }
+            @include media('<640px') {
+                left: -190px;
+                width:761px;
             }
             @include media('<phone') {
-                left: -332px;
+                left: -232px;
             }
-            @include media('<400px') {
-                left: -402px;
+            @include media('<430px') {
+                left: -292px;
             }
             .card-title {
                 position: absolute;
@@ -312,7 +317,7 @@
             flex-direction: column;
         }
         .img-holder {
-            margin: -22% 0 20px -13%;
+            margin: -22% 0 20px 0%;
             @include media('<desktop') {
                 // margin: 0;
             }
@@ -447,8 +452,9 @@
                 // width: 230px;
             }
             @include media('<tablet') {
-                left: 29px;
+                left: 22px;
                 width: 230px;
+                top:15px;
             }
             @include media('<640px') {
                 left: 50%;

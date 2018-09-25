@@ -114,10 +114,14 @@ body {
 //         transform: translate(-50%, -50%);
 //         transform-origin: center center;
 // }
-body{
+
+body {
     padding-top: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
     .wrapper {
-        padding: 90px 0 0 0;
+        padding: 92px 0 0 0;
         @include media('>=tablet') {
             position: absolute;
             left: calc(50% - 960px);
@@ -125,6 +129,9 @@ body{
             /* background: url(960_template_download.png) center top repeat-y; */
             transform: scale(1);
             transform-origin: 50% 0%;
+        }
+        @include media('<tablet') {
+            padding-top: 89px;
         }
     }
     min-height: 100%;
@@ -147,7 +154,12 @@ body{
     opacity: 0;
     animation-fill-mode: forwards;
 }
-
+.merged-thumbs .animation-opacity {
+    @include media('>=tablet') {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
 .section-headline {}
 
 @keyframes swing {
@@ -170,8 +182,8 @@ body{
 
 .swing {
     animation-name: swing;
-    opacity:1 !important;
-    visibility: visible !important; 
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 @keyframes slideInRight {
@@ -208,7 +220,8 @@ body{
     }
 }
 
-.thumb-col .zoom103, .grid-item .zoom103 {
+.thumb-col .zoom103,
+.grid-item .zoom103 {
     opacity: 1 !important;
     visibility: visible !important;
     animation-fill-mode: forwards;
@@ -221,10 +234,9 @@ body{
 
 .product-thumb.zoom103 {
     @include media('>=tablet') {
-        
-        @include animate(transform) ;
+        @include animate(transform);
         transform: scale(1) !important;
-        opacity: 1 !important ;
+        opacity: 1 !important;
         visibility: visible !important;
         &:hover {
             transform: scale(1.03) !important;
@@ -242,10 +254,9 @@ body{
 
 .inspiration-col.zoom103 {
     @include media('>=tablet') {
-        
-        @include animate(transform) ;
+        @include animate(transform);
         transform: scale(1) !important;
-        opacity: 1 !important ;
+        opacity: 1 !important;
         visibility: visible !important;
         &:hover {
             transform: scale(1.03) !important;
@@ -261,12 +272,11 @@ body{
     }
 }
 
-.products-row__item.text-center.wow.zoom103{
+.products-row__item.text-center.wow.zoom103 {
     @include media('>=tablet') {
-        
-        @include animate(transform box-shadow) ;
+        @include animate(transform box-shadow);
         transform: scale(1) !important;
-        opacity: 1 !important ;
+        opacity: 1 !important;
         visibility: visible !important;
         &:hover {
             transform: scale(1.03) !important;
