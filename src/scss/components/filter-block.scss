@@ -30,6 +30,9 @@
 .filter-title {
     font-size: 30px;
     font-weight: 600;
+    .title-row {
+        font-weight: 600;
+    }
 }
 
 .search-field {
@@ -165,8 +168,12 @@
             position: absolute;
             top: 25px;
             width: calc(100% - 20px);
+            min-height: 160px;
             left: 50%;
             padding: 27px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transform: translateX(-50%);
             background: transparent;
             background-image: url(../images/name-holder.svg);
@@ -186,8 +193,8 @@
             position: relative;
             margin-bottom: 0;
             .cursive {
-                font-size: 35px;
-                line-height: .6;
+                font-size: 40px;
+                line-height: .7;
             }
             &-row {
                 position: relative;

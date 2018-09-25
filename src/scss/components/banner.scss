@@ -43,10 +43,10 @@
 			@include media('<tablet') {
 				height: 100%;
 				object-fit: cover;
-				&:last-child {
+				&:first-child {
 					display: none;
 				}
-				&:nth-child(2){
+				&:last-child {
 					display: block;
 				}
 			}
@@ -74,11 +74,12 @@
 		// }
 		@include media('<tablet') {
 			width: 100%;
-			max-width: 530px;
+			max-width: 385px;
 			top: 13%;
 			font-size: 16px;
 		}
 		@include media('<phone') {
+			padding: 0 5px;
 			font-size: 14px;
 		}
 	}
