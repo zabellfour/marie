@@ -38,7 +38,7 @@
         }
         .img-holder {
             max-width: 128px;
-            margin: 0 auto 5px;
+            margin: 0 auto 7px;
             // @include media('<desktop') {
             //     max-width: 160px;
             //     margin: 10px auto 20px;
@@ -54,6 +54,7 @@
         }
         p {
             line-height: 1.4;
+            margin-bottom: 10px;
         }
         &:after {
             content: '';

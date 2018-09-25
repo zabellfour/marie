@@ -81,7 +81,9 @@
             }
         }
     }
-    .social-block {
+}
+
+.social-block {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -127,4 +129,3 @@
             transform: translateY(-5px);
         }
     }
-}

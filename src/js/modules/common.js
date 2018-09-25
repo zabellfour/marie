@@ -41,6 +41,23 @@ var common = {
         });
         wow.init();
 
+    },
+
+    masonry: function() {
+        var $grid = $('.masonry-grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            horizontalOrder: true,
+            percentPosition: true,
+            gutter: 20
+        });
+
+        // $grid.masonry();
+        
+        $grid.imagesLoaded().progress( function() {
+          $grid.masonry();
+        });
+
     }
 
 };

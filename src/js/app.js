@@ -14,9 +14,14 @@ import common from './modules/common';
         common.heroSlider();
         common.accordion();
         common.animation();
+        common.masonry();
         $(document).ready(function() {
             $(window).resize();
         });
+
+        // $(window).load(function() {
+        //     common.masonry();
+        // });
 
         $(window).resize(function() {
             var mobileDelta = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())) ? 0 : 17;
