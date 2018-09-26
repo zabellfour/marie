@@ -2,6 +2,12 @@
 	padding: 55px 4.6% 85px;
 	.section-headline {
 		margin-bottom: 15px;
+		 .h1 {
+		 	font-size: 88px;
+		 }
+		 .h4 {
+			font-weight: 400;
+		 }
 	}
 	.social-block {
 		margin-bottom: 40px;
@@ -18,6 +24,7 @@
 		margin-bottom: 20px;
 		@include media('<tablet') {
 			width: calc(50% - 10px);
+			margin-bottom: 30px;
 		}
 		@include media('<650px') {
 			width: 100%;

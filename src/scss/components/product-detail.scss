@@ -49,7 +49,7 @@
     &__text {
         float: left;
         width: calc(100% - 362px);
-        padding: 155px 15px 15px 40px;
+        padding: 135px 15px 15px 40px;
         font-size: 16px;
         // @include media('<desktop') {
         //     float: none;
@@ -69,6 +69,7 @@
             font-size: 52px;
             margin-bottom: 0;
             line-height: 1;
+            font-weight: 600;
             @include media('<tablet') {
                 font-size: 36px;
             }
@@ -92,8 +93,8 @@
         // @include media('<desktop') {
         //     width: 40%;
         // }
-        @include media('<tablet') {
-            width: 40%;
+        @include media('<650px') {
+            width: 60%;
         }
     }
     &__footer {
@@ -101,11 +102,12 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 70px;
-        // @include media('<desktop') {
-        //     margin-bottom: 40px;
-        // }
         @include media('<tablet') {
             margin-bottom: 25px;
+            font-size: 13px;
+        }
+        @include media('<650px') {
+            font-size: 14px;
         }
     }
     &__info {
@@ -116,12 +118,16 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        // @include media('<widescreen') {
-        //     width: 63%;
-        // }
         @include media('<tablet') {
+            width: 63%;
+        }
+        @include media('<650px') {
             width: 100%;
             margin-bottom: 20px;
+        }
+        @include media('<414px') {
+            height: auto;
+            padding: 15px 0;
         }
         &:first-child {
             .item-info {
@@ -132,8 +138,11 @@
                 // @include media('<desktop') {
                 //    margin: 0 2.5%;
                 // }
-                @include media('<tablet') {
+                @include media('<650px') {
                    margin: 0 2.5%;
+                }
+                @include media('<414px') {
+                    margin-bottom: 10px;
                 }
                 i {
                     color: $red;
@@ -145,10 +154,10 @@
         &:last-child {
             width: calc(25% - 20px);
             align-content: center;
-            // @include media('<widescreen') {
-            //    width: calc(37% - 20px);
-            // }
             @include media('<tablet') {
+               width: calc(37% - 20px);
+            }
+            @include media('<650px') {
                 width: 100%;
             }
             .item-info {

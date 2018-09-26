@@ -23,9 +23,37 @@ import { wrap } from 'module';
         //     target: $('.wrapper'),
         //     property: 'min-height',
         // });
-        // $(window).load(function() {
-        //     common.masonry();
-        // });
+        $(window).on('load', function() {
+
+            let productsWrapper = $('.products-wrapper');
+
+            if (!$(productsWrapper).length) {
+                return;
+            }
+
+            setLabelHeight();
+
+            let resizeId;
+            $(window).on('resize',function() {
+                clearTimeout(resizeId);
+                resizeId = setTimeout(doneResizing, 500);
+            });
+
+            function doneResizing(){
+                setLabelHeight();
+            }
+
+            function setLabelHeight(){
+                 productsWrapper.each(function(){
+
+                    let height = $(this).find('.products-row__item:first-child').outerHeight(),
+                        el = $(this).find('.products-category-label');
+
+                    el.outerHeight(height);
+                });
+            }
+
+        });
 
         $(window).resize(function() {
             var mobileDelta = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())) ? 0 : 17;
@@ -36,7 +64,7 @@ import { wrap } from 'module';
             if (w >= 768 && w < 1920) {
                 var wspec = 1920;
                 scale = w / wspec;
-                console.log(hw)
+                // console.log(hw);
      //           $('body').height(hw * scale);
                 
             } else {

@@ -39,7 +39,17 @@ var common = {
             },
             scrollContainer: null
         });
+
+        var wowSwing = new WOW({
+            boxClass: 'wowSwing',
+            offset: 120,
+            mobile: true,
+            live: true,
+            scrollContainer: null
+        });
+
         wow.init();
+        wowSwing.init();
 
     },
 
@@ -53,7 +63,6 @@ var common = {
         });
 
         // $grid.masonry();
-        
         $grid.imagesLoaded().progress( function() {
           $grid.masonry();
         });

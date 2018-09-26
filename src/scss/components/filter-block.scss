@@ -182,6 +182,7 @@
             background-repeat: no-repeat;
             @include media ('<tablet') {
                 top: 42px;
+                width: calc(100% - 15px);
             }
         }
         .title {
@@ -195,6 +196,9 @@
             .cursive {
                 font-size: 40px;
                 line-height: .7;
+                @include media('<tablet') {
+                    line-height: .5;
+                }
             }
             &-row {
                 position: relative;
@@ -204,9 +208,15 @@
                 font-size: 16px;
                 &:first-child {
                     top: -5px;
+                    @include media('<tablet') {
+                        top: -3px;
+                    }
                 }
                 &:last-child {
                     bottom: -5px;
+                    @include media('<tablet') {
+                        bottom: -3px;
+                    }
                 }
             }
         }
@@ -355,12 +365,13 @@
             margin: 0;
         }
         .image-holder {
-            width: 148px;
-            height: 148px;
+            // width: 148px;
+            // height: 148px;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            // overflow: hidden;
+            margin-bottom: 5px;
             // @include media ('<desktop') {
             //     width: 180px;
             //     height: 150px;

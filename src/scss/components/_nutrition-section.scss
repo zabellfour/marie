@@ -60,7 +60,7 @@
         @include media('<tablet') {
             display: flex;
             flex-wrap: wrap;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
         .top-text {
             width: 50%;
@@ -199,6 +199,18 @@
                         font-size: 3.2vw;
                         margin-bottom: 5vw;
                     }
+                }
+            }
+            .note-decor-image {
+                position: absolute;
+                bottom: 60px;
+                left: -15px;
+                @include media('<tablet') {
+                    left: -15%;
+                    bottom: 33%;
+                }
+                @include media('<650px') {
+                    display: none;
                 }
             }
         }
@@ -348,7 +360,7 @@
                         
                     }
                     @include media('<650px') {
-                        width: 100%;
+                        width: 95%;
                     }
                 }
             }
@@ -485,11 +497,11 @@
                     width: 60%;
                 }
                 @include media('<650px') {
-                    width: 80%;
-                    transform: translateX(0);
+                    width: 85%;
+                    transform: translateX(-20px);
                 }
                 @include media('<phone') {
-                    width: 100%;
+                    
                 }
             }
             .sticker-bg-text {
@@ -575,7 +587,7 @@
                     right: 0;
                     bottom: 0;
                     padding: 75px 10% 12% 10%;
-                    transform: translate(45px, -70px);
+                    transform: translate(70px, -70px);
                     margin-bottom: -70px;
                 }
                 @include media('<phone') {
