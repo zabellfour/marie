@@ -34,17 +34,17 @@ import { wrap } from 'module';
             setLabelHeight();
 
             let resizeId;
-            $(window).on('resize',function() {
+            $(window).on('resize', function() {
                 clearTimeout(resizeId);
                 resizeId = setTimeout(doneResizing, 500);
             });
 
-            function doneResizing(){
+            function doneResizing() {
                 setLabelHeight();
             }
 
-            function setLabelHeight(){
-                 productsWrapper.each(function(){
+            function setLabelHeight() {
+                productsWrapper.each(function() {
 
                     let height = $(this).find('.products-row__item:first-child').outerHeight(),
                         el = $(this).find('.products-category-label');
@@ -54,6 +54,7 @@ import { wrap } from 'module';
             }
 
         });
+
 
         $(window).resize(function() {
             var mobileDelta = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())) ? 0 : 17;
@@ -65,12 +66,21 @@ import { wrap } from 'module';
                 var wspec = 1920;
                 scale = w / wspec;
                 // console.log(hw);
-     //           $('body').height(hw * scale);
-                
+                //           $('body').height(hw * scale);
+                isIEorEDGE() ? $(document).scroll(function(e) {
+                    e.preventDefault()
+                    var hw = ($('.footer')[0].offsetTop - $('.footer').height() * 1.65) * scale;
+                    var maxScroll = hw;
+                    if ($(document).scrollTop() > maxScroll) {
+                        $(document).scrollTop(maxScroll)
+                    }
+                    console.log($(document).scrollTop(), hw);
+                }) : '';
             } else {
                 scale = 1;
                 mobileDelta = 0;
             }
+
             $(".wrapper").css('transform', 'scale(' + scale + ')').css('margin', -mobileDelta / 2);
 
 
