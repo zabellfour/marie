@@ -10,7 +10,7 @@
     }
     .owl-dots {
         position: absolute;
-        bottom: 213px;
+        bottom: 11.36vw;
         left: 50%;
         transform: translateX(-50%);
         @include media('<desktop') {
@@ -32,9 +32,9 @@
                 }
             }
             span {
-                width: 75px;
-                height: 4px;
-                border-radius: 4px;
+                width: 4vw;
+                height: 0.21vw;
+                border-radius:0.21vw;
                 background-color: #eee !important;
                 border: none;
                 display: block;
@@ -58,16 +58,17 @@
     }
     .text-holder {
         position: absolute;
-        top: calc(100% - 95px);
-        max-width: 620px;
+        top: calc(100% - 5vw);
+        max-width: 33vw;
         width: 100%;
         left: 0;
         right: 0;
         margin: 0 auto;
         background-color: $white;
-        padding: 50px 45px 26px;
+        padding:2.6vw 2.3vw 1.1vw;
         text-align: center;
-        min-height: 203px;
+        min-height: 10.8vw;
+        font-size: 1vw;
         @include media('<widescreen') {
          //   font-size: 15px;
         }
@@ -96,8 +97,8 @@
         .btn {
             position: absolute;
             bottom: -24px;
-            padding: 23px 10px;
-            min-width: 174px;
+            padding: 1.4px 0.7px;
+            min-width: 9.28px;
             left: 50%;
             transform: translateX(-50%);
             &:before {
@@ -127,7 +128,7 @@
         }
         .slide-title {
             display: block;
-            font-size: 29px;
+            font-size:1.54px;
             margin-bottom: 5px;
             font-weight: 600;
             @include media('<tablet') {
@@ -164,7 +165,7 @@
         }
     }
     .owl-stage-outer {
-        padding-bottom: 162px;
+        padding-bottom: 8.64px;
         overflow: visible;
         @include media('<tablet') {
             padding-bottom: 138px;
