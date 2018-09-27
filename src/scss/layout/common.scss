@@ -1,8 +1,8 @@
 .wrapper {
+ 
+    overflow: hidden;
     max-width: 1920px;
     margin: 0 auto;
-    width: 100%;
-    overflow: hidden;
 }
 
 .container {
@@ -121,15 +121,8 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     .wrapper {
-        padding: 92px 0 0 0;
-        @include media('>=tablet') {
-            position: absolute;
-            left: calc(50% - 960px);
-            width: 1920px;
-            /* background: url(960_template_download.png) center top repeat-y; */
-            transform: scale(1);
-            transform-origin: 50% 0%;
-        }
+        padding: 4.8vw 0 0 0;
+
         @include media('<tablet') {
             padding-top: 89px;
         }

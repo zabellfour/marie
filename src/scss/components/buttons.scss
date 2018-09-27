@@ -1,40 +1,52 @@
 .btn {
-	@include animate (color background-color);
-	display: flex;
-	width: 100%;
-	max-width: 176px;
-	justify-content: center;
-	align-items: center;
-	height: 46px;
-	padding: 0 21px;
-	border: 2px solid transparent;
-	border-radius: 50px;
-	margin: 0 auto;
-	font-size: 13px;
-	font-weight: 700;
-	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: .6px;
-	text-align: center;
-	&-red {
-		background-color: $red;
-		color: $white;
-		border-color: $red;
-		&:hover {
-			background-color: $white;
-			color: $red;
-		}
-	}
-	&-white {
-		background-color: $white;
-		color: $red;
-		border-color: $white;
-		&:hover {
-			background-color: $red;
-			color: $white;
-		}
-	}
-	&-long {
-		max-width: 375px;
-	}
+    @include animate (color background-color);
+    display: flex;
+    width: 100%;
+    max-width: 12.23vw;
+    justify-content: center;
+    align-items: center;
+    height: 3.2vw;
+    padding: 0 1.46vw;
+    border: 0.14vw solid transparent;
+    border-radius: 3.47vw;
+    margin: 0 auto;
+    font-size: 0.9vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .6px;
+    text-align: center;
+    @include media('<tablet') {
+        max-width: 176px;
+        height: 46px;
+        padding: 0 21px;
+        border: 2px solid transparent;
+        border-radius: 50px; 
+        font-size: 13px; 
+        letter-spacing: .6px;
+    }
+    &-red {
+        background-color: $red;
+        color: $white;
+        border-color: $red;
+        &:hover {
+            background-color: $white;
+            color: $red;
+        }
+    }
+    &-white {
+        background-color: $white;
+        color: $red;
+        border-color: $white;
+        &:hover {
+            background-color: $red;
+            color: $white;
+        }
+    }
+    &-long {
+			max-width: 26.06vw;
+				@include media('<tablet') {
+					max-width: 375px;
+				}
+    }
 }

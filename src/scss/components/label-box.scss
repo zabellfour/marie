@@ -1,57 +1,81 @@
 .label-box {
-    max-width: 300px;
+    max-width: 20.85vw;
     text-align: center;
     position: relative;
+    @include media('<tablet') {
+        max-width: 300px;
+    }
     &:before {
         content: '';
         position: absolute;
-        top: 65px;
-        bottom: 65px;
+        top: 4.52vw;
+        bottom: 4.52vw;
         left: 0;
         right: 0;
         background-color: $white;
+        @include media('<tablet') {
+            top: 65px;
+            bottom: 65px;
+        }
     }
     &:after {
         position: absolute;
-        bottom: 12px;
+        bottom: 0.83vw;
         left: 0;
-        top: 12px;
+        top: 0.83vw;
         right: 0;
         content: '';
         z-index: -5;
-        box-shadow: 0px 5px 35px -10px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0.35vw 2.43vw -0.69vw rgba(0, 0, 0, 0.75);
         border-radius: 36%;
+        @include media('<tablet') {
+            bottom: 12px;
+            top: 12px;
+            box-shadow: 0px 5px 35px -10px rgba(0, 0, 0, 0.75);
+        }
     }
     .number-decorated {
         display: inline-block;
         position: relative;
-        font-size: 36px;
+        font-size: 2.5vw;
         font-family: $font-felt;
         color: $red;
         line-height: 1;
-        margin-bottom: -4px;
+        margin-bottom: -0.28vw;
+        @include media('<tablet') {
+            font-size: 36px;
+            margin-bottom: -4px;
+        }
         &:after,
         &:before {
             content: '';
             position: absolute;
-            right: calc(100% + 4px);
-            width: 20px;
+            right: calc(100% + .28vw);
+            width: 1.39vw;
             top: 50%;
-            height: 1px;
+            height: 0.07vw;
             background-color: $gray;
+            @include media('<tablet') {
+                width: 20px;
+                height: 1px;
+                right: calc(100% + 4px);
+            }
         }
         &:before {
-            left: calc(100% + 10px);
+            left: calc(100% + 0.69vw);
             right: auto;
+            @include media('<tablet') {
+                left: calc(100% + 10px);
+            }
         }
     }
     &-inner {
-      
         position: relative;
-        font-size: 12px;
-        p {
-        
+        font-size: 0.83vw;
+        @include media('<tablet') {
+            font-size: 12px;
         }
+        p {}
         &:before,
         &:after {
             content: '';
@@ -60,11 +84,14 @@
             left: 0;
             right: 0;
             background-image: url('../images/label.svg');
-            height: 65px;
+            height: 4.52vw;
             z-index: 1;
             background-size: 100% auto;
             overflow: hidden;
             background-position: 50% 0;
+            @include media('<tablet') {
+                height: 65px;
+            }
         }
         &:after {
             top: auto;
@@ -72,27 +99,39 @@
             background-position: 50% 100%;
         }
         .subtitle {
-            font-size: 24px;
+            font-size: 1.67vw;
             font-weight: 600;
-            margin: 0;line-height: 1;
+            margin: 0;
+            line-height: 1;
+            @include media('<tablet') {
+                font-size: 24px;
+            }
         }
         .title {
-            font-size: 60px;
+            font-size: 4.17vw;
             color: $red;
             margin-bottom: 0;
             font-family: $font-felt;
             font-weight: 400;
             line-height: .6;
-            margin-bottom: 7px;
+            margin-bottom: 0.49vw;
+            @include media('<tablet') {
+                font-size: 60px;
+                margin-bottom: 7px;
+            }
         }
         .label-box-content {
             position: relative;
-            padding: 0 15px;
+            padding: 0 1.04vw;
             z-index: 2;
-            padding: 15px 20px 39px;
-p{
-    margin-bottom: 0;
-}
+            padding: 1.04vw 1.39vw 2.71vw;
+            @include media('<tablet') {
+                padding: 0 15px;
+                padding: 15px 20px 39px;
+            }
+            p {
+                margin-bottom: 0;
+            }
             &:before {
                 content: '';
                 position: absolute;
@@ -100,8 +139,12 @@ p{
                 width: 1%;
                 background-color: #e64046;
                 ;
-                bottom: 65px;
-                top: 65px;
+                bottom: 4.52vw;
+                top: 4.52vw;
+                @include media('<tablet') {
+                    bottom: 65px;
+                    top: 65px;
+                }
             }
             &:after {
                 content: '';
@@ -109,11 +152,14 @@ p{
                 background-color: #e64046;
                 width: 1%;
                 right: 2.51%;
-                bottom: 65px;
-                top: 65px;
+                bottom: 4.52vw;
+                top: 4.52vw;
                 pointer-events: none;
+                @include media('<tablet') {
+                    bottom: 65px;
+                    top: 65px;
+                }
             }
-    
         }
     }
 }

@@ -1,8 +1,8 @@
 .hero-slider {
     position: relative;
     @include media('<desktop') {
-   //     min-width: 188%;
-  //      margin-left: -44%;
+        //     min-width: 188%;
+        //      margin-left: -44%;
     }
     @include media('<tablet') {
         min-width: 190%;
@@ -10,14 +10,14 @@
     }
     .owl-dots {
         position: absolute;
-        bottom: 213px;
+        bottom: 14.8vw;
         left: 50%;
         transform: translateX(-50%);
         @include media('<desktop') {
             //bottom: 215px;
         }
         @include media('<tablet') {
-                    bottom: 217px;
+            bottom: 217px;
         }
         .owl-dot {
             outline: none;
@@ -32,9 +32,9 @@
                 }
             }
             span {
-                width: 75px;
-                height: 4px;
-                border-radius: 4px;
+                width: 5.21vw;
+                height: 0.27vw;
+                border-radius: 0.27vw;
                 background-color: #eee !important;
                 border: none;
                 display: block;
@@ -43,6 +43,8 @@
                 @include media('<tablet') {
                     width: 50px;
                     max-width: 10vw;
+                    height: 4px;
+                    border-radius: 4px;
                 }
                 &:after {
                     content: '';
@@ -58,18 +60,19 @@
     }
     .text-holder {
         position: absolute;
-        top: calc(100% - 95px);
-        max-width: 620px;
+        top: calc(100% - 6.6vw);
+        max-width: 43.08vw;
         width: 100%;
         left: 0;
         right: 0;
         margin: 0 auto;
         background-color: $white;
-        padding: 50px 45px 26px;
+        padding: 3.47vw 3.13vw 1.8vw;
         text-align: center;
-        min-height: 203px;
+        min-height: 14.7vw;
+        font-size: 1.11vw;
         @include media('<widescreen') {
-         //   font-size: 15px;
+            //   font-size: 15px;
         }
         @include media('<desktop') {
             // font-size: 14px;
@@ -80,91 +83,112 @@
             //remove
             font-size: 14px;
             max-width: 716px;
-            padding-top: 64px;
+            padding: 45px 45px 26px;
             //remove
             max-width: 90vw;
             top: calc(100% - 120px);
-            padding-top: 45px;
+            min-height: 203px;
         }
         @include media('<640px') {
             max-width: 92vw;
         }
         p {
             line-height: 1.5;
-            margin-bottom: 7px;
+            margin-bottom: 0.49vw;
+            @include media('<tablet') {
+                margin-bottom: 7px;
+            }
         }
         .btn {
             position: absolute;
-            bottom: -24px;
-            padding: 23px 10px;
-            min-width: 174px;
+            bottom: -1.67vw;
+            padding: 1.6vw 0.7vw;
+            min-width: 12.1vw;
             left: 50%;
             transform: translateX(-50%);
+            @include media('<tablet') {
+                bottom: -24px;
+                padding: 23px 10px;
+                min-width: 174px;
+            }
             &:before {
                 content: '';
                 position: absolute;
-                left: -6px;
-                right: -6px;
+                left: -0.42vw;
+                right: -0.42vw;
                 top: 0;
-                height: 14px;
-                border-left: 6px solid $white;
-                border-right: 6px solid $white;
-                @include media('<desktop') {
-                    left: -17px;
-                    right: -17px;
-                    border-left: 17px solid $white;
-                    border-right: 17px solid $white;
-                }
+                height: 0.97vw;
+                border-left: 0.42vw solid $white;
+                border-right: 0.42vw solid $white;
+                // @include media('<desktop') {
+                //     left: -17px;
+                //     right: -17px;
+                //     border-left: 17px solid $white;
+                //     border-right: 17px solid $white;
+                // }
                 //remove  
                 @include media('<tablet') {
                     left: -17px;
                     right: -17px;
                     border-left: 17px solid $white;
                     border-right: 17px solid $white;
+                    height: 14px;
                 }
                 //remove
             }
         }
         .slide-title {
             display: block;
-            font-size: 29px;
-            margin-bottom: 5px;
+            font-size: 2.01vw;
+            margin-bottom: 0.35vw;
             font-weight: 600;
             @include media('<tablet') {
                 font-size: 22px;
+                margin-bottom: 5px;
             }
         }
         &:before {
             content: '';
             position: absolute;
-            top: 10px;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
+            top: 0.69vw;
+            bottom: 0.69vw;
+            left: 0.69vw;
+            right: 0.69vw;
             pointer-events: none;
-            border: 2px solid $red;
+            border: 0.14vw solid $red;
+            @include media('<tablet') {
+                top: 10px;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                border: 2px solid $red;
+            }
         }
         &:after {
             content: '';
             position: absolute;
             z-index: 10;
-            top: -7px;
-            left: -12px;
-            right: -90px;
-            bottom: -20px;
+            top: -0.49vw;
+            left: -0.83vw;
+            right: -6.25vw;
+            bottom: -1.39vw;
             background-image: url('../images/sliders/shadow-decoration.png');
             background-size: 100% 100%;
             z-index: -1;
             @include media('<tablet') {
-                right:-65px;
+                top: -7px;
+                left: -12px;
+                right: -65px;
+                bottom: -20px;
+
             }
             @include media('<phone') {
-                right:-44px;
+                right: -44px;
             }
         }
     }
     .owl-stage-outer {
-        padding-bottom: 162px;
+        padding-bottom: 11.26vw;
         overflow: visible;
         @include media('<tablet') {
             padding-bottom: 138px;
@@ -181,9 +205,9 @@
     }
 }
 
-.hero-slider.produit .owl-stage-outer{
+.hero-slider.produit .owl-stage-outer {
     @include media('<desktop') {
-      //  padding-bottom: 150px;
+        //  padding-bottom: 150px;
     }
     @include media('<tablet') {
         padding-bottom: 125px;
