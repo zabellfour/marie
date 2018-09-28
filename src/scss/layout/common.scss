@@ -17,6 +17,11 @@ body {
     background-color: #eef1ef;
     background-image: url('../images/body-bg.png');
     background-position: 50% 50%;
+    font-size: 1.11vw;
+    @include media('<tablet') {
+        font-size: 16px;
+    }
+
 }
 
 .cursive {

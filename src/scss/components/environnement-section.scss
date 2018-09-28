@@ -13,16 +13,18 @@
     }
     .text-top {
         text-align: center;
-        max-width: 800px;
+        max-width: 55.59vw;
         margin: 0 auto;
         padding: 66px 50px 0;
-        margin-bottom: -20px;
+        margin-bottom: -1.39vw;
         position: relative;
         line-height: 1.5;
         @include media('<desktop') {
             // padding-top: 59px;
             // padding-left: 10px;
             // padding-right: 10px;
+            // max-width: 800px;
+            // margin-bottom: -20px;
         }
         @include media('<tablet') {
             padding-top: 59px;
@@ -33,18 +35,28 @@
             padding-top: 34px;
         }
         p {
-            margin-bottom: 30px;
+            margin-bottom: 2.08vw;
+            @include media('<tablet') {
+                margin-bottom: 30px;
+            }
         }
         .section-headline {
             line-height: 1;
-            max-width: 500px;
+            max-width: 34.75vw;
             margin: 0 auto;
+            @include media('<tablet') {
+                max-width: 500px;
+            }
         }
         .decor-img {
             position: absolute;
             right: -12%;
-            top: 31px;
-            width: 180px;
+            top: 2.15vw;
+            width: 12.5vw;
+            @include media('<tablet') {
+                top: 31px;
+                width: 180px;
+            }
             @include media('<phone') {
                 position: absolute;
                 right: -25%;
@@ -54,15 +66,17 @@
         }
         .h1 {
             line-height: .7 !important;
-            font-size: 105px;
+            font-size: 7.3vw;
             margin: 0;
-            max-width: 600px;
-            margin: 0 auto 35px;
+            max-width: 41.69vw;
+            margin: 0 auto 2.43vw;
             // @include media('<desktop') {
             //     margin-bottom: 32px !important;
             // }
             @include media('<tablet') {
-                margin-bottom: 32px !important;
+                font-size: 105px;
+                max-width: 600px;
+                margin: 0 auto 32px;
             }
             @include media('<640px') {
                 font-size: 85px;
@@ -71,8 +85,11 @@
         }
         .h4 {
             line-height: .6 !important;
-            font-size: 54px;
+            font-size: 3.75vw;
             margin-bottom: 0;
+            @include media('<tablet') {
+                font-size: 54px;
+            }
             @include media('<640px') {
                 font-size: 44px;
                 margin-bottom: 11px !important;
@@ -81,12 +98,13 @@
     }
     .text-img-row {
         display: flex;
-        margin-bottom: 45px;
+        margin-bottom: 3.13vw;
         // @include media('<desktop') {
         //     flex-wrap: wrap;
         // }
         @include media('<tablet') {
             flex-wrap: wrap;
+            margin-bottom: 45px;
         }
         .col-l {
             width: 50%;
@@ -101,7 +119,7 @@
             width: 50%;
             @extend %clearfix;
             @include media('<desktop') {
-            //    width: 100%;
+                //    width: 100%;
             }
             @include media('<tablet') {
                 width: 100%;
@@ -117,7 +135,7 @@
             .col-r {
                 .text-holder {
                     @include media('<desktop') {
-                    //    display: none;
+                        //    display: none;
                     }
                     @include media('<tablet') {
                         display: none;
@@ -131,19 +149,29 @@
         line-height: 1.55;
         .title {
             line-height: 1.2;
-            font-size: 35px;
+            font-size: 2.43vw;
             font-weight: 600;
-            margin-bottom: 29px;
+            margin-bottom: 2.01vw;
+            @include media('<tablet') {
+                font-size: 35px;
+                margin-bottom: 29px;
+            }
         }
         p {
-            margin-bottom: 21px;
+            margin-bottom: 1.46vw;
+            @include media('<tablet') {
+                margin-bottom: 21px;
+            }
         }
         .h5 {
-            font-size: 16px;
+            font-size: 1.11vw;
+            @include media('<tablet') {
+                font-size: 16px;
+            }
         }
     }
     .text-holder1 {
-        padding-top: 94px;
+        padding-top: 6.53vw;
         @include media('<desktop') {
             // padding-top: 0;
             // margin-top: -50px;
@@ -161,18 +189,24 @@
             justify-content: center;
         }
         .text-holder {
-            padding: 0 82px 0 13px;
+            padding: 0 5.7vw 0 0.9vw;
+            @include media('<tablet') {
+                padding: 0 82px 0 13px;
+            }
             p {
-                margin-bottom: 30px;
+                margin-bottom: 2.08vw;
+                @include media('<tablet') {
+                    margin-bottom: 30px;
+                }
             }
         }
         .img-holder-2 {
             margin-left: auto;
-            right: -50px;
+            right: -3.47vw;
             position: relative;
             z-index: 1;
             @include media('<desktop') {
-               // right: 5px;
+                // right: 5px;
             }
             @include media('<tablet') {
                 right: 5px;
@@ -184,7 +218,7 @@
         }
         .box-text {
             @include media('<desktop') {
-               // margin-bottom: 0;
+                // margin-bottom: 0;
             }
             @include media('<tablet') {
                 margin-bottom: 0;
@@ -196,7 +230,7 @@
     }
     .img-holder-1 {
         position: relative;
-        padding-top: 203px;
+        padding-top: 14.10vw;
         @include media('<desktop') {
             // position: relative;
             // text-align: right;
@@ -216,9 +250,9 @@
         .hand-img {
             position: absolute;
             top: 0;
-            left: calc(15px + 7vw * -1);
-            width: 861px;
-            top: -33px;
+            left: calc(1.04vw + 7vw * -1);
+            width: 59.83vw;
+            top: -2.29vw;
             // @include media('<1300px') {
             //     left: calc(15px + 18vw * -1)
             // }
@@ -232,10 +266,11 @@
             @include media('<tablet') {
                 top: -8px;
                 left: -177px;
+                width: 861px;
             }
             @include media('<640px') {
                 left: -190px;
-                width:761px;
+                width: 761px;
             }
             @include media('<phone') {
                 left: -232px;
@@ -249,7 +284,7 @@
                 right: 17%;
                 bottom: 50%;
                 left: 48%;
-                font-size: 20px;
+                font-size: 1.39vw;
                 text-transform: uppercase;
                 font-weight: bold;
                 text-align: center;
@@ -259,8 +294,11 @@
                 align-items: center;
                 font-size: 1.3vw;
                 line-height: 1.3;
+                @include media('<tablet') {
+                    font-size: 20px;
+                }
                 @include media('<desktop') {
-                    font-size: 2.2vw;
+                   // font-size: 2.2vw;
                 }
                 @include media('<640px') {
                     font-size: 20px;
@@ -279,32 +317,50 @@
     .box-text {
         background-image: url('../images/env-box.png');
         background-size: 100% 100%;
-        padding: 50px 70px 79px;
-        max-width: 540px;
+        padding: 3.47vw 4.86vw 5.49vw;
+        max-width: 37.53vw;
         text-align: center;
-        font-size: 16px;
+        font-size: 1.11vw;
         line-height: 1.4;
         position: relative;
         z-index: -1;
-        margin-bottom: 30px;
-        transform: translate(15px, -62px);
-        padding: 68px 80px;
+        margin-bottom: 2.08vw;
+        transform: translate(1.04vw, -4.3vw);
+        padding: 4.72vw 5.56vw;
+        @include media('<tablet') {
+            padding: 50px 70px 79px;
+            max-width: 540px;
+            font-size: 16px;
+            margin-bottom: 30px;
+            transform: translate(15px, -62px);
+            padding: 68px 80px;
+        }
         &-title {
             color: $red;
             margin: 0;
             font-weight: 500;
             line-height: .8;
             font-family: $font-felt;
-            font-size: 60px;
+            font-size: 4.17vw;
+            @include media('<tablet') {
+                font-size: 60px;
+            }
         }
         &-sub-title {
-            font-size: 26px;
-            margin-bottom: 20px;
+            font-size: 1.81vw;
+            margin-bottom: 1.39vw;
+            @include media('<tablet') {
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
         }
     }
     .coll2 {
         .img-holder {
-            padding: 30px 0 0 0;
+            padding: 2.08vw 0 0 0;
+            @include media('<tablet') {
+                padding: 30px 0 0 0;
+            }
         }
     }
     .colr2 {
@@ -317,7 +373,7 @@
             flex-direction: column;
         }
         .img-holder {
-            margin: -22% 0 20px 0%;
+            margin: -22% 0 1.39vw 0%;
             @include media('<desktop') {
                 // margin: 0;
             }
@@ -326,15 +382,21 @@
             }
         }
         .text-holder {
-            padding: 86px 15px 15px 12px;
+            padding: 5.98vw 1.04vw 1.04vw 0.83vw;
             order: -1;
+            @include media('<tablet') {
+                padding: 86px 15px 15px 12px;
+            }
             .title {
                 display: flex;
                 align-items: center;
                 span {
                     display: inline-block;
                     width: 50%;
-                    margin-right: 28px;
+                    margin-right: 1.94vw;
+                    @include media('<tablet') {
+                        margin-right: 28px;
+                    }
                     @include media('<640px') {
                         margin-right: 0;
                         width: 80%;
@@ -351,20 +413,24 @@
     .sticky-box {
         position: relative;
         background-color: $white;
-        padding: 33px 50px;
+        padding: 2.29vw 3.47vw;
         text-align: center;
         text-transform: uppercase;
         color: $red;
-        max-width: 500px;
-        margin: 0 20px 0 120px;
+        max-width: 34.75vw;
+        margin: 0 1.39vw 0 8.34vw;
         font-weight: 700;
-        font-size: 20px;
-        box-shadow: 0 0 15px 0 rgba(0, 0, 0, .2);
+        font-size: 1.39vw;
+        box-shadow: 0 0 1.04vw 0 rgba(0, 0, 0, .2);
         @include media('<desktop') {
-         //   margin-top: 30px;
+            //   margin-top: 30px;
         }
         @include media('<tablet') {
-            margin-top: 30px;
+            padding: 33px 50px;
+            max-width: 500px;
+            margin: 30px 20px 0 120px;
+            font-size: 20px;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, .2);
         }
         @include media('<640px') {
             margin: 30px auto 0;
@@ -372,29 +438,36 @@
         &:before {
             content: '';
             position: absolute;
-            width: 139px;
-            height: 44px;
+            width: 9.66vw;
+            height: 3.06vw;
             background-size: 100% 100%;
             opacity: .79;
-            top: -31px;
-            left: 254px;
+            top: -2.15vw;
+            left: 17.65vw;
             transform: translateX(-50%);
+            @include media('<tablet') {
+                width: 139px;
+                height: 44px;
+                top: -31px;
+                left: 254px;
+            }
             @include background-svg('
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"><polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /></svg>');
 
         }
     }
     .bottom-dox-decorated {
         background-color: $red;
-        padding: 20px 20px 20px 31%;
+        padding: 1.39vw 1.39vw 1.39vw 31%;
         color: $white;
         position: relative;
-        margin: 93px 0 30px 0;
+        margin: 6.46vw 0 2.08vw 0;
         @include media('<desktop') {
             //padding-left: 39%;
         }
         @include media('<tablet') {
-            padding-left: 39%;
+            margin: 93px 0 30px 0;
+            padding: 20px 20px 20px 39%;
         }
         @include media('<640px') {
             padding: 160px 20px 36px 20px;
@@ -403,50 +476,73 @@
         &:before {
             content: '';
             position: absolute;
-            width: 39px;
-            height: 139px;
+            width: 2.71vw;
+            height: 9.66vw;
             background-size: 100% 100%;
             opacity: .79;
-            top: -25px;
-            left: 3px;
+            top: -1.74vw;
+            left: 0.21vw;
             transform: translateX(-50%);
+            @include media('<tablet') {
+                width: 39px;
+                height: 139px;
+                top: -25px;
+                left: 3px;
+            }
             @include background-svg('
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:pace="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="0,5 98.6,0 100,95 4,100  " /> </svg>');
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: pace="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="0,5 98.6,0 100,95 4,100  " /> </svg>');
 
         }
         &:after {
             content: '';
             position: absolute;
-            width: 37px;
-            height: 128px;
+            width: 2.57vw;
+            height: 8.89vw;
             background-size: 100% 100%;
             opacity: .79;
-            top: 20px;
-            right: -34px;
+            top: 1.39vw;
+            right: -2.36vw;
             transform: translateX(-50%);
+            @include media('<tablet') {
+                width: 37px;
+                height: 128px;
+                top: 20px;
+                right: -34px;
+            }
             @include background-svg('
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,0 100,2 97,105 1.4,100  " /> </svg>');
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,0 100,2 97,105 1.4,100  " /> </svg>');
 
         }
         .title {
-            font-size: 85px;
+            font-size: 5.9vw;
             font-family: $font-felt;
             line-height: 0.8;
             margin: 0;
             font-weight: 400;
+            @include media('<tablet') {
+                font-size: 85px;
+            }
         }
         .subtitile {
-            font-size: 35px;
-            margin-bottom: 7px;
+            font-size: 2.43vw;
+            margin-bottom: 0.49vw;
             line-height: .9;
+            @include media('<tablet') {
+                font-size: 35px;
+                margin-bottom: 7px;
+            }
         }
         P {
             margin: 0;
         }
         img {
             position: absolute;
-            top: -69px;
-            left: 89px;
+            top: -4.79vw;
+            left: 6.18vw;
+            @include media('>=tablet') {
+                width: 22.79vw;
+            }
+
             @include media('<desktop') {
                 // left: 29px;
                 // width: 230px;
@@ -454,7 +550,7 @@
             @include media('<tablet') {
                 left: 22px;
                 width: 230px;
-                top:15px;
+                top: 15px;
             }
             @include media('<640px') {
                 left: 50%;
@@ -466,7 +562,10 @@
         .text-holder {
             margin: 0 auto;
             text-align: center;
-            max-width: 544px;
+            max-width: 37.8vw;
+            @include media('<tablet') {
+                max-width: 544px;
+            }
         }
     }
     .section-headline {
@@ -476,9 +575,15 @@
         }
         .h1 {
             line-height: .7;
-            margin: 0 0 20px;
+            margin: 0 0 1.39vw;
+            @include media('<tablet') {
+                margin: 0 0 20px;
+            }
             & + .h4 {
-                margin: 0 0 40px;
+                margin: 0 0 2.78vw;
+                @include media('<tablet') {
+                    margin: 0 0 40px;
+                }
             }
         }
     }
