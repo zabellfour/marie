@@ -17,11 +17,8 @@ import { wrap } from 'module';
         common.animation();
         common.masonry();
 
-        // $('body').matchHeight({
-        //     target: $('.wrapper'),
-        //     property: 'min-height',
-        // });
-
+        var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+        if (isIE11) return $('body').addClass('ie');
         $(window).on('load', function() {
 
             let productsWrapper = $('.products-wrapper');

@@ -103,6 +103,7 @@
             font-size: 12px;
         }
         p {}
+
         &:before,
         &:after {
             content: '';
@@ -207,6 +208,17 @@
                     bottom: 65px;
                     top: 65px;
                 }
+            }
+        }
+    }
+}
+body.ie  {
+    .label-box{
+        &-inner {
+            &:before,
+            &:after {
+                content: '';
+                background-image: url('../images/label-ie.png');
             }
         }
     }

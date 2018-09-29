@@ -35,6 +35,7 @@
             padding-top: 59px;
             padding-left: 10px;
             padding-right: 10px;
+            max-width: 90vw;
         }
         @include media('<640px') {
             padding-top: 34px;

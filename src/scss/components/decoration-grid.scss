@@ -221,11 +221,18 @@
                         @include media('<tablet') {
                             left: auto;
                             width: auto;
+                            right: 13%;
+                            top: 60px;
+                        }
+                        @include media('<640px') {
+                            left: auto;
+                            width: auto;
                             right: -32px;
                             top: 60px;
                         }
                         @include media('<phone') {
                             top: 0;
+                            right: -32px
                         }
                     }
                     &.img4 {
