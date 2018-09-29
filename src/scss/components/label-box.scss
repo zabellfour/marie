@@ -2,6 +2,9 @@
     max-width: 20.85vw;
     text-align: center;
     position: relative;
+    @include media('>1920px') { 
+        max-width: 300px;
+     }
     @include media('<tablet') {
         max-width: 300px;
     }
@@ -13,6 +16,10 @@
         left: 0;
         right: 0;
         background-color: $white;
+        @include media('>1920px') { 
+            top: 65px;
+            bottom: 65px;
+         }
         @include media('<tablet') {
             top: 65px;
             bottom: 65px;
@@ -28,6 +35,11 @@
         z-index: -5;
         box-shadow: 0px 0.35vw 2.43vw -0.69vw rgba(0, 0, 0, 0.75);
         border-radius: 36%;
+        @include media('>1920px') { 
+            bottom: 12px;
+            top: 12px;
+            box-shadow: 0px 5px 35px -10px rgba(0, 0, 0, 0.75);
+         }
         @include media('<tablet') {
             bottom: 12px;
             top: 12px;
@@ -42,6 +54,10 @@
         color: $red;
         line-height: 1;
         margin-bottom: -0.28vw;
+        @include media('>1920px') { 
+            font-size: 36px;
+            margin-bottom: -4px;
+         }
         @include media('<tablet') {
             font-size: 36px;
             margin-bottom: -4px;
@@ -55,6 +71,11 @@
             top: 50%;
             height: 0.07vw;
             background-color: $gray;
+            @include media('>1920px') { 
+                width: 20px;
+                height: 1px;
+                right: calc(100% + 4px);
+             }
             @include media('<tablet') {
                 width: 20px;
                 height: 1px;
@@ -64,6 +85,9 @@
         &:before {
             left: calc(100% + 0.69vw);
             right: auto;
+            @include media('>1920px') { 
+                left: calc(100% + 10px);
+             }
             @include media('<tablet') {
                 left: calc(100% + 10px);
             }
@@ -72,6 +96,9 @@
     &-inner {
         position: relative;
         font-size: 0.83vw;
+        @include media('>1920px') { 
+            font-size: 12px;
+         }
         @include media('<tablet') {
             font-size: 12px;
         }
@@ -89,6 +116,9 @@
             background-size: 100% auto;
             overflow: hidden;
             background-position: 50% 0;
+            @include media('>1920px') { 
+                height: 65px;
+             }
             @include media('<tablet') {
                 height: 65px;
             }
@@ -103,6 +133,9 @@
             font-weight: 600;
             margin: 0;
             line-height: 1;
+            @include media('>1920px') { 
+                font-size: 24px;
+             }
             @include media('<tablet') {
                 font-size: 24px;
             }
@@ -115,6 +148,10 @@
             font-weight: 400;
             line-height: .6;
             margin-bottom: 0.49vw;
+            @include media('>1920px') { 
+                font-size: 60px;
+                margin-bottom: 7px;
+             }
             @include media('<tablet') {
                 font-size: 60px;
                 margin-bottom: 7px;
@@ -125,6 +162,9 @@
             padding: 0 1.04vw;
             z-index: 2;
             padding: 1.04vw 1.39vw 2.71vw;
+            @include media('>1920px') { 
+                padding: 15px 20px 39px;
+             }
             @include media('<tablet') {
                 padding: 0 15px;
                 padding: 15px 20px 39px;
@@ -141,6 +181,10 @@
                 ;
                 bottom: 4.52vw;
                 top: 4.52vw;
+                @include media('>1920px') { 
+                    bottom: 65px;
+                    top: 65px;
+                 }
                 @include media('<tablet') {
                     bottom: 65px;
                     top: 65px;
@@ -155,6 +199,10 @@
                 bottom: 4.52vw;
                 top: 4.52vw;
                 pointer-events: none;
+                @include media('>1920px') { 
+                    bottom: 65px;
+                    top: 65px;
+                 }
                 @include media('<tablet') {
                     bottom: 65px;
                     top: 65px;

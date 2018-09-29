@@ -13,6 +13,9 @@
         bottom: 14.8vw;
         left: 50%;
         transform: translateX(-50%);
+        @include media('>1920px') {
+            bottom: 213px;
+        }
         @include media('<desktop') {
             //bottom: 215px;
         }
@@ -40,6 +43,11 @@
                 display: block;
                 position: relative;
                 overflow: hidden;
+                @include media('>1920px') {
+                    width: 75px;
+                    height: 4px;
+                    border-radius: 4px;
+                }
                 @include media('<tablet') {
                     width: 50px;
                     max-width: 10vw;
@@ -71,6 +79,13 @@
         text-align: center;
         min-height: 14.7vw;
         font-size: 1.11vw;
+        @include media('>1920px') {
+            top: calc(100% - 95px);
+            max-width: 620px;
+            padding: 50px 45px 26px;
+            min-height: 212px;
+            font-size: 16px;
+        }
         @include media('<widescreen') {
             //   font-size: 15px;
         }
@@ -95,6 +110,9 @@
         p {
             line-height: 1.5;
             margin-bottom: 0.49vw;
+            @include media('>1920px') {
+                margin-bottom: 7px;
+            }
             @include media('<tablet') {
                 margin-bottom: 7px;
             }
@@ -106,6 +124,11 @@
             min-width: 12.1vw;
             left: 50%;
             transform: translateX(-50%);
+            @include media('>1920px') {
+                bottom: -24px;
+                padding: 23px 10px;
+                min-width: 174px;
+            }
             @include media('<tablet') {
                 bottom: -24px;
                 padding: 23px 10px;
@@ -127,6 +150,13 @@
                 //     border-right: 17px solid $white;
                 // }
                 //remove  
+                @include media('>1920px') { 
+                    left: -6px;
+                    right: -6px;
+                    border-left: 6px solid $white;
+                    border-right: 6px solid $white;
+                    height: 14px;
+                 }
                 @include media('<tablet') {
                     left: -17px;
                     right: -17px;
@@ -142,6 +172,10 @@
             font-size: 2.01vw;
             margin-bottom: 0.35vw;
             font-weight: 600;
+            @include media('>1920px') { 
+                font-size: 29px;
+                margin-bottom: 5px;
+             }
             @include media('<tablet') {
                 font-size: 22px;
                 margin-bottom: 5px;
@@ -156,6 +190,13 @@
             right: 0.69vw;
             pointer-events: none;
             border: 0.14vw solid $red;
+            @include media('>1920px') { 
+                top: 10px;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                border: 2px solid $red;
+             }
             @include media('<tablet') {
                 top: 10px;
                 bottom: 10px;
@@ -175,12 +216,17 @@
             background-image: url('../images/sliders/shadow-decoration.png');
             background-size: 100% 100%;
             z-index: -1;
+            @include media('>1920px') { 
+                top: -7px;
+                left: -12px;
+                right: -90px;
+                bottom: -20px;
+             }
             @include media('<tablet') {
                 top: -7px;
                 left: -12px;
                 right: -65px;
                 bottom: -20px;
-
             }
             @include media('<phone') {
                 right: -44px;
@@ -190,6 +236,9 @@
     .owl-stage-outer {
         padding-bottom: 11.26vw;
         overflow: visible;
+        @include media('>1920px') { 
+            padding-bottom: 162px;
+         }
         @include media('<tablet') {
             padding-bottom: 138px;
         }

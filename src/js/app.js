@@ -16,13 +16,12 @@ import { wrap } from 'module';
         common.accordion();
         common.animation();
         common.masonry();
-        $(document).ready(function() {
-            $(window).resize();
-        });
+
         // $('body').matchHeight({
         //     target: $('.wrapper'),
         //     property: 'min-height',
         // });
+
         $(window).on('load', function() {
 
             let productsWrapper = $('.products-wrapper');
@@ -34,17 +33,18 @@ import { wrap } from 'module';
             setLabelHeight();
 
             let resizeId;
-            $(window).on('resize',function() {
+            $(window).on('resize', function() {
                 clearTimeout(resizeId);
                 resizeId = setTimeout(doneResizing, 500);
+
             });
 
-            function doneResizing(){
+            function doneResizing() {
                 setLabelHeight();
             }
 
-            function setLabelHeight(){
-                 productsWrapper.each(function(){
+            function setLabelHeight() {
+                productsWrapper.each(function() {
 
                     let height = $(this).find('.products-row__item:first-child').outerHeight(),
                         el = $(this).find('.products-category-label');
@@ -56,6 +56,9 @@ import { wrap } from 'module';
         });
 
 
+
+
+        
     });
 
 })(jQuery);

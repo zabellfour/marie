@@ -11,6 +11,19 @@
     padding: 0 15px;
     margin: 0 auto;
 }
+.wrapper {
+ 
+    overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+    @include media('>1920px') {
+        transform-origin: 50% 0;
+        max-width: 1443px;
+        transform: scale(1.334);
+        padding-top:70px; 
+    }
+    
+}
 
 body {
     padding-top: 90px;
@@ -22,6 +35,10 @@ body {
         font-size: 16px;
     }
 
+    @include media('>1920px') {
+        font-size: 16px;
+        padding-top: 0px !important;
+    }
 }
 
 .cursive {
@@ -131,6 +148,11 @@ body {
         @include media('<tablet') {
             padding-top: 89px;
         }
+        
+    @include media('>1920px') {
+     
+        padding-top: 50px !important;
+    }
     }
     min-height: 100%;
 }

@@ -4,10 +4,13 @@
     left: 0;
     right: 0;
     background-color: $white;
-    padding: .9vw 0;
+    padding: .9vw;
     max-width: 1920;
     margin: 0 auto;
     z-index: 100;
+    @include media('>1920px') { 
+        padding: 13px;
+     }
     @include media('<tablet') {
         padding: 17px 0;
     }
@@ -106,6 +109,10 @@
         // @include media('<desktop') {
         //     margin-right: 20px;
         // }
+        @include media('>1920px') { 
+            width: 123px;
+            margin-right: 36px;
+         }
         @include media('<tablet') {
             //   margin-right: 0;
             margin-right: 20px;
@@ -134,6 +141,10 @@
         //     margin-right: 17px;
         //     font-size: 12px;
         // }
+        @include media('>1920px') { 
+            margin-right: 36px;
+            font-size: 11px;
+         }
         @include media('<tablet') {
             //remove   
             margin-right: 17px;
@@ -165,6 +176,9 @@
                 font-size: 1.1vw;
                 margin-left: 6px;
                 color: $red;
+                @include media('>1920px') { 
+                    font-size: 16px;
+                 }
                 @include media('<tablet') {
                     color: inherit;
                     margin-right: 10px;

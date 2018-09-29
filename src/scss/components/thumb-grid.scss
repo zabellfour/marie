@@ -4,6 +4,9 @@
     img {
         max-width: 100%;
     }
+    @include media('>1920px') { 
+        margin-bottom: 27px
+     }
     @include media('<tablet') {
         padding: 0 2.6%;
         margin-bottom: 0;
@@ -23,6 +26,10 @@
         background-color: $white;
         margin-bottom: 1.39vw;
         box-shadow: 0px 0.35vw 1.04vw 0px rgba(0, 0, 0, 0.25);
+        @include media('>1920px') { 
+            margin-bottom: 20px;
+            box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.25);
+         }
         @include media('<tablet') {
             box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.25);
             display: flex;
@@ -77,6 +84,11 @@
                 align-items: center;
                 justify-content: center;
                 line-height: 0;
+                @include media('>1920px') { 
+                    font-size: 76px;
+                    width: 30px;
+                    height: 30px;
+                 }
                 @include media('<tablet') {
                     font-size: 76px;
                     width: 30px;
@@ -115,6 +127,9 @@
         &.col-66 {
             .descr-holder {
                 padding: 1.53vw 2.08vw 2.08vw;
+                @include media('>1920px') { 
+                    padding: 22px 30px 30px;
+                 }
                 @include media('<tablet') {
                     padding: 26px 34px 9px 30px;
                 }
@@ -123,6 +138,9 @@
                 }
                 .thumb-title {
                     font-size: 1.53vw;
+                    @include media('>1920px') { 
+                        font-size: 22px;
+                     }
                     @include media('<tablet') {
                         font-size: 22px;
                     }
@@ -149,6 +167,10 @@
             // @include media('<desktop') {
             //     font-size: 30px;
             // }
+            @include media('>1920px') { 
+                padding: 0px 21px;
+                font-size: 40px;
+             }
             @include media('<tablet') {
                 padding: 0 15px 0 35px;
                 font-size: 40px;
@@ -161,6 +183,10 @@
             // @include media('<desktop') {
             //     font-size: 14px;
             // }
+            @include media('>1920px') { 
+                padding: 36px 68px 21px;
+                font-size: 16px;
+             }
             @include media('<tablet') {
                 padding: 27px 29px 13px;
                 font-size: 16px;
@@ -174,6 +200,10 @@
                 // @include media('<desktop') {
                 //     font-size: 18px;
                 // }
+                @include media('>1920px') { 
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                 }
                 @include media('<tablet') {
                     font-size: 24px;
                     margin-bottom: 10px;
@@ -187,6 +217,10 @@
     text-align: center;
     margin-bottom: 2.08vw;
     padding-top: 0.69vw;
+    @include media('>1920px') { 
+        margin-bottom: 30px;
+        padding-top: 10px;
+     }
     @include media('<tablet') {
         margin-bottom: 30px;
         padding-top: 20px;
@@ -198,6 +232,9 @@
         font-weight: 400;
         line-height: 1;
         font-size: 4.86vw;
+        @include media('>1920px') { 
+            font-size: 70px;
+         }
         @include media('<tablet') {
             font-size: 70px;
         }
@@ -206,6 +243,9 @@
         line-height: 1;
         font-weight: 600;
         font-size: 2.08vw;
+        @include media('>1920px') { 
+            font-size: 30px;
+         }
         @include media('<tablet') {
             font-size: 30px;
         }

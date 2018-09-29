@@ -16,6 +16,14 @@
     text-decoration: none;
     letter-spacing: .6px;
     text-align: center;
+    @include media('>1920px') { 
+        max-width: 176px;
+        height: 46px;
+        padding: 0 21px;
+        border: 2px solid transparent;
+        border-radius: 50px; 
+        font-size: 13px; 
+     }
     @include media('<tablet') {
         max-width: 176px;
         height: 46px;
@@ -44,7 +52,10 @@
         }
     }
     &-long {
-			max-width: 26.06vw;
+            max-width: 26.06vw;
+            @include media('>1920px') { 
+                max-width: 375px;
+             }
 				@include media('<tablet') {
 					max-width: 375px;
 				}
