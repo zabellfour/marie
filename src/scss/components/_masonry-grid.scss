@@ -55,8 +55,8 @@
 	}
 	.grid-sizer,
 	.grid-item {
-		width: calc(25% - 1.4vw);
-		margin-bottom: 1.4vw;
+		width: calc(25% - 20px);
+		margin-bottom: 20px;
 		@include media('>1920px') {
 			width: calc(25% - (20px * 1.3334));
 			margin-bottom: calc(20px * 1.3334);
@@ -100,7 +100,7 @@
 	}
 
 	.grid-item--width2 {
-		width: calc(50% - 1.4vw);
+		width: calc(50% - 20px);
 		@include media('>1920px') {
 			width: calc(50% - (20 * 1.3334));
 		}

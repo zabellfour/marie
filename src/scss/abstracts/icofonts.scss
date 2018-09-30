@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow:before {
+  content: "\e90a";
+}
+.icon-cancel:before {
+  content: "\e90b";
+}
+.icon-refresh:before {
+  content: "\e90c";
+}
 .icon-cook:before {
   content: "\e904";
 }

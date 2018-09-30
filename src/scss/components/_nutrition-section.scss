@@ -466,7 +466,8 @@
                     @include media('<tablet') {
                         transform: translateY(0);
                         position: relative;
-                        width: 45%;
+                        // width: 45%;
+                        width: 100%;
                         .title {
                             position: absolute;
                             width: 200%;
@@ -496,6 +497,11 @@
                     }
                 }
             }
+            .sticker-holder-desktop {
+                @include media('<tablet') {
+                    display: none;
+                }
+            }
         }
         &.bottom {
             transform: translateY(-3.47vw);
@@ -504,6 +510,10 @@
             }
             @include media('<tablet') {
                 transform: translateY(0);
+                justify-content: flex-end;
+            }
+            @include media('<650px') {
+                justify-content: center;
             }
             .text-holder {
                 margin-bottom: 2.78vw;
@@ -514,11 +524,16 @@
                 }
                 @include media('<tablet') {
                     margin-bottom: 8%;
-                    padding-top: 12%;
+                    margin-bottom: 5%;
+                    // padding-top: 12%;
                     transform: translateY(-25px);
                     @include media('<650px') {
                         width: 80%;
+                        padding-top: 12%;
                     }
+                }
+                @include media('<650px') {
+                    order: 2;
                 }
                 &.bg-text {
                     @include media('<tablet') {
@@ -530,6 +545,17 @@
                     @include media('<650px') {
                         width: 100%;
                     }
+                }
+            }
+            .sticker-holder {
+                display: none !important;
+                @include media('<tablet') {
+                    display: block !important;
+                }
+                @include media('<650px') {
+                    order: 0;
+                    padding: 0;
+                    margin: 0;
                 }
             }
             .title {
@@ -710,13 +736,15 @@
                 transform: translate(100px, -250px);
             }
             @include media('<tablet') {
-                transform: translate(-20px, 0);
+                transform: translate(-20px, 25px);
             }
             @include media('<650px') {
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
+                transform: translate(-20px, 0);
+                order: 1;
             }
             .image-holder {
                 width: 29.60vw;
@@ -744,9 +772,12 @@
                     width: auto;
                 }
                 @include media('<tablet') {
-                    top: 260px;
-                    left: 60px;
-                    width: auto;
+                    // top: 260px;
+                    // left: 60px;
+                    // width: auto;
+                    left: 0;
+                    top: 305px;
+                    width: 288px;
                 }
                 @include media('<650px') {
                     z-index: -1;
@@ -836,6 +867,11 @@
                     max-width: 525px;
                     transform: translate(10px, 0);
                 }
+                @include media('<phone') {
+                    padding: 53px 55px 36px 10px;
+                    width: 135%;
+                    transform: translate(-20px, 0);
+                }
                 &:before {
                     content: '';
                     position: absolute;
@@ -882,6 +918,9 @@
                     background-color: $white;
                     position: relative;
                     z-index: 1;
+                    @include media('<tablet') {
+                        padding: 25px;
+                    }
                 }
                 &:before, &:after {
                     content: '';
@@ -959,7 +998,7 @@
                 @include media('<tablet') {
                     font-size: 60px;
                     line-height: .5;
-                    margin-bottom: 22px;
+                    margin: 0 auto 22px;
                 }
                 @include media('<phone') {
                     font-size: 46px;
@@ -973,7 +1012,7 @@
                     font-size: 26px;
                 }
                 @include media('<tablet') {
-                    font-size: 26px;
+                    font-size: 24px;
                 }
                 @include media('<phone') {
                     font-size: 18px;

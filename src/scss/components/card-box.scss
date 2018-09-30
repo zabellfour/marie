@@ -85,6 +85,8 @@
             left: calc(100% - 3.54vw);
             bottom: -6.53vw;
             background-image: url(../images/hand-decor.png);
+            background-repeat: no-repeat;
+            background-size: contain;
             @include media('>1920px') {
                 width: 282px;
                 height: 282px;
@@ -121,7 +123,7 @@
             // }
             @include media('<tablet') {
                 display: block;
-                margin-bottom: 65px;
+                margin-bottom: 35px;
             }
         }
     }

@@ -67,6 +67,22 @@ var common = {
           $grid.masonry();
         });
 
+    },
+
+    filterScroll: function() {
+        $('.next-icon').click(function() {
+            event.preventDefault();
+            $('.filter-items-row').animate({
+              scrollLeft: "+=150px"
+            },200);
+          });
+          
+           $('.prev-icon').click(function() {
+            event.preventDefault();
+            $('.filter-items-row').animate({
+              scrollLeft: "-=150px"
+            },200);
+        });
     }
 
 };

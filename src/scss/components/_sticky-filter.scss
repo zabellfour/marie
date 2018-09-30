@@ -1,0 +1,178 @@
+.sticky-filter {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    padding: 1.53vw 15%;
+    background-color: #fff;
+    z-index: 2;
+    @include media('>1920px') {
+        padding: 22px 15%;
+    }
+    @include media('<tablet') {
+        padding: 22px 5%;
+    }
+    .filter-items {
+        &-holder {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include media('<650px') {
+                width: 350px;
+                margin: 0 auto 10px;
+            }
+        }
+        &-row {
+            max-width: 40.31vw;
+            overflow: auto;
+            overflow-x: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include media('>1920px') {
+                max-width: 580px;
+            }
+            @include media('<tablet') {
+                max-width: 290px;
+            }
+            @include media('<phone') {
+                max-width: 150px;
+            }
+        }
+    }
+    .filter-item {
+        min-width: 8.69vw;
+        padding: 0.83vw 1.6vw;
+        margin: 0 0.69vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 50px;
+        background-color: #eff2f0;
+        font-size: 0.9vw;
+        font-weight: 600;
+        @include media('>1920px') {
+            min-width: 125px;
+            padding: 12px 23px;
+            margin: 0 10px;
+            font-size: 13px;
+        }
+        @include media('<tablet') {
+            min-width: 125px;
+            padding: 12px 23px;
+            margin: 0 10px;
+            font-size: 13px;
+        }
+        .close {
+            @include animate(opacity);
+            cursor: pointer;
+            &:hover {
+                opacity: .7;
+            }
+        }
+        i {
+            font-size: 0.49vw;
+            font-weight: 600;
+            color: #c8cac9;
+            @include media('>1920px') {
+                font-size: 7px;
+            }
+            @include media('<tablet') {
+                font-size: 7px;
+            }
+        }
+    }
+    .prev-icon {
+        @include animate(opacity);
+        display: inline-block;
+        transform: rotate(180deg);
+        cursor: pointer;
+        &:hover {
+            opacity: .7;
+        }
+    }
+    .next-icon {
+        @include animate(opacity);
+        display: inline-block;
+        cursor: pointer;
+        &:hover {
+            opacity: .7;
+        }
+    }
+    .filter-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media('<650px') {
+            width: 100%;
+        }
+        .cursive {
+            font-size: 1.74vw;
+            @include media('>1920px') {
+                font-size: 25px;
+            }
+            @include media('<tablet') {
+                font-size: 25px;
+            }
+        }
+        .refresh {
+            @include animate(opacity);
+            font-size: 0.9vw;
+            font-weight: 600;
+            position: relative;
+            cursor: pointer;
+            @include media('>1920px') {
+                font-size: 13px;
+            }
+            @include media('<tablet') {
+                font-size: 13px;
+            }
+            &:before {
+                content: '';
+                display: inline-block;
+                position: relative;
+                top: 0.14vw;
+                width: 0.07vw;
+                height: 0.83vw;
+                margin: 0 1.74vw;
+                background-color:  #c8cac9;
+                @include media('>1920px') {
+                    top: 2px;
+                    width: 1px;
+                    height: 12px;
+                    margin: 0 25px;
+                }
+                @include media('<tablet') {
+                    top: 2px;
+                    width: 1px;
+                    height: 12px;
+                    margin: 0 25px;
+                }
+            }
+            &:hover {
+                opacity: .7;
+            }
+        }
+        i {
+            font-weight: 700;
+            color: #c8cac9;
+            font-size: 0.9vw;
+            margin-left: 0.42vw;
+            position: relative;
+            top: 0.14vw;
+            @include media('>1920px') {
+                font-size: 13px;
+                margin-left: 6px;
+                top: 2px;
+            }
+            @include media('<tablet') {
+                font-size: 13px;
+                margin-left: 6px;
+                top: 2px;
+            }
+        }
+    }
+}

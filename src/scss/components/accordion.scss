@@ -86,10 +86,10 @@
 			.tab-content {
 				max-height: 20.85vw;
 				@include media('>1920px') {
-					max-height: 300px;
+					max-height: 1000px;
 				}
 				@include media('<tablet') {
-					max-height: 300px;
+					max-height: 1000px;
 				}
 			}
 			.tab-pane__open-close:after {

@@ -16,6 +16,7 @@ import { wrap } from 'module';
         common.accordion();
         common.animation();
         common.masonry();
+        common.filterScroll();
 
         var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
         if (isIE11) return $('body').addClass('ie');

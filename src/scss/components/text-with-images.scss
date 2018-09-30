@@ -32,25 +32,28 @@
         }
         .title-row {
         	font-weight: 600;
-            font-size: 2vw !important;
+            font-size: 2vw;
             // @include media('<desktop') {
             //     font-size: 30px !important;
             // }
             @include media('>1920px') {
-                font-size: 30px !important;
+                font-size: 30px;
             }
             @include media('<tablet') {
-            	font-size: 30px !important;
+            	font-size: 30px;
             }
             &.cursive {
                 line-height: .7;
-                font-size: 5vw !important;
+                font-size: 5vw;
      //            @include media('<desktop') {
 					// font-size: 72px !important;
      //            }
+                @include media('>1920px') {
+                    font-size: 72px;
+                }
                 @include media('<tablet') {
                 	font-weight: 500;
-					font-size: 52px !important;
+					font-size: 52px;
                 }
             }
         }
