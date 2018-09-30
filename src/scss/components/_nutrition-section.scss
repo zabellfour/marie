@@ -289,16 +289,23 @@
                 position: absolute;
                 bottom: 4.17vw;
                 left: -1.04vw;
+                width: 10vw;
                 @include media('>1920px') {
                     bottom: 60px;
                     left: -15px;
+                    width: auto;
                 }
                 @include media('<tablet') {
                     left: -15%;
                     bottom: 33%;
+                    width: auto;
                 }
                 @include media('<650px') {
                     display: none;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
                 }
             }
         }
@@ -544,7 +551,7 @@
             }
         }
         .text-holder {
-            width: 50%;
+            width: 49%;
             line-height: 1.6; // @include media('<desktop') {
             //     width: 100% !important;
             //     float: none !important;
@@ -613,12 +620,21 @@
                 height: 44px;
                 background-size: 100% 100%;
                 opacity: .79;
-                top: -24px;
+                top: -1.67vw;
                 left: 50%;
                 transform: translateX(-50%);
                 @include background-svg('
  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
-
+                @include media('>1920px') {
+                    width: 139px;
+                    height: 44px;
+                    top: -24px;
+                }
+                @include media('<tablet') {
+                    width: 139px;
+                    height: 44px;
+                    top: -24px;
+                }
             }
             .title {
                 font-size: 1.39vw;
@@ -823,8 +839,8 @@
                 &:before {
                     content: '';
                     position: absolute;
-                    width: 139px;
-                    height: 44px;
+                    width: 9.66vw;
+                    height: 3.06vw;
                     background-size: 100% 100%;
                     opacity: .79;
                     top: 0;
@@ -832,7 +848,14 @@
                     transform: translateX(-50%) rotate(-2deg);
                     @include background-svg('
  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
-
+                    @include media('>1920px') {
+                        width: 139px;
+                        height: 44px;
+                    }
+                    @include media('<tablet') {
+                        width: 139px;
+                        height: 44px;
+                    }
                 }
             }
             &.wide {

@@ -11,19 +11,28 @@
         margin-bottom: 0;
     }
     &__head {
-        margin-bottom: 40px;
+        margin-bottom: 2.78vw;
+        @include media('>1920px') {
+            margin-bottom: 40px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 40px;
+        }
         .h4 {
             font-weight: 600;
         }
     }
     &__inner {
-        padding: 30px 0 245px;
+        padding: 2.08vw 0 17.03vw;
         position: relative; // @include media('<1440px') {
         //     padding: 30px 0 19.5%;
         // }
         // @include media('<desktop') {
         //     padding: 30px 0 300px;
         // }
+        @include media('>1920px') {
+            padding: 30px 0 245px;
+        }
         @include media('<tablet') {
             padding: 30px 0 300px;
         }
@@ -35,7 +44,9 @@
         position: absolute;
     }
     .vide-holder {
+        width: 61.85vw;
         position: relative;
+        margin: 0 auto;
         z-index: 1; // @include media('<1440px') {
         //     width: 80%;
         //     margin: 0 auto;
@@ -43,6 +54,9 @@
         // @include media('<desktop') {
         //     width: 100%;
         // }
+        @include media('>1920px') {
+            width: 890px;
+        }
         @include media('<tablet') {
             width: 100%;
         }
@@ -52,9 +66,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 76px;
-            width: 30px;
-            height: 30px;
+            font-size: 5.28vw;
+            width: 2.08vw;
+            height: 2.08vw;
             background-color: #fff;
             color: #ed1c24;
             display: flex;
@@ -62,18 +76,34 @@
             justify-content: center;
             line-height: 0;
             text-decoration: none;
+            @include media('>1920px') {
+                font-size: 76px;
+                width: 30px;
+                height: 30px;
+            }
+            @include media('<tablet') {
+                font-size: 76px;
+                width: 30px;
+                height: 30px;
+            }
         }
         img {
-            box-shadow: 8px 40px 60px -5px rgba(0, 0, 0, 0.25);
-            width: 1005;
+            box-shadow: 0.55vw 2.78vw 4.17vw -0.35vw rgba(0, 0, 0, 0.25);
+            width: 100%;
             height: auto;
+            @include media('>1920px') {
+                box-shadow: 8px 40px 60px -5px rgba(0, 0, 0, 0.25);
+            }
+            @include media('<tablet') {
+                box-shadow: 8px 40px 60px -5px rgba(0, 0, 0, 0.25);
+            }
         }
     }
     .bottom-card {
-        max-width: 1060px;
+        max-width: 73.61vw;
         margin: 0 auto;
         background-color: $red;
-        padding: 40px 50px;
+        padding: 2.78vw 3.47vw;
         position: relative;
         text-align: left;
         z-index: 1; // @include media('<1440px') {
@@ -82,6 +112,10 @@
         // @include media('<desktop') {
         //     width: 100%;
         // }
+        @include media('>1920px') {
+            max-width: 1060px;
+            padding: 40px 50px;
+        }
         @include media('<tablet') {
             width: 100%;
             padding: 40px 30px 30px;
@@ -89,25 +123,31 @@
         &__text {
             max-width: 70%;
             color: $white;
-            font-size: 19px; // @include media('<1440px') {
+            font-size: 1.32vw; // @include media('<1440px') {
             //     font-size: 1.3vw;
             // }
             // @include media('<desktop') {
             //     font-size: 19px;
             //     max-width: none;
             // }
+            @include media('>1920px') {
+                font-size: 19px;
+            }
             @include media('<tablet') {
                 font-size: 19px;
                 max-width: none;
             }
             .title {
                 font-weight: 600;
-                font-size: 38px; // @include media('<1440px') {
+                font-size: 2.64vw; // @include media('<1440px') {
                 //     font-size: 2.5vw;
                 // }
                 // @include media('<desktop') {
                 //     font-size: 38px;
                 // }
+                @include media('>1920px') {
+                    font-size: 38px;
+                }
                 @include media('<tablet') {
                     font-size: 38px;
                 }
@@ -116,12 +156,15 @@
                 }
             }
             .big {
-                font-size: 70px; // @include media('<1440px') {
+                font-size: 4.86vw; // @include media('<1440px') {
                 //     font-size: 5vw;
                 // }
                 // @include media('<desktop') {
                 //     font-size: 70px;
                 // }
+                @include media('>1920px') {
+                    font-size: 70px;
+                }
                 @include media('<tablet') {
                     font-size: 70px;
                 }
@@ -139,15 +182,16 @@
         }
         &__decor {
             position: absolute;
-            right: -152px;
-            top: 70px;
-            @include media('<1440px') {
-                width: 47%;
+            width: 34.61vw;
+            top: 2.78vw;
+            right: -14.33%;
+            @include media('>1440px') {
+                
+            }
+            @include media('>1920px') {
                 top: 40px;
-                right: -14.33%;
-            } // @include media('<desktop') {
-            //    display: none;
-            // }
+                width: 498px;
+            }
             @include media('<tablet') {
                 display: none;
             }
@@ -155,12 +199,13 @@
     }
     .image-pos-1 {
         top: 0;
-        left: 120px;
-        img {
-            &:last-child {
-                display: none;
-            }
-        } // @include media('<1440px') {
+        left: -1.39vw;
+        width: 19.04vw;
+        @include media('>1920px') {
+            left: -20px;
+            width: 274px;
+        }
+        // @include media('<1440px') {
         //     width: 22%;
         // }
         // @include media('<desktop') {
@@ -180,6 +225,12 @@
             width: 30%;
             top: -18px;
             left: -27px;
+            @include media('>1920px') {
+            
+            }
+            @include media('<tablet') {
+                
+            }
             img {
                 &:last-child {
                     display: block;
@@ -189,16 +240,24 @@
                 }
             }
         }
-    }
-    .image-pos-2 {
-        top: 0;
-        right: 120px;
-        z-index: -1;
         img {
+            width: 100%;
+            height: auto;
             &:last-child {
                 display: none;
             }
-        } // @include media('<1440px') {
+        }
+    }
+    .image-pos-2 {
+        top: 0;
+        right: -2.78vw;
+        z-index: -1;
+        width: 22.65vw;
+        @include media('>1920px') {
+            right: -40px;
+            width: 326px;
+        }
+        // @include media('<1440px') {
         //     width: 26%;
         // }
         // @include media('<desktop') {
@@ -229,11 +288,19 @@
                 }
             }
         }
+        img {
+            width: 100%;
+            height: auto;
+            &:last-child {
+                display: none;
+            }
+        }
     }
     .image-pos-3 {
+        width: 24.32vw;
         top: 60%;
         transform: translateY(-50%);
-        left: 95px; // @include media('<1440px') {
+        left: -4.5vw; // @include media('<1440px') {
         //     width: 28%;
         // }
         // @include media('<desktop') {
@@ -241,15 +308,24 @@
         //     top: 43%;
         //     left: -180px;
         // }
+        @include media('>1920px') {
+            left: -65px;
+            width: 350px;
+        }
         @include media('<tablet') {
             width: 50%;
             top: 45%;
             left: -23%;
         }
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
     .image-pos-4 {
-        bottom: -160px;
-        left: 180px; // @include media('<1440px') {
+        width: 14.10vw;
+        bottom: -11.11vw;
+        left: -3.5vw; // @include media('<1440px') {
         //     width: 16%;
         //     left: -3%;
         // }
@@ -257,6 +333,11 @@
         //     width: auto;
         //     bottom: -120px;
         // }
+        @include media('>1920px') {
+            width: 203px;
+            left: -50px;
+            bottom: -160px;
+        }
         @include media('<tablet') {
             width: auto;
             bottom: -17%;
@@ -265,10 +346,15 @@
         @include media('<phone') {
             width: 45%;
         }
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
     .image-pos-5 {
-        left: 25%;
-        bottom: 25px; // @include media('<1440px') {
+        width: 15.43vw;
+        left: 19%;
+        bottom: 1.74vw; // @include media('<1440px') {
         //     width: 18%;
         // }
         // @include media('<desktop') {
@@ -276,6 +362,10 @@
         //     left: -13%;
         //     bottom: 45px;
         // }
+        @include media('>1920px') {
+            width: 222px;
+            bottom: 25px;
+        }
         @include media('<tablet') {
             left: 5%;
             width: auto;
@@ -284,8 +374,13 @@
         @include media('<phone') {
             width: 45%;
         }
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
     .image-pos-6 {
+        width: 10.7vw;
         left: 39%;
         bottom: 0; // @include media('<1440px') {
         //     width: 13%;
@@ -295,6 +390,9 @@
         //     left: 25%;
         //     bottom: 42px;
         // }
+        @include media('>1920px') {
+            width: 154px;
+        }
         @include media('<tablet') {
             width: auto;
             left: 260px;
@@ -304,10 +402,15 @@
             width: 34%;
             left: 65%;
         }
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
     .image-pos-7 {
-        right: 150px;
-        bottom: -85px; // @include media('<1440px') {
+        width: 46.63vw;
+        right: -3.42vw;
+        bottom: -5.9vw; // @include media('<1440px') {
         //     width: 55%;
         // }
         // @include media('<desktop') {
@@ -315,10 +418,19 @@
         //     right: -315px;
         //     bottom: 60px;
         // }
+        @include media('>1920px') {
+            width: 671px;
+            right: -49px;
+            bottom: -85px;
+        }
         @include media('<tablet') {
             width: 90%;
             right: -280px;
             bottom: -80px;
+        }
+        img {
+            width: 100%;
+            height: auto;
         }
     }
 }

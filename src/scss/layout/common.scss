@@ -55,8 +55,11 @@ body {
     display: inline-block;
     width: 100%;
     text-align: center;
-    font-size: 30px;
+    font-size: 2.08vw;
     font-weight: 400;
+    @include media('>1920px') {
+        font-size: 30px;
+    }
     @include media ('<tablet') {
         letter-spacing: -.6px;
     }
@@ -64,9 +67,12 @@ body {
         font-size: 24px;
     }
     &.cursive {
-        font-size: 72px;
+        font-size: 5vw;
         line-height: .7;
-        @include media ('<desktop') {
+        @include media('>1920px') {
+            font-size: 72px;
+        }
+        @include media ('<tablet') {
             line-height: .7;
         }
         @include media ('<phone') {

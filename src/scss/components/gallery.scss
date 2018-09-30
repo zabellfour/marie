@@ -13,13 +13,16 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 55px;
+        margin-bottom: 3.82vw;
+        @include media('>1920px') {
+            margin-bottom: 55px;
+        }
         @include media('<tablet') {
             margin-bottom: 35px;
         }
     }
     &-item {
-        height: 500px;
+        height: 34.75vw;
         width: 32%;
         margin-bottom: 2%;
         background-size: cover;
@@ -31,6 +34,9 @@
         //     width: calc(50% - 10px);
         //     margin-bottom: 20px;
         // }
+        @include media('>1920px') {
+            height: 500px;
+        }
         @include media('<tablet') {
             height: 330px;
             width: calc(50% - 10px);
@@ -73,19 +79,32 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
-        max-width: 480px;
-        padding: 0 15px;
-        font-size: 34px;
+        max-width: 33.36vw;
+        padding: 0 1.04vw;
+        font-size: 2.36vw;
         color: $white;
         font-weight: 600;
+        @include media('>1920px') {
+            max-width: 480px;
+            padding: 0 15px;
+            font-size: 34px;
+        }
         @include media('<tablet') {
             font-size: 29px;
+            max-width: 480px;
+            padding: 0 15px;
         }
         .cursive {
             display: inline-block;
             width: 100%;
-            font-size: 30px;
+            font-size: 2.08vw;
             font-weight: 400;
+            @include media('>1920px') {
+                font-size: 30px;
+            }
+            @include media('<tablet') {
+                font-size: 30px;
+            }
         }
     }
 }

@@ -5,16 +5,23 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 30px 0;
+        padding: 2.08vw 0;
         border-top: 1px solid $light-gray;
-        @include media('<desktop') {
+        @include media('>1920px') {
+            padding: 30px 0;
+        }
+        @include media('<tablet') {
+            padding: 30px 0;
             font-size: 14px;
         }
         li {
-            margin: 0 15px;
+            margin: 0 1.04vw 1.04vw;
             text-align: center;
-            margin-bottom: 15px;
+            @include media('>1920px') {
+                margin: 0 15px 15px;
+            }
             @include media('<tablet') {
+                margin: 0 15px 15px;
                 width: 100%;
             }
         }
@@ -30,12 +37,26 @@
 }
 
 .footer-inner {
-    padding: 20px 0 0 0;
+    padding: 1.39vw 0 0 0;
+    @include media('>1920px') {
+        padding: 20px 0 0 0;
+    }
+    @include media('<tablet') {
+        padding: 20px 0 0 0;
+    }
     .logo {
         @include animate(opacity);
-        width: 176px;
+        width: 12.23vw;
         display: block;
-        margin: 0 auto 8px;
+        margin: 0 auto 0.55vw;
+        @include media('>1920px') {
+            width: 176px;
+            margin: 0 auto 8px;
+        }
+        @include media('<tablet') {
+            width: 176px;
+            margin: 0 auto 8px;
+        }
         &:hover {
             opacity: .8;
         }
@@ -44,9 +65,14 @@
         text-decoration: none;
         color: $gray1;
         text-align: center;
-        font-size: 15px;
-        margin: 0 auto 40px;
+        font-size: 1.04vw;
+        margin: 0 auto 2.78vw;
+        @include media('>1920px') {
+            font-size: 15px;
+            margin: 0 auto 40px;
+        }
         @include media('<tablet') {
+            font-size: 15px;
             margin: 0 auto 30px;
         }
     }
@@ -54,25 +80,32 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 2.08vw;
         font-weight: 600;
-        @include media('<desktop') {
-            margin: 0 -20px 30px -20px;
-            font-size: 14px;
+        @include media('>1920px') {
+            margin-bottom: 30px;
         }
+        // @include media('<desktop') {
+        //     margin: 0 -20px 30px -20px;
+        //     font-size: 14px;
+        // }
         @include media('<tablet') {
             margin-bottom: 15px;
         }
         a {
             @include animate(color);
-            padding: 0 25px;
+            padding: 0 1.74vw;
             text-decoration: none;
             color: $black;
             text-align: center;
-            @include media('<desktop') {
-                padding: 0 20px;
+            @include media('>1920px') {
+                padding: 0 25px;
             }
+            // @include media('<desktop') {
+            //     padding: 0 20px;
+            // }
             @include media('<tablet') {
+                padding: 0 20px;
                 width: 100%;
                 margin-bottom: 15px;
             }
@@ -87,13 +120,27 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-bottom: 15px;
+        margin-bottom: 1.04vw;
+        @include media('>1920px') {
+            margin-bottom: 15px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 15px;
+        }
         .title {
-            margin-bottom: 10px;
+            margin-bottom: 0.69vw;
             font-family: $font-felt;
-            font-size: 37px;
+            font-size: 2.57vw;
             line-height: 1;
             color: $red;
+            @include media('>1920px') {
+                font-size: 37px;
+                margin-bottom: 10px;
+            }
+            @include media('<tablet') {
+                font-size: 37px;
+                margin-bottom: 10px;
+            }
         }
     }
     .social-menu {
@@ -102,7 +149,13 @@
         width: 100%;
         justify-content: center;
         li {
-            margin: 0 15px;
+            margin: 0 1.04vw;
+            @include media('>1920px') {
+                margin: 0 15px;
+            }
+            @include media('<tablet') {
+                margin: 0 15px;
+            }
         }
         a {
             @include animate (opacity);
@@ -114,7 +167,13 @@
         }
         i {
             display: block;
-            font-size: 40px;
+            font-size: 2.78vw;
+            @include media('>1920px') {
+                font-size: 40px;
+            }
+            @include media('<tablet') {
+                font-size: 40px;
+            }
         }
         .icon-facebook {
             color: #4065b7;
@@ -125,7 +184,15 @@
             -webkit-text-fill-color: transparent;
         }
         .icon-youtube {
-            font-size: 50px;
-            transform: translateY(-5px);
+            font-size: 3.47vw;
+            transform: translateY(-0.35vw);
+            @include media('>1920px') {
+                font-size: 50px;
+                transform: translateY(-5px);
+            }
+            @include media('<tablet') {
+                font-size: 50px;
+                transform: translateY(-5px);
+            }
         }
     }
