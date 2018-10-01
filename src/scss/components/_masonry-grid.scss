@@ -2,8 +2,6 @@
 	padding: 3.82vw 4.6% 5.9vw;
 	@include media('>1920px') {
 			padding: 55px 4.6% 85px;
-			padding-top: calc(55px * 1.3334);
-			padding-bottom: calc(85px * 1.3334);
 		}
 	@include media('<tablet') {
 			padding: 55px 4.6% 85px;
@@ -12,7 +10,6 @@
 		margin-bottom: 1.04vw;
 		@include media('>1920px') {
 			margin-bottom: 15px;
-			margin-bottom: calc(15px * 1.3334);
 		}
 		@include media('<tablet') {
 			margin-bottom: 15px;
@@ -20,7 +17,7 @@
 		 .h1 {
 			 font-size: 6.11vw;
 			 @include media('>1920px') {
-				font-size: calc(88px * 1.3334);
+				font-size: 88px;
 			}
 			 @include media('<tablet') {
 				font-size: 88px;
@@ -34,7 +31,6 @@
 		margin-bottom: 2.78vw;
 		@include media('>1920px') {
 			margin-bottom: 40px;
-			margin-bottom: calc(40px * 1.3334);
 		}
 		@include media('<tablet') {
 			margin-bottom: 40px;
@@ -48,7 +44,6 @@
 	margin-bottom: 4.2vw;
 	@include media('>1920px') {
 		margin-bottom: 60px;
-		margin-bottom: calc(60px * 1.3334);
 	}
 	@include media('<tablet') {
 		margin-bottom: 60px;
@@ -58,8 +53,8 @@
 		width: calc(25% - 20px);
 		margin-bottom: 20px;
 		@include media('>1920px') {
-			width: calc(25% - (20px * 1.3334));
-			margin-bottom: calc(20px * 1.3334);
+			width: calc(25% - 20px);
+			margin-bottom: 20px;
 		}
 		@include media('<tablet') {
 			width: calc(50% - 10px);
@@ -67,6 +62,15 @@
 		}
 		@include media('<650px') {
 			width: 100%;
+		}
+		&:nth-child(3n) {
+			width: 25%;
+			@include media('<tablet') {
+				width: calc(50% - 10px);
+			}
+			@include media('<650px') {
+				width: 100%;
+			}
 		}
 	}
 
@@ -78,7 +82,7 @@
 			p {
 				margin-bottom: 1.73vw;
 				@include media('>1920px') {
-					margin-bottom: calc(25px * 1.3334);
+					margin-bottom: 25px;
 				}
 				@include media('<tablet') {
 					margin-bottom: 25px;
@@ -87,7 +91,7 @@
 			.marked-red {
 				margin-bottom: 0.7vw;
 				@include media('>1920px') {
-					margin-bottom: calc(10px * 1.3334);
+					margin-bottom: 10px;
 				}
 				@include media('<tablet') {
 					margin-bottom: 10px;
@@ -102,13 +106,16 @@
 	.grid-item--width2 {
 		width: calc(50% - 20px);
 		@include media('>1920px') {
-			width: calc(50% - (20 * 1.3334));
+			width: calc(50% - 20px);
 		}
 		@include media('<tablet') {
 			width: 100%;
 		}
-		@include media('<650px') {
-			width: 100%;
+		&:nth-child(3n) {
+			width: 50%;
+			@include media('<tablet') {
+				width: 100%;
+			}
 		}
 	}
 	.thumb-top {
@@ -116,7 +123,7 @@
 		background: $red;
 		position: relative;
 		@include media('>1920px') {
-			height: calc(40px * 1.3334);
+			height: 40px;
 		}
 		@include media('<tablet') {
 			height: 40px;
@@ -129,8 +136,8 @@
 			font-size: 1.39vw;
 			color: #fff;
 			@include media('>1920px') {
-				left: calc(30px * 1.3334);
-				font-size: calc(20px * 1.3334);
+				left: 30px;
+				font-size: 20px;
 			}
 			@include media('<tablet') {
 				width: 100%;
@@ -178,13 +185,9 @@
                 }
 			@include media('>1920px') {
 				font-size: 76px;
-				width: calc(30px * 1.3334);
-				height: calc(30px * 1.3334);
 			}
 			@include media('<tablet') {
 				font-size: 76px;
-				width: 30px;
-		    	height: 30px;
 			}
 		}
 	}
@@ -196,9 +199,9 @@
 		color: #6d6d6d;
 		background: #fff;
 		@include media('>1920px') {
-			padding: calc(25px * 1.3334);
-			padding-right: calc(40px * 1.3334);
-			font-size: calc(15px * 1.3334);
+			padding: 25px;
+			padding-right: 40px;
+			font-size: 15px;
 		}
 		@include media('<tablet') {
 			font-size: 15px;

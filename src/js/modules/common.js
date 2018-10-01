@@ -56,7 +56,7 @@ var common = {
     masonry: function() {
         var $grid = $('.masonry-grid').masonry({
             itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer',
+            columnWidth: '.grid-item',
             horizontalOrder: true,
             percentPosition: true,
             gutter: 20

@@ -30,7 +30,7 @@
         }
         @include media('<tablet') {
             max-width: 800px;
-            padding: 66px 0 0;
+            padding: 26px 0 0;
             margin-bottom: -20px;
         }
         .section-headline {
@@ -65,8 +65,16 @@
                 font-size: 105px;
                 margin: 0 auto 12px;
             }
+            @include media('<tablet') {
+                margin: 0 auto 12px;
+                font-size: 105px;
+            }
             @include media('<640px') {
                 font-size: 85px;
+                letter-spacing: -1.5px;
+            }
+            @include media('<500px') {
+                line-height: .6;
             }
         }
         .h4 {
@@ -81,6 +89,7 @@
             }
             @include media('<640px') {
                 font-size: 44px;
+                margin-bottom: 10px;
             }
         }
     }
@@ -224,7 +233,7 @@
                 }
                 @include media('<500px') {
                     padding: 7vw 0 0 0;
-                    width: 68vw
+                    width: 68vw;
                 }
                 .title {
                     font-size: 1.8vw;
@@ -1051,6 +1060,9 @@
             max-width: 65%;
             margin-left: 35%;
             font-size: 18px;
+        }
+        @include media('<phone') {
+            font-size: 14px;
         }
         strong {
             font-weight: 600;
