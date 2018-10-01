@@ -241,8 +241,10 @@
     }
     .gallery-item{
         @include media('<tablet') {
-         width:calc(48% - 10px) !important ;  
-         
+         width:calc(50% - 10px) !important ;  
+        }
+        @include media('<phone') {
+            width: 100% !important;
         }
     }
 }

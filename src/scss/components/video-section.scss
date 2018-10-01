@@ -195,6 +195,10 @@
             @include media('<tablet') {
                 display: none;
             }
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
     }
     .image-pos-1 {

@@ -201,7 +201,7 @@
                 padding-top: 3.27vw;
                 position: absolute;
                 max-width: 21.89vw;
-                right: 3.68vw;
+                right: 5%;
                 top: 0; // @include media('<1440px') {
                 //     max-width: 55%;
                 //     right: 5%;
@@ -209,7 +209,7 @@
                 @include media('>1920px') {
                     padding-top: 47px;
                     max-width: 315px;
-                    right: 53px;
+                    right: 45px;
                 }
                 @include media('<tablet') {
                     padding-top: 47px;
@@ -527,13 +527,11 @@
                     margin-bottom: 5%;
                     // padding-top: 12%;
                     transform: translateY(-25px);
-                    @include media('<650px') {
-                        width: 80%;
-                        padding-top: 12%;
-                    }
                 }
                 @include media('<650px') {
                     order: 2;
+                    width: 100%;
+                    padding-top: 12%;
                 }
                 &.bg-text {
                     @include media('<tablet') {
@@ -556,6 +554,7 @@
                     order: 0;
                     padding: 0;
                     margin: 0;
+                    width: 80%;
                 }
             }
             .title {
@@ -642,8 +641,8 @@
             &:before {
                 content: '';
                 position: absolute;
-                width: 139px;
-                height: 44px;
+                width: 9.66vw;
+                height: 3.06vw;
                 background-size: 100% 100%;
                 opacity: .79;
                 top: -1.67vw;

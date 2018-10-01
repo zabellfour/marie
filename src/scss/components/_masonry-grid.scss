@@ -150,21 +150,39 @@
 		    top: 50%;
 		    left: 50%;
 		    transform: translate(-50%, -50%);
-		    font-size: 76px;
-		    width: 30px;
-		    height: 30px;
-		    background-color: #fff;
-		    color: #e11c1b;
+		    font-size: 5.28vw;
+		    color: $red;
 		    display: flex;
 		    align-items: center;
 		    justify-content: center;
 		    line-height: 0;
 			text-decoration: none;
+			&:before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 2.08vw;
+                    height: 2.08vw;
+                    background-color: $white;
+                    z-index: -1;
+                    @include media('>1920px') { 
+                        width: 30px;
+                        height: 30px;
+                    }
+                    @include media('<tablet') {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
 			@include media('>1920px') {
+				font-size: 76px;
 				width: calc(30px * 1.3334);
 				height: calc(30px * 1.3334);
 			}
 			@include media('<tablet') {
+				font-size: 76px;
 				width: 30px;
 		    	height: 30px;
 			}

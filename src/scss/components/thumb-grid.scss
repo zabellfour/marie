@@ -76,23 +76,36 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-size: 5.28vw;
-                width: 2.08vw;
-                height: 2.08vw;
-                background-color: $white;
+                // background-color: $white;
                 color: $red;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 line-height: 0;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 2.08vw;
+                    height: 2.08vw;
+                    background-color: $white;
+                    z-index: -1;
+                    @include media('>1920px') { 
+                        width: 30px;
+                        height: 30px;
+                    }
+                    @include media('<tablet') {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
                 @include media('>1920px') { 
                     font-size: 76px;
-                    width: 30px;
-                    height: 30px;
                  }
                 @include media('<tablet') {
                     font-size: 76px;
-                    width: 30px;
-                    height: 30px;
                 }
                 @include animate(opacity);
                 &:hover {
