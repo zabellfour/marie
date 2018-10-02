@@ -3,9 +3,6 @@
     @include media('>1920px') {
         padding: 0 17px;
     }
-    @include media('<desktop') {
-        //  padding: 0;
-    }
     @include media('<tablet') {
         padding: 0;
     }
@@ -19,9 +16,6 @@
         @include media('>1920px') {
             max-width: 500px;
             margin: 0 auto 50px;
-        }
-        @include media('<desktop') {
-            // margin-bottom: 30px;
         }
         @include media('<tablet') {
             margin: 0 auto 30px;
@@ -39,10 +33,6 @@
             @include media('>1920px') {
                 margin-bottom: 80px;
             }
-            @include media('<desktop') {
-                // flex-wrap: wrap;
-                // margin-bottom: 27px;
-            }
             @include media('<tablet') {
                 flex-wrap: wrap;
                 margin-bottom: 27px;
@@ -59,12 +49,6 @@
             @include media('>1920px') {
                 box-shadow: 0 5px 25px 0 rgba($black, .2);
                 padding: 15px;
-            }
-            @include media('<desktop') {
-                // width: 32%;
-                // padding-top: 44px;
-                // margin-bottom: 20px;
-                // min-height: 327px;
             }
             @include media('<tablet') {
                 width: 32%;
@@ -198,51 +182,43 @@
         padding: 0 22px;
     }
     .gallery-item:last-child {
-        @include media('<desktop') {
-            // display: none;
-        }
         @include media('<tablet') {
             display: none;
         }
     }
     .additional-indents {
-        // @include media('<desktop') {
-        //     padding:0 ;
-        // }
         @include media('<tablet') {
             padding: 0;
         }
     }
     .container {
-        //   @include media('<desktop') {
-        //    padding: 0 15px;
-        //   }
         @include media('<tablet') {
             padding: 0;
         }
     }
     .gallery-holder {
         @include media('<tablet') {
-            
             .gallery-item {
-                &:first-child{
+                &:first-child {
                     background-position: 20% 50%;
-                    background-position:-57px 0 ;
-                    background-size: 214% !important ;
+                    background-position: -57px 0;
+                    background-size: 214% !important;
                 }
-                &:nth-child(2){
+                &:nth-child(2) {
                     background-position: 20% 0;
                     background-size: cover;
-                    background-position:0px 0 ;
-                    background-size: 124% !important ;
+                    background-position: 0px 0;
+                    background-size: 124% !important;
                 }
             }
         }
     }
-    .gallery-item{
+    .gallery-item {
         @include media('<tablet') {
-         width:calc(48% - 10px) !important ;  
-         
+            width: calc(50% - 10px) !important;
+        }
+        @include media('<phone') {
+            width: 100% !important;
         }
     }
 }

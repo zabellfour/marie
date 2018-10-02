@@ -2,10 +2,6 @@
     .mob-item {
         text-align: center;
         display: none;
-        @include media('<desktop') {
-            // display: block;
-            // margin-bottom: 10px;
-        }
         @include media('<tablet') {
             display: block;
             margin-bottom: 10px;
@@ -23,13 +19,6 @@
             max-width: 800px;
             padding: 66px 54px 0;
             margin-bottom: -20px;
-        }
-        @include media('<desktop') {
-            // padding-top: 59px;
-            // padding-left: 10px;
-            // padding-right: 10px;
-            // max-width: 800px;
-            // margin-bottom: -20px;
         }
         @include media('<tablet') {
             padding-top: 59px;
@@ -86,9 +75,6 @@
             margin: 0;
             max-width: 41.69vw;
             margin: 0 auto 2.43vw;
-            // @include media('<desktop') {
-            //     margin-bottom: 32px !important;
-            // }
             @include media('>1920px') {
                 font-size: 105px;
                 max-width: 600px;
@@ -123,9 +109,6 @@
     .text-img-row {
         display: flex;
         margin-bottom: 3.13vw;
-        // @include media('<desktop') {
-        //     flex-wrap: wrap;
-        // }
         @include media('>1920px') {
             margin-bottom: 45px;
         }
@@ -135,9 +118,6 @@
         }
         .col-l {
             width: 50%;
-            @include media('<desktop') {
-                // width: 100%;
-            }
             @include media('<tablet') {
                 width: 100%;
             }
@@ -145,25 +125,16 @@
         .col-r {
             width: 50%;
             @extend %clearfix;
-            @include media('<desktop') {
-                //    width: 100%;
-            }
             @include media('<tablet') {
                 width: 100%;
             }
         }
         &.row1 {
-            @include media('<desktop') {
-                //flex-direction: column-reverse;
-            }
             @include media('<tablet') {
                 flex-direction: column-reverse;
             }
             .col-r {
                 .text-holder {
-                    @include media('<desktop') {
-                        //    display: none;
-                    }
                     @include media('<tablet') {
                         display: none;
                     }
@@ -212,10 +183,6 @@
         @include media('>1920px') {
             padding-top: 94px;
         }
-        @include media('<desktop') {
-            // padding-top: 0;
-            // margin-top: -50px;
-        }
         @include media('<tablet') {
             padding-top: 0;
             margin-top: -50px;
@@ -254,9 +221,6 @@
             @include media('>1920px') {
                 right: -50px;
             }
-            @include media('<desktop') {
-                // right: 5px;
-            }
             @include media('<tablet') {
                 right: 5px;
                 margin: 0 auto;
@@ -266,9 +230,6 @@
             }
         }
         .box-text {
-            @include media('<desktop') {
-                // margin-bottom: 0;
-            }
             @include media('<tablet') {
                 margin-bottom: 0;
             }
@@ -282,12 +243,6 @@
         padding-top: 14.10vw;
         @include media('>1920px') {
             padding-top: 203px;
-        }
-        @include media('<desktop') {
-            // position: relative;
-            // text-align: right;
-            // padding-top: 203px;
-            // margin-right: 63px;
         }
         @include media('<tablet') {
             position: relative;
@@ -311,16 +266,6 @@
                     width: 100%;
                 }
             }
-            // @include media('<1300px') {
-            //     left: calc(15px + 18vw * -1)
-            // }
-            // @include media('<widescreen') {
-            //     left: calc(15px + 28vw * -1)
-            // }
-            // @include media('<desktop') {
-            //     left: calc(15px + 8vw * -1);
-            //     top: -8px;
-            // }
             @include media('>1920px') {
                 left: -87px;
                 width: 861px;
@@ -363,9 +308,6 @@
                 @include media('<tablet') {
                     font-size: 20px;
                 }
-                @include media('<desktop') {
-                    // font-size: 2.2vw;
-                }
                 @include media('<640px') {
                     font-size: 20px;
                 }
@@ -373,9 +315,6 @@
         }
     }
     .img-holder-2 {
-        // @include media('<desktop') {
-        //     right: 5px;
-        // }
         @include media('<tablet') {
             right: 5px;
         }
@@ -447,10 +386,6 @@
         }
     }
     .colr2 {
-        // @include media('<desktop') {
-        //     display: flex;
-        //     flex-direction: column;
-        // }
         @include media('<tablet') {
             display: flex;
             flex-direction: column;
@@ -459,9 +394,6 @@
             margin: -22% 0 1.39vw 0%;
             @include media('>1920px') {
                 margin: -22% 0 20px 0%;
-            }
-            @include media('<desktop') {
-                // margin: 0;
             }
             @include media('<tablet') {
                 margin: 0;
@@ -521,9 +453,6 @@
             font-size: 20px;
             box-shadow: 0 0 15px 0 rgba(0, 0, 0, .2);
         }
-        @include media('<desktop') {
-            //   margin-top: 30px;
-        }
         @include media('<tablet') {
             padding: 33px 50px;
             max-width: 500px;
@@ -570,9 +499,6 @@
         @include media('>1920px') {
             padding: 20px 20px 20px 31%;
             margin: 93px 0 30px 0;
-        }
-        @include media('<desktop') {
-            //padding-left: 39%;
         }
         @include media('<tablet') {
             margin: 93px 0 30px 0;
@@ -674,10 +600,6 @@
                 top: -69px;
                 left: 89px;
                 width: 328px;
-            }
-            @include media('<desktop') {
-                // left: 29px;
-                // width: 230px;
             }
             @include media('<tablet') {
                 left: 22px;

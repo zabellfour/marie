@@ -1,12 +1,18 @@
 .product-detail {
     padding: 0 4.5%;
-    transform: translateY(-137px);
-    margin-bottom: -137px;
+    transform: translateY(-9.52vw);
+    margin-bottom: -9.52vw;
     // @include media('<desktop') {
     //     padding: 0% 2.6%;
     // }
+    @include media('>1920px') {
+        transform: translateY(-137px);
+        margin-bottom: -137px;
+    }
     @include media('<tablet') {
         padding: 0% 2.6%;
+        transform: translateY(-137px);
+        margin-bottom: -137px;
     }
     @include media('<phone') {
         padding: 0% 7px;
@@ -14,23 +20,31 @@
     &__header {
         @extend %clearfix;
         padding: 0 12% 0 10%;
-        margin-bottom: 40px;
+        margin-bottom: 2.78vw;
         // @include media('<desktop') {
         //     padding: 0 8% 0 10%;
         // }
+        @include media('>1920px') {
+            margin-bottom: 40px;
+        }
         @include media('<tablet') {
             padding: 0 8% 0 10%;
+            margin-bottom: 40px;
         }
     }
     &__image {
         float: left;
-        max-width: 362px;
+        max-width: 25.16vw;
         position: relative;
         // @include media('<desktop') {
         //     float: none;
         //     margin: 0 auto;
         // }
+        @include media('>1920px') {
+            max-width: 362px;
+        }
         @include media('<tablet') {
+            max-width: 362px;
             float: none;
             margin: 0 auto;
         }
@@ -42,15 +56,21 @@
             bottom: 0;
             left: 0;
             right: 0;
-            box-shadow: 0px 15px 35px 5px rgba(153, 153, 153, 1);
+            box-shadow: 0px 1.04vw 2.43vw 0.35vw rgba(153, 153, 153, 1);
             z-index: -1;
+            @include media('>1920px') {
+                box-shadow: 0px 15px 35px 5px rgba(153, 153, 153, 1);
+            }
+            @include media('<tablet') {
+                box-shadow: 0px 15px 35px 5px rgba(153, 153, 153, 1);
+            }
         }
     }
     &__text {
         float: left;
-        width: calc(100% - 362px);
-        padding: 135px 15px 15px 40px;
-        font-size: 16px;
+        width: calc(100% - 25.16vw);
+        padding: 9.38vw 1.04vw 1.04vw 2.78vw;
+        font-size: 1.11vw;
         // @include media('<desktop') {
         //     float: none;
         //     width: 100%;
@@ -58,29 +78,43 @@
         //     padding: 35px 0 0 0;
         //     text-align: center;
         // }
+        @include media('>1920px') {
+            width: calc(100% - 362px);
+            padding: 135px 15px 15px 40px;
+            font-size: 16px;
+        }
         @include media('<tablet') {
             float: none;
             width: 100%;
             margin: 0 auto;
             padding: 35px 0 0 0;
+            font-size: 16px;
             text-align: center;
         }
         .title {
-            font-size: 52px;
+            font-size: 3.61vw;
             margin-bottom: 0;
             line-height: 1;
             font-weight: 600;
+            @include media('>1920px') {
+                font-size: 52px;
+            }
             @include media('<tablet') {
                 font-size: 36px;
             }
         }
         .sub-title {
             display: inline-block;
-            font-size: 43px;
+            font-size: 2.99vw;
             line-height: 1;
-            margin-bottom: 15px;
+            margin-bottom: 1.04vw;
+            @include media('>1920px') {
+                font-size: 43px;
+                margin-bottom: 15px;
+            }
             @include media('<tablet') {
                 font-size: 41px;
+                margin-bottom: 15px;
             }
         }
         p {
@@ -88,20 +122,27 @@
         }
     }
     &__bg-image {
-        margin: 0 auto 10px;
+        margin: 0 auto 0.69vw;
         width: 46%;
         // @include media('<desktop') {
         //     width: 40%;
         // }
+        @include media('>1920px') {
+            margin: 0 auto 10px;
+        }
         @include media('<650px') {
             width: 60%;
+            margin: 0 auto 10px;
         }
     }
     &__footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 70px;
+        margin-bottom: 4.86vw;
+        @include media('>1920px') {
+            margin-bottom: 70px;
+        }
         @include media('<tablet') {
             margin-bottom: 25px;
             font-size: 13px;
@@ -111,14 +152,18 @@
         }
     }
     &__info {
-        height: 85px;
+        height: 5.9vw;
         width: 75%;
         background-color: $white;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        @include media('>1920px') {
+            height: 85px;
+        }
         @include media('<tablet') {
+            height: 85px;
             width: 63%;
         }
         @include media('<650px') {
@@ -146,14 +191,25 @@
                 }
                 i {
                     color: $red;
-                    font-size: 27px;
-                    margin-bottom: 6px;
+                    font-size: 1.88vw;
+                    margin-bottom: 0.42vw;
+                    @include media('>1920px') {
+                        font-size: 27px;
+                        margin-bottom: 6px;
+                    }
+                    @include media('<tablet') {
+                        font-size: 27px;
+                        margin-bottom: 6px;
+                    }
                 }
             }
         }
         &:last-child {
-            width: calc(25% - 20px);
+            width: calc(25% - 1.39vw);
             align-content: center;
+            @include media('>1920px') {
+                width: calc(25% - 20px);
+            }
             @include media('<tablet') {
                width: calc(37% - 20px);
             }
@@ -172,10 +228,22 @@
                   text-align: center;
                 }
                 &:first-child {
-                    margin-bottom: 8px;
+                    margin-bottom: 0.55vw;
+                    @include media('>1920px') {
+                        margin-bottom: 8px;
+                    }
+                    @include media('<tablet') {
+                        margin-bottom: 8px;
+                    }
                 }
                 i {
-                    margin-right: 10px;
+                    margin-right: 0.69vw;
+                    @include media('>1920px') {
+                        margin-right: 10px;
+                    }
+                    @include media('<tablet') {
+                        margin-right: 10px;
+                    }
                 }
             }
         }

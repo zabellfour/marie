@@ -13,21 +13,14 @@
 
 .prefooter-banner {
     position: relative; 
-    // padding-bottom: 37.5%;
-    margin-bottom: 50px;
+    margin-bottom: 3.47vw;
     display: flex;
     justify-content: flex-end;
     padding: 9% 6% 9% 0;
-    @include media('<desktop') {
-        // padding-bottom: 45%;
-        min-height: 330px;
-        padding: 7% 0 7% 0;
+    @include media('>1920px') {
+        margin-bottom: 50px;
     }
     @include media('<tablet') {
-        //desk
-        min-height: 330px;
-        padding: 7% 0 7% 0;
-        //desk
         padding: 27px 0 0 0;
         height: 515px;
     }
@@ -50,8 +43,12 @@
         max-width: 50%;
         color: $white;
         text-align: center;
-        margin-top: 15px;
-        padding: 0 10px;
+        margin-top: 1.04vw;
+        padding: 0 0.69vw;
+        @include media('>1920px') {
+            margin-top: 15px;
+            padding: 0 10px;
+        }
         @include media('<desktop') {
             // margin-top: 0;
             // max-width: 40%;
@@ -60,6 +57,7 @@
             //desk
             margin-top: 0;
             max-width: 40%;
+            padding: 0 10px;
             //desk
             position: static;
             max-width: 334px;
@@ -73,15 +71,19 @@
         }
     }
     &__title {
-        font-size: 44px;
+        font-size: 3.06vw;
         font-weight: 400;
-        margin-bottom: 5px;
+        margin-bottom: 0.35vw;
         // @include media('<widescreen') {
         //     font-size: 37px;
         // }
         // @include media('<desktop') {
         //     font-size: 30px;
         // }
+        @include media('>1920px') {
+            font-size: 44px;
+            margin-bottom: 5px;
+        }
         @include media('<tablet') {
            // desk
            font-size: 30px;
@@ -89,10 +91,10 @@
         }
     }
     &__sub-title {
-        font-size: 20px;
+        font-size: 1.39vw;
         font-weight: 600;
-        max-width: 360px;
-        margin: 0 auto 35px;
+        max-width: 25vw;
+        margin: 0 auto 2.43vw;
         // @include media('<widescreen') {
         //     font-size: 18px;
         //     margin: 0 auto 20px;
@@ -101,8 +103,14 @@
             
         //     font-size: 16px;
         // }
+        @include media('>1920px') {
+            font-size: 20px;
+            max-width: 360px;
+            margin: 0 auto 35px;
+        }
         @include media('<tablet') {
             //desk
+            max-width: 360px;
             font-size: 16px;
             margin: 0 auto 20px;
             //desk

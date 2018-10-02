@@ -56,7 +56,7 @@ var common = {
     masonry: function() {
         var $grid = $('.masonry-grid').masonry({
             itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer',
+            columnWidth: '.grid-item',
             horizontalOrder: true,
             percentPosition: true,
             gutter: 20
@@ -67,6 +67,22 @@ var common = {
           $grid.masonry();
         });
 
+    },
+
+    filterScroll: function() {
+        $('.next-icon').click(function() {
+            event.preventDefault();
+            $('.filter-items-row').animate({
+              scrollLeft: "+=150px"
+            },200);
+          });
+          
+           $('.prev-icon').click(function() {
+            event.preventDefault();
+            $('.filter-items-row').animate({
+              scrollLeft: "-=150px"
+            },200);
+        });
     }
 
 };

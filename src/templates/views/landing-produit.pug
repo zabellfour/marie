@@ -1,6 +1,41 @@
 extends ../partials/layouts/main-layout.pug
 
 block main
+  .sticky-filter
+    .filter-items-holder
+      span.prev-icon
+        i.icon-arrow
+      .filter-items-row
+        .filter-item
+          span Pizzas
+          span.close
+            i.icon-cancel
+        .filter-item
+          span Fromage
+          span.close
+            i.icon-cancel
+        .filter-item
+          span Légumes
+          span.close
+            i.icon-cancel
+        .filter-item
+          span Viande
+          span.close
+            i.icon-cancel
+        .filter-item
+          span Viande
+          span.close
+            i.icon-cancel
+        .filter-item
+          span Viande
+          span.close
+            i.icon-cancel
+      span.next-icon
+        i.icon-arrow
+    .filter-control
+      span.text-info.marked-red.cursive 5 produits
+      span.refresh Réinitialiser
+        i.icon-refresh
   include ../partials/sliders/produit-slider.pug
   include ../partials/components/filter-block.pug
   include ../partials/components/gallery.pug

@@ -1,15 +1,22 @@
 .text-thumbs {
-    padding: 25px 4.5% 0;
+    padding: 1.74vw 4.5% 0;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 25px;
-    font-size: 15px;
+    margin-bottom: 1.74vw;
+    font-size: 1.04vw;
     // @include media('<widescreen') {
     //    justify-content: space-between;
     // }
+    @include media('>1920px') {
+        padding: 25px 4.5% 0;
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
     @include media('<tablet') {
         justify-content: space-between;
         padding: 25px 2.6% 0;
+        margin-bottom: 25px;
+        font-size: 15px;
     }
     .merged-thumbs {
         width: 50%;
@@ -26,7 +33,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 25px 25px 20px;
+        padding: 1.74vw 1.74vw 1.39vw;
         width: 23.5%;
         margin-left: 1.5%;
         background-color: $red;
@@ -37,7 +44,11 @@
         //     min-height: 332px;
         //     margin-left: 0;
         // }
-         @include media('<tablet') {
+        @include media('>1920px') {
+            padding: 25px 25px 20px;
+        }
+        @include media('<tablet') {
+            padding: 25px 25px 20px;
             width: 49%;
             min-height: 332px;
             margin-left: 0;
@@ -59,13 +70,21 @@
                 content: '';
                 position: absolute;
                 display: block;
-                height: 4px;
+                height: 0.28vw;
                 width: 60%;
-                bottom: -22px;
+                bottom: -1.53vw;
                 left: 33%;
                 background: linear-gradient(to right, rgba(118,118,118,0) 0%,rgba(118,118,118,1) 25%,rgba(118,118,118,1) 75%,rgba(118,118,118,0) 100%);
                 transform: translateX(-50%) rotate(-0.4deg);
                 z-index: -1;
+                @include media('>1920px') {
+                    height: 4px;
+                    bottom: -22px;
+                }
+                @include media('<tablet') {
+                    height: 4px;
+                    bottom: -22px;
+                }
             }
             &:after {
                 content: '';
@@ -80,10 +99,13 @@
         &__title {
             text-align: center;
             line-height: 1;
-            margin-bottom: 40px;
+            margin-bottom: 2.78vw;
             // @include media('<desktop') {
             //     text-align: left;
             // }
+            @include media('>1920px') {
+                margin-bottom: 40px;
+            }
             @include media('<tablet') {
                 text-align: center;
                 margin-bottom: 15px;
@@ -92,17 +114,27 @@
         &:before {
             content: '';
             position: absolute;
-            width: 86px;
-            height: 26px;
+            width: 5.98vw;
+            height: 1.8vw;
             background-size: 100% 100%;
             opacity: .19;
-            top: -13px;
+            top: -0.9vw;
             left: 50%;
             transform-origin: left;
             transform: rotate(3deg) translateX(-50%);
             background: $black; // box-shadow: 0px 0px 0px 2px $black;
             //        @include background-svg('
             // <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
+            @include media('>1920px') {
+                width: 86px;
+                height: 26px;
+                top: -13px;
+            }
+            @include media('<tablet') {
+                width: 86px;
+                height: 26px;
+                top: -13px;
+            }
         }
         &.pseudo-rotate-left {
             &:before {
@@ -113,9 +145,17 @@
     .btn {
         align-self: flex-end;
         color: $black;
-        max-width: 140px;
-        height: 40px;
+        max-width: 9.73vw;
+        height: 2.78vw;
         margin-top: auto;
+        @include media('>1920px') {
+            max-width: 140px;
+            height: 40px;
+        }
+        @include media('<tablet') {
+            max-width: 140px;
+            height: 40px;
+        }
         &:hover {
             color: $white;
         }
@@ -137,13 +177,21 @@
         content: '';
         position: absolute;
         display: block;
-        height: 4px;
+        height: 0.28vw;
         width: 60%;
-        bottom: -2px;
+        bottom: -0.14vw;
         left: 33%;
         background: linear-gradient(to right, rgba(118,118,118,0) 0%,rgba(118,118,118,1) 25%,rgba(118,118,118,1) 75%,rgba(118,118,118,0) 100%);
         transform: translateX(-50%) rotate(-0.35deg);
         z-index: -1;
+        @include media('>1920px') {
+            height: 4px;
+            bottom: -2px;
+        }
+        @include media('<tablet') {
+            height: 4px;
+            bottom: -2px;
+        }
         @include media('<500px') {
             display: none;
         }
@@ -161,7 +209,7 @@
         display: flex;
         flex-direction: column;
         width: 33.33%;
-        padding: 25px 4.33% 20px;
+        padding: 1.74vw 4.33% 1.39vw;
         position: relative;
         background-color: $red;
         // @include media('<widescreen') {
@@ -170,6 +218,9 @@
         // @include media('<desktop') {
         //     padding: 18px 5.5% 20px;
         // }
+        @include media('>1920px') {
+            padding: 25px 4.33% 20px;
+        }
         @include media('<tablet') {
             min-height: 332px; 
             text-align: center;
@@ -184,15 +235,25 @@
             display: none;
             content: '';
             position: absolute;
-            width: 86px;
-            height: 26px;
+            width: 5.98vw;
+            height: 1.81vw;
             background-size: 100% 100%;
             opacity: .19;
-            top: -13px;
+            top: -0.9vw;
             left: 50%;
             transform-origin: left;
             transform: rotate(10deg) translateX(-50%);
             background: $black;
+            @include media('>1920px') {
+                width: 86px;
+                height: 26px;
+                top: -13px;
+            }
+            @include media('<tablet') {
+                width: 86px;
+                height: 26px;
+                top: -13px;
+            }
             @include media('<500px') {
                 display: block;
             }
@@ -202,17 +263,27 @@
                 display: block !important;
                 content: '';
                 position: absolute;
-                width: 86px;
-                height: 26px;
+                width: 5.98vw;
+                height: 1.81vw;
                 background-size: 100% 100%;
                 opacity: .19;
-                top: -13px;
+                top: -0.9vw;
                 left: 50%;
                 transform-origin: left;
                 transform: rotate(10deg) translateX(-50%);
                 background: $black; // box-shadow: 0px 0px 0px 2px $black;
                 //        @include background-svg('
                 // <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
+                @include media('>1920px') {
+                    width: 86px;
+                    height: 26px;
+                    top: -13px;
+                }
+                @include media('<tablet') {
+                    width: 86px;
+                    height: 26px;
+                    top: -13px;
+                }
             }
         }
         &__title-holder {
@@ -225,44 +296,84 @@
             background-size: contain;
             background-position: 50% 50%;
             background-repeat: no-repeat;
-            margin-bottom: 12px;
-            padding: 0 15px;
-            width: 140px;
+            padding: 0 1.04vw;
+            width: 9.73vw;
+            margin: 0 auto 0.55vw;
             position: relative;
-            margin: 0 auto 8px;
+            @include media('>1920px') {
+                padding: 0 15px;
+                width: 140px;
+                margin: 0 auto 8px;
+            }
             @include media('<tablet') {
+                padding: 0 15px;
                 width: 136px;
+                margin: 0 auto 8px;
             }
             .title {
-                font-size: 34px;
+                font-size: 2.36vw;
                 font-weight: 400;
                 line-height: .5;
                 position: relative;
                 margin-bottom: 18px;
+                @include media('>1920px') {
+                    font-size: 34px;
+                }
+                @include media('<tablet') {
+                    font-size: 34px;
+                }
             }
             .subtitle {
-                font-size: 12px;
+                font-size: 0.83vw;
                 display: inline-block;
                 color: $black;
                 position: relative;
+                @include media('>1920px') {
+                    font-size: 12px;
+                }
+                @include media('<tablet') {
+                    font-size: 12px;
+                }
             }
             .number-decorated {
                 display: inline-block;
-                font-size: 20px;
+                font-size: 1.39vw;
                 position: relative;
+                @include media('>1920px') {
+                    font-size: 20px;
+                }
+                @include media('<tablet') {
+                    font-size: 20px;
+                }
                 &:before,
                 &:after {
                     content: '';
                     position: absolute;
-                    right: calc(100% + 4px);
-                    width: 10px;
+                    right: calc(100% + 0.28vw);
+                    width: 0.69vw;
                     top: 50%;
-                    height: 1px;
+                    height: 0.07vw;
                     background-color: #4c4c4c;
+                    @include media('>1920px') {
+                        right: calc(100% + 4px);
+                         width: 10px;
+                         height: 1px;
+                    }
+                    @include media('<tablet') {
+                        right: calc(100% + 4px);
+                        width: 10px;
+                        height: 1px;
+                    }
                 }
                 &:before {
-                    left: calc(100% + 10px);
+                    left: calc(100% + 0.69vw);
                     right: auto;
+                    @include media('>1920px') {
+                        left: calc(100% + 10px);
+                    }
+                    @include media('<tablet') {
+                        left: calc(100% + 10px);
+                    }
                 }
             }
         }
@@ -287,8 +398,14 @@
             }
         }
         &__text {
-            margin-bottom: 35px;
+            margin-bottom: 2.43vw;
             line-height: 1.3;
+            @include media('>1920px') {
+                margin-bottom: 35px;
+            }
+            @include media('<tablet') {
+                margin-bottom: 35px;
+            }
         }
     }
 }
