@@ -82,13 +82,9 @@
                     height: 50%;
                     background-color: rgba(0, 0, 0, 0.25);
                     box-shadow: 2.57vw -1.04vw 3.47vw 0 rgba(0, 0, 0, 0.25);
-                    // background-color: rgba(0, 0, 0, .3);
                     z-index: -2 !important;
                     transform: rotate(10deg);
                     border-radius: 100% 0 0 0;
-                    // @include media('<widescreen') {
-                    //     right: 33px;
-                    // }
                     @include media('>1920px') {
                         right: 23px;
                         width: 160px;
@@ -110,12 +106,8 @@
                     height: 50%;
                     box-shadow: 2.57vw -1.04vw 3.47vw 0 rgba(0, 0, 0, 0.25);
                     border-radius: 0 0 0 100%;
-                    // background-color: rgba(0, 0, 0, .3);
                     z-index: -2 !important;
                     transform: rotate(-10deg);
-                    // @include media('<widescreen') {
-                    //     right: 33px;
-                    // }
                     @include media('>1920px') {
                         right: 23px;
                         bottom: -10px;
@@ -136,10 +128,6 @@
                 position: relative;
                 z-index: 1;
                 margin-bottom: 2.36vw;
-                // @include media('<desktop') {
-                //     padding-left: 27px;
-                //     padding-right: 25px;
-                // }
                 @include media('>1920px') {
                     padding: 30px 30px 68px;
                     margin-bottom: 34px;
@@ -151,9 +139,6 @@
             }
         }
         &.decoration-section1 {
-            // @include media('<desktop') {
-            //     padding-top: 23px;
-            // }
             @include media('<tablet') {
                 padding-top: 23px;
             }
@@ -170,14 +155,6 @@
                         left: -4.24vw;
                         top: -6.32vw;
                         width: 22.58vw;
-                        // @include media('<widescreen') {
-                        //     left: -40px;
-                        //     top: -80px;
-                        //     max-width: 300px;
-                        // }
-                        // @include media('<desktop') {
-                        //     display: none;
-                        // }
                         @include media('>1920px') {
                             left: -61px;
                             top: -91px;
@@ -191,12 +168,6 @@
                         top: -3.96vw;
                         right: -3.75vw;
                         width: 32.8vw;
-                        // @include media('<widescreen') {
-                        //     max-width: 400px;
-                        // }
-                        // @include media('<desktop') {
-                        //     display: none;
-                        // }
                         @include media('>1920px') {
                             top: -57px;
                             right: -54px;
@@ -211,9 +182,6 @@
                         left: 56%;
                         width: 10vw;
                         z-index: 99;
-                        // @include media('<desktop') {
-                        //     left: 60%;
-                        // }
                         @include media('>1920px') {
                             top: 60px;
                             width: 144px;
@@ -239,10 +207,6 @@
                         bottom: -2.43vw;
                         left: 2.71vw;
                         width: 23vw;
-                        // @include media('<desktop') {
-                        //     bottom: -243px;
-                        //     left: -12px;
-                        // }
                         @include media('>1920px') {
                             bottom: -35px;
                             left: -39px;
@@ -261,16 +225,8 @@
                     }
                     &.img5 {
                         top: 39.5%;
-                        // left: calc(100% + (100vw - 1274px)/2);
                         width: 47.95vw;
                         right: -12vw;
-                        // @include media('<1306px') {
-                        //     width: 500px;
-                        //     left: calc(100% + 15px);
-                        // }
-                        // @include media('<desktop') {
-                        //     display: none;
-                        // }
                         @include media('>1920px') {
                             width: 690px;
                             right: -173px;
@@ -285,10 +241,6 @@
                 &.col-l {
                     width: 51%;
                     padding-left: 6%;
-                    @include media('<desktop') {
-                        // width: 100%;
-                        // padding: 0 5% 0 17.5%;
-                    }
                     @include media('<tablet') {
                         width: 100%;
                         padding: 0 5% 0 17.5%;
@@ -308,14 +260,6 @@
                     padding-left: 6.2%;
                     @include media('>1920px') {
                         padding-top: 132px;
-                    }
-                    @include media('<desktop') {
-                        // padding: 0;
-                        // position: absolute;
-                        // bottom: 74px;
-                        // right: 19px;
-                        // z-index: 2;
-                        // width: auto;
                     }
                     @include media('<tablet') {
                         padding: 0;
@@ -378,9 +322,6 @@
                         padding: 13px 5px;
                         max-width: 294px;
                         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3);
-                    }
-                    @include media('<desktop') {
-                        // padding: 13px 19px;
                     }
                     @include media('<tablet') {
                         padding: 13px 19px;
@@ -446,18 +387,6 @@
                     position: absolute;
                     right: 63%;
                     top: -0.2vw;
-                    // @include media('<1306px') {
-                    //     width: 60%;
-                    //     right: 60%;
-                    // }
-                    // @include media('<desktop') {
-                    //     width: 50%;
-                    //     right: 62%;
-                    //     top: 15px;
-                    // }
-                    // @include media('<840px') {
-                    //     width: 65%;
-                    // }
                     @include media('>1920px') {
                         top: -3px;
                     }
@@ -487,19 +416,6 @@
                         right: 0.69vw;
                         font-size: 0.97vw;
                         letter-spacing: -0.5px;
-                        // @include media('<1306px') {
-                        //     left: 30px;
-                        //     right: 10px;
-                        //     font-size: 11px;
-                        //     top: 75%;
-                        // }
-                        // @include media('<desktop') {
-                        //     left: 11%;
-                        //     font-size: 14px;
-                        // }
-                        // @include media('<840px') {
-                        //     top: 78%;
-                        // }
                         @include media('>1920px') {
                             right: 10px;
                             font-size: 14px;
@@ -555,10 +471,6 @@
             }
             .label-box {
                 transform: translateX(-1.04vw);
-                // @include media('<desktop') {
-                //     margin-left: 0;
-                //     transform: translateX(-93px);
-                // }
                 @include media('>1920px') {
                     transform: translateX(-15px);
                 }
@@ -583,14 +495,6 @@
                 font-weight: 300;
                 position: relative;
                 margin-bottom: 0.69vw;
-                // @include media('<desktop') {
-                //     margin-right: 0;
-                //     margin: 0 0 0 -19%;
-                //     float: left;
-                //     transform: translateY(15vw);
-                //     max-width: 410px;
-                //     padding-bottom: 55px;
-                // }
                 @include media('>1920px') {
                     padding: 36px 26px 36px 26px;
                     font-size: 14px;
@@ -653,11 +557,6 @@
         }
         &.decoration-section2 {
             position: relative;
-            // @include media('<desktop') {
-            //     flex-direction: column-reverse;
-            //     padding: 0 15px;
-            //     margin-bottom: 302px;
-            // }
             @include media('<tablet') {
                 flex-direction: column-reverse;
                 padding: 0 15px;
@@ -700,11 +599,6 @@
                 margin-top: 4.17vw;
                 @include media('>1920px') {
                     margin-top: 60px;
-                }
-                @include media('<desktop') {
-                    // width: 100%;
-                    // margin-top: 45px;
-                    // margin-left: 21px;
                 }
                 @include media('<tablet') {
                     width: 100%;
@@ -782,20 +676,12 @@
             .col-r {
                 padding: 0;
                 width: 55%;
-                @include media('<desktop') {
-                    // width: 100%;
-                    // padding-top: 116px;
-                }
                 @include media('<tablet') {
                     width: 100%;
                     padding-top: 116px;
                 }
                 .label-box {
                     margin-left: 22%;
-                    @include media('<desktop') {
-                        // margin-right: 0;
-                        // margin-left: auto;
-                    }
                     @include media('<tablet') {
                         margin-right: 0;
                         margin-left: auto;
@@ -809,9 +695,6 @@
                     line-height: 1.5;
                     @include media('>1920px') {
                         padding: 36px 31px;
-                    }
-                    @include media('<desktop') {
-                        // margin-bottom: 0;
                     }
                     @include media('<tablet') {
                         margin-bottom: 0;
@@ -843,13 +726,6 @@
             }
             .img-row {
                 position: relative;
-                @include media('<desktop') {
-                    // position: absolute;
-                    // bottom: 0;
-                    // left: 0;
-                    // right: 0;
-                    // height: 288px;
-                }
                 @include media('<tablet') {
                     position: absolute;
                     bottom: 0;
@@ -869,21 +745,6 @@
                     position: absolute;
                     width: 61.5vw;
                     left: -7vw;
-                    // right: 111.19vw;
-                    // transform: translateX(100%);
-                    // @include media('<desktop') {
-                    //     left: -15px;
-                    //     right: auto;
-                    //     top: auto;
-                    //     width: 760px !important;
-                    //     left: -103px;
-                    //     bottom: -335px;
-                    //     transform: translate(0)
-                    // }
-                    // @include media('<1306px') {
-                    //     right: calc(100% + 15px);
-                    //     width: 700px;
-                    // }
                     @include media('>1920px') {
                         top: -70px;
                         width: 885px;
@@ -919,13 +780,6 @@
                         text-align: center;
                         transform: translateY(-60%);
                         line-height: 1.6;
-                        // @include media('<1306px') {
-                        //     right: 86px;
-                        //     width: 31%;
-                        // }
-                        // @include media('<desktop') {
-                        //     right: 100px;
-                        // }
                         @include media('>1920px') {
                             right: 130px;
                         }
@@ -964,12 +818,6 @@
                         margin-right: -80px;
                         width: 370px;
                     }
-                    @include media('<desktop') {
-                        // position: absolute;
-                        // top: -177px;
-                        // right: -124px;
-                        // margin: 0;
-                    }
                     @include media('<tablet') {
                         position: absolute;
                         top: -177px;
@@ -995,14 +843,6 @@
                     @include media('>1920px') {
                         margin-right: -37px;
                         width: 300.03px;
-                    }
-                    @include media('<desktop') {
-                        // margin-top: 0px;
-                        // margin-right: 0;
-                        // position: absolute;
-                        // right: -40px;
-                        // bottom: -106px;
-                        // z-index: 99;
                     }
                     @include media('<tablet') {
                         margin-top: 0px;
@@ -1042,10 +882,6 @@
                         right: 103px;
                         width: 195px;
                     }
-                    @include media('<desktop') {
-                        // top: -71px;
-                        // right: -8px;
-                    }
                     @include media('<tablet') {
                         width: auto;
                         top: -71px;
@@ -1068,9 +904,6 @@
                     font-size: 14px;
                     max-width: 437px;
                     margin-bottom: 10px;
-                }
-                @include media('<desktop') {
-                    // max-width: 60%;
                 }
                 @include media('<tablet') {
                     max-width: 60%;
@@ -1099,11 +932,6 @@
                 position: relative;
                 @include media('>1920px') {
                     padding: 0 0 0 73px;
-                }
-                @include media('<desktop') {
-                    // width: 82%;
-                    // padding: 15px 0 0 0;
-                    // margin: 0 0 0 auto;
                 }
                 @include media('<tablet') {
                     width: 82%;
@@ -1179,13 +1007,6 @@
                             top: -132px;
                             width: 490px;
                         }
-                        @include media('<desktop') {
-                            // position: absolute; 
-                            // left: -470px;
-                            // top: -123px;
-                            // z-index: 5;
-                            // transform: scaleX(-1);
-                        }
                         @include media('<tablet') {
                             position: absolute;
                             left: -470px;
@@ -1203,9 +1024,6 @@
                         top: 74%;
                         z-index: 5;
                         left: -3.82vw;
-                        // @include media('<desktop') {
-                        //     left: -135px;
-                        // }
                         @include media('>=tablet') {
                             width: 11.57vw;
                         }
@@ -1224,9 +1042,6 @@
                 position: relative;
                 text-align: center;
                 width: 49%;
-                // @include media('<desktop') {
-                //     width: 100% !important;
-                // }
                 @include media('<tablet') {
                     width: 100% !important;
                 }
@@ -1236,9 +1051,6 @@
                 }
                 .product-img {
                     transform: translateX(3.61vw);
-                    // @include media('<desktop') {
-                    //     display: none;
-                    // }
                     @include media('>=tablet') {
                         width: 25.34vw;
                     }
@@ -1260,14 +1072,6 @@
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    @include media('<desktop') {
-                        // position: relative;
-                        // width: 100%;
-                        // display: flex;
-                        // justify-content: flex-end;
-                        // align-items: flex-start;
-                        // transform: translateY(-66px)
-                    }
                     @include media('<tablet') {
                         position: relative;
                         width: 100%;
@@ -1285,20 +1089,6 @@
                         top: 48.5%;
                         left: auto;
                         right: -8vw;
-                        // @include media('<1306px') {
-                        //     left: calc(100% + 15px);
-                        //     width: 550px;
-                        // }
-                        // @include media('<widescreen') {
-                        //     left: calc(100% + 60px);
-                        // }
-                        // @include media('<desktop') {
-                        //     position: static;
-                        //     float: right;
-                        //     position: static;
-                        //     margin: 0 0 0 auto;
-                        //     transform: translate(15px);
-                        // }
                         @include media('>1920px') {
                             width: 682px;
                             right: -116px;
@@ -1342,12 +1132,6 @@
                             width: 26.61vw;
                             height: 2.08vw;
                             text-align: center;
-                            @include media('<1306px') {
-                                // top: 68px;
-                                // left: 32px;
-                                // width: 310px;
-                                // height: 30px;
-                            }
                             @include media('>1920px') {
                                 top: 96px;
                                 left: 41px;
@@ -1383,8 +1167,6 @@
                         position: absolute;
                         top: 7%;
                         left: 1.74vw;
-                        // @include media('<desktop') {
-                        // }
                         @include media('>=tablet') {
                             width: 13.97vw;
                         }
@@ -1407,14 +1189,6 @@
                 line-height: 1.5;
                 justify-content: flex-start;
                 margin-bottom: -6.11vw;
-                // @include media('<widescreen') {
-                //     margin: 0;
-                // }
-                // @include media('<desktop') {
-                //     margin: -256px 0 36px -100px;
-                //     padding: 0;
-                //     width: 140%;
-                // }
                 img {
                     @include media('>=tablet') {
                         width: 28.35vw;

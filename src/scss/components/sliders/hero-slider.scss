@@ -1,9 +1,5 @@
 .hero-slider {
     position: relative;
-    @include media('<desktop') {
-        //     min-width: 188%;
-        //      margin-left: -44%;
-    }
     @include media('<tablet') {
         min-width: 190%;
         margin-left: -45%;
@@ -15,9 +11,6 @@
         transform: translateX(-50%);
         @include media('>1920px') {
             bottom: 213px;
-        }
-        @include media('<desktop') {
-            //bottom: 215px;
         }
         @include media('<tablet') {
             bottom: 217px;
@@ -86,20 +79,10 @@
             min-height: 212px;
             font-size: 16px;
         }
-        @include media('<widescreen') {
-            //   font-size: 15px;
-        }
-        @include media('<desktop') {
-            // font-size: 14px;
-            // max-width: 716px;
-            // padding-top: 64px;
-        }
         @include media('<tablet') {
-            //remove
             font-size: 14px;
             max-width: 716px;
             padding: 45px 45px 26px;
-            //remove
             max-width: 90vw;
             top: calc(100% - 120px);
             min-height: 203px;
@@ -142,14 +125,7 @@
                 top: 0;
                 height: 0.97vw;
                 border-left: 0.42vw solid $white;
-                border-right: 0.42vw solid $white;
-                // @include media('<desktop') {
-                //     left: -17px;
-                //     right: -17px;
-                //     border-left: 17px solid $white;
-                //     border-right: 17px solid $white;
-                // }
-                //remove  
+                border-right: 0.42vw solid $white; 
                 @include media('>1920px') { 
                     left: -6px;
                     right: -6px;
@@ -164,7 +140,6 @@
                     border-right: 17px solid $white;
                     height: 14px;
                 }
-                //remove
             }
         }
         .slide-title {
@@ -255,9 +230,6 @@
 }
 
 .hero-slider.produit .owl-stage-outer {
-    @include media('<desktop') {
-        //  padding-bottom: 150px;
-    }
     @include media('<tablet') {
         padding-bottom: 125px;
     }
