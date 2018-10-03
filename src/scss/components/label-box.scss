@@ -2,6 +2,13 @@
     max-width: 20.85vw;
     text-align: center;
     position: relative;
+    @include media('>tablet') {
+        animation: swing 1.2s linear infinite;
+        animation-play-state: paused;
+        &:hover {
+            animation-play-state: running;
+        }
+    }
     @include media('>1920px') {
         max-width: 300px;
     }

@@ -33,7 +33,8 @@ var common = {
             offset: 0,
             mobile: true,
             live: true,
-            scrollContainer: null
+            scrollContainer: null,
+            
         });
 
         var wowSwing = new WOW({

@@ -101,7 +101,12 @@
         @include media('<tablet') {
             width: 100%;
             max-width: 100%;
-            padding: 40px 30px 30px;
+            padding: 40px 148px 30px 15px;
+        }
+        @include media('<640px') {
+            width: 100%;
+            max-width: 100%;
+            padding: 40px 108px 30px 15px;
         }
         &__text {
             max-width: 70%;
@@ -144,196 +149,211 @@
                 text-align: left;
                 li {
                     line-height: 1.6;
+                    &:not(:last-child) {
+                    @include media('<640px') {
+                        width: calc(100% + 100px);
+                    }
                 }
-            }
-        }
-        &__decor {
-            position: absolute;
-            width: 34.61vw;
-            top: 2.78vw;
-            right: -14.33%;
-            @include media('>1440px') {
-                
-            }
-            @include media('>1920px') {
-                top: 40px;
-                width: 498px;
-            }
-            @include media('<tablet') {
-                display: none;
-            }
-            img {
-                width: 100%;
-                height: auto;
             }
         }
     }
-    .image-pos-1 {
-        top: 0;
-        left: -1.39vw;
-        width: 19.04vw;
+    &__decor {
+        position: absolute;
+        width: 34.61vw;
+        top: 2.78vw;
+        right: -14.33%;
+        @include media('>1440px') {}
         @include media('>1920px') {
-            left: -20px;
-            width: 274px;
+            top: 40px;
+            width: 498px;
         }
         @include media('<tablet') {
-            width: 30%;
-            top: -18px;
-            left: -27px;
-            @include media('>1920px') {
-            
-            }
-            @include media('<tablet') {
-                
-            }
-            img {
-                &:last-child {
-                    display: block;
-                }
-                &:first-child {
-                    display: none;
-                }
-            }
+            top: auto;
+            bottom:-111px;
+        }
+        @include media('<640px') {
+            bottom:-109px;
+        }
+        @include media('<phone') {
+            bottom:0;
         }
         img {
             width: 100%;
             height: auto;
+        }
+    }
+}
+
+.image-pos-1 {
+    top: 0;
+    left: -1.39vw;
+    width: 19.04vw;
+    @include media('>1920px') {
+        left: -20px;
+        width: 274px;
+    }
+    @include media('<tablet') {
+        width: 30%;
+        top: -18px;
+        left: -27px;
+        @include media('>1920px') {}
+        @include media('<tablet') {}
+        img {
             &:last-child {
+                display: block;
+            }
+            &:first-child {
                 display: none;
             }
         }
     }
-    .image-pos-2 {
-        top: 0;
-        right: -2.78vw;
-        z-index: -1;
-        width: 22.65vw;
-        @include media('>1920px') {
-            right: -40px;
-            width: 326px;
+    img {
+        width: 100%;
+        height: auto;
+        &:last-child {
+            display: none;
         }
-        @include media('<tablet') {
-            width: 35%;
-            top: -2%;
-            right: -11%;
-            transform: rotate(12deg);
-            img {
-                &:last-child {
-                    display: block;
-                }
-                &:first-child {
-                    display: none;
-                }
-            }
-        }
+    }
+}
+
+.image-pos-2 {
+    top: 0;
+    right: -2.78vw;
+    z-index: -1;
+    width: 22.65vw;
+    @include media('>1920px') {
+        right: -40px;
+        width: 326px;
+    }
+    @include media('<tablet') {
+        width: 35%;
+        top: -2%;
+        right: -11%;
+        transform: rotate(12deg);
         img {
-            width: 100%;
-            height: auto;
             &:last-child {
+                display: block;
+            }
+            &:first-child {
                 display: none;
             }
         }
     }
-    .image-pos-3 {
-        width: 24.32vw;
-        top: 60%;
-        transform: translateY(-50%);
-        left: -4.5vw;
-        @include media('>1920px') {
-            left: -65px;
-            width: 350px;
-        }
-        @include media('<tablet') {
-            width: 50%;
-            top: 45%;
-            left: -23%;
-        }
-        img {
-            width: 100%;
-            height: auto;
+    img {
+        width: 100%;
+        height: auto;
+        &:last-child {
+            display: none;
         }
     }
-    .image-pos-4 {
-        width: 14.10vw;
-        bottom: -11.11vw;
-        left: -3.5vw;
-        @include media('>1920px') {
-            width: 203px;
-            left: -50px;
-            bottom: -160px;
-        }
-        @include media('<tablet') {
-            width: auto;
-            bottom: -17%;
-            left: 5%;
-        }
-        @include media('<phone') {
-            width: 45%;
-        }
-        img {
-            width: 100%;
-            height: auto;
-        }
+}
+
+.image-pos-3 {
+    width: 24.32vw;
+    top: 60%;
+    transform: translateY(-50%);
+    left: -4.5vw;
+    @include media('>1920px') {
+        left: -65px;
+        width: 350px;
     }
-    .image-pos-5 {
-        width: 15.43vw;
-        left: 19%;
-        bottom: 1.74vw;
-        @include media('>1920px') {
-            width: 222px;
-            bottom: 25px;
-        }
-        @include media('<tablet') {
-            left: 5%;
-            width: auto;
-            bottom: 3%;
-        }
-        @include media('<phone') {
-            width: 45%;
-        }
-        img {
-            width: 100%;
-            height: auto;
-        }
+    @include media('<tablet') {
+        width: 50%;
+        top: 45%;
+        left: -23%;
     }
-    .image-pos-6 {
-        width: 10.7vw;
-        left: 39%;
-        bottom: 0;
-        @include media('>1920px') {
-            width: 154px;
-        }
-        @include media('<tablet') {
-            width: auto;
-            left: 260px;
-            bottom: 42px;
-        }
-        @include media('<phone') {
-            width: 34%;
-            left: 65%;
-        }
-        img {
-            width: 100%;
-            height: auto;
-        }
+    img {
+        width: 100%;
+        height: auto;
     }
-    .image-pos-7 {
-        width: 46.63vw;
-        right: -3.42vw;
-        bottom: -5.9vw;
-        @include media('>1920px') {
-            width: 671px;
-            right: -49px;
-            bottom: -85px;
-        }
-        @include media('<tablet') {
-            width: 90%;
-            right: -280px;
-            bottom: -80px;
-        }
-        img {
-            width: 100%;
-            height: auto;
-        }
+}
+
+.image-pos-4 {
+    width: 14.10vw;
+    bottom: -11.11vw;
+    left: -3.5vw;
+    @include media('>1920px') {
+        width: 203px;
+        left: -50px;
+        bottom: -160px;
     }
+    @include media('<tablet') {
+        width: auto;
+        bottom: -17%;
+        left: 5%;
+    }
+    @include media('<phone') {
+        width: 45%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.image-pos-5 {
+    width: 15.43vw;
+    left: 19%;
+    bottom: 1.74vw;
+    @include media('>1920px') {
+        width: 222px;
+        bottom: 25px;
+    }
+    @include media('<tablet') {
+        left: 5%;
+        width: auto;
+        bottom: 3%;
+    }
+    @include media('<phone') {
+        width: 45%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.image-pos-6 {
+    width: 10.7vw;
+    left: 39%;
+    bottom: 0;
+    @include media('>1920px') {
+        width: 154px;
+    }
+    @include media('<tablet') {
+        width: auto;
+        left: 260px;
+        bottom: 42px;
+    }
+    @include media('<phone') {
+        width: 34%;
+        left: 65%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.image-pos-7 {
+    width: 46.63vw;
+    right: -3.42vw;
+    bottom: -5.9vw;
+    @include media('>1920px') {
+        width: 671px;
+        right: -49px;
+        bottom: -85px;
+    }
+    @include media('<tablet') {
+        width: 90%;
+        right: -280px;
+        bottom: -80px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
 }

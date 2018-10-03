@@ -19,6 +19,7 @@
         }
         @include media('<tablet') {
             margin-bottom: 70px;
+            padding-top: 13vw;
         }
         .h4 {
             margin-bottom: -0.28vw;
@@ -470,7 +471,6 @@
                 }
             }
             .label-box {
-                transform: translateX(-1.04vw);
                 @include media('>1920px') {
                     transform: translateX(-15px);
                 }
@@ -788,8 +788,18 @@
                             width: 31%;
                         }
                         @include media('<640px') {
-                            font-size: 3.2vw;
-                            top: 33vw;
+                            font-size: 16px;
+                            top: 164px;
+                            right: 13%;
+                        }
+                        @include media('<540px') {
+                            font-size: 14px;
+                            top: 145px;
+                            right: 13%;
+                        }
+                        @include media('<440px') {
+                            font-size: 12px;
+                            top: 125px;
                             right: 13%;
                         }
                         strong {
@@ -1094,14 +1104,14 @@
                             right: -116px;
                         }
                         @include media('<tablet') {
-                            left: calc(100% + 15px);
                             width: 550px;
                             left: calc(100% + 60px);
-                            position: static;
                             float: right;
-                            position: static;
                             margin: 0 0 0 auto;
                             transform: translate(15px);
+                            position: relative !important;
+                            right: -33px;
+                            left: auto;
                         }
                         @include media('<640px') {
                             position: static;
@@ -1196,6 +1206,7 @@
                     @include media('>1920px') {
                         width: 408px;
                     }
+                    @include media('<tablet') {}
                 }
                 @include media('>1920px') {
                     padding: 48px 0 0 50px;
@@ -1219,7 +1230,7 @@
                     @include media('<640px') {
                         width: 327px;
                         position: absolute;
-                        left: -93px;
+                        left: -123px;
                         top: -126px;
                     }
                     @include media('<phone') {
@@ -1244,19 +1255,20 @@
                         max-width: 51%;
                         width: 999px;
                         transform: translate(-153px, 84px);
-                        padding: 30px 50px 30px 102px;
+                        padding: 25px 15px 20px 115px;
                     }
                     @include media('<640px') {
                         padding-left: 130px;
                         transform: translate(0);
                         width: 100%;
                         max-width: 100%;
-                        padding: 30px 5px 30px 164px;
-                        ;
+                        padding: 30px 15px 30px 144px;
+                        
                     }
                     @include media('<phone') {
-                        padding: 60px;
+                        padding: 35px 15px 35px 65px;
                     }
+               
                     &:before {
                         content: '';
                         content: '';

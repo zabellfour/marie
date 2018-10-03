@@ -119,6 +119,39 @@ body {
     }
 }
 
+@keyframes rotate30 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+}
+.rotate30 {
+    animation-name: rotate30;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+        
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(.85);
+    }
+}
+.fadeInZoom {
+    animation-name: fadeInZoom;
+}
+
 .fadeIn {
     animation-name: fadeIn;
 }
@@ -130,8 +163,15 @@ body {
 
 .merged-thumbs .animation-opacity {
     @include media('>=tablet') {
-        opacity: 1 !important;
-        visibility: visible !important;
+
+        opacity: 0;
+      
+    }
+}
+
+.thumb.animation-opacity{
+    @include media('>=tablet') {
+        opacity: 0;
     }
 }
 
@@ -202,7 +242,9 @@ body {
     @include media('<tablet') {
         animation-name: zoom103;
     }
-    transform: scale(1) !important;
+    @include media('>=tablet') {
+        transform: scale(1) !important;
+    }
 }
 
 .product-thumb.zoom103 {
@@ -221,7 +263,7 @@ body {
         animation-fill-mode: forwards;
         background-color: $white;
         animation-name: zoom103;
-        transform: scale(1) !important;
+        
     }
 }
 
@@ -241,7 +283,6 @@ body {
         animation-fill-mode: forwards;
         background-color: $white;
         animation-name: zoom103;
-        transform: scale(1) !important;
     }
 }
 
@@ -261,7 +302,6 @@ body {
         animation-fill-mode: forwards;
         background-color: $white;
         animation-name: zoom103;
-        transform: scale(1) !important;
     }
 }
 
