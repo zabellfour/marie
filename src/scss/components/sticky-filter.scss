@@ -4,16 +4,22 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    top: 50%;
+    max-width: 1920px;
+    top: 4.66vw;
     left: 0;
+    right: 0;
     padding: 1.53vw 15%;
     background-color: #fff;
+    margin: 0 auto;
     z-index: 2;
     @include media('>1920px') {
         padding: 22px 15%;
+        top: 50px;
+        max-width: calc(1920px * 1.334);
     }
     @include media('<tablet') {
         padding: 22px 5%;
+        top: 88px;
     }
     .filter-items {
         &-holder {
@@ -138,7 +144,7 @@
                 width: 0.07vw;
                 height: 0.83vw;
                 margin: 0 1.74vw;
-                background-color:  #c8cac9;
+                background-color: #c8cac9;
                 @include media('>1920px') {
                     top: 2px;
                     width: 1px;
