@@ -1,7 +1,4 @@
 .gallery {
-    // @include media('<desktop') {
-    //     padding: 0 2.6%;
-    // }
     @include media('<tablet') {
         padding: 0 2.6%;
     }
@@ -29,11 +26,6 @@
         background-position: 50% 50%;
         background-repeat: no-repeat;
         position: relative;
-        // @include media('<desktop') {
-        //     height: 410px;
-        //     width: calc(50% - 10px);
-        //     margin-bottom: 20px;
-        // }
         @include media('>1920px') {
             height: 500px;
         }
@@ -60,9 +52,6 @@
         }
         &.wide {
             width: 66%;
-            // @include media('<desktop') {
-            //     width: 100%;
-            // }
             @include media('<tablet') {
                 width: 100%;
             }

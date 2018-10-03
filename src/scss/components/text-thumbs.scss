@@ -4,9 +4,6 @@
     flex-wrap: wrap;
     margin-bottom: 1.74vw;
     font-size: 1.04vw;
-    // @include media('<widescreen') {
-    //    justify-content: space-between;
-    // }
     @include media('>1920px') {
         padding: 25px 4.5% 0;
         margin-bottom: 25px;
@@ -20,10 +17,6 @@
     }
     .merged-thumbs {
         width: 50%;
-        // @include media('<widescreen') {
-        //     width: 100%;
-        //     margin-bottom: 40px;
-        // }
         @include media('<tablet') {
             width: 100%;
             margin-bottom: 40px;
@@ -39,11 +32,6 @@
         background-color: $red;
         color: $white;
         position: relative;
-        // @include media('<widescreen') {
-        //     width: 49%;
-        //     min-height: 332px;
-        //     margin-left: 0;
-        // }
         @include media('>1920px') {
             padding: 25px 25px 20px;
         }
@@ -100,9 +88,6 @@
             text-align: center;
             line-height: 1;
             margin-bottom: 2.78vw;
-            // @include media('<desktop') {
-            //     text-align: left;
-            // }
             @include media('>1920px') {
                 margin-bottom: 40px;
             }
@@ -122,9 +107,7 @@
             left: 50%;
             transform-origin: left;
             transform: rotate(3deg) translateX(-50%);
-            background: $black; // box-shadow: 0px 0px 0px 2px $black;
-            //        @include background-svg('
-            // <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
+            background: $black;
             @include media('>1920px') {
                 width: 86px;
                 height: 26px;
@@ -212,12 +195,6 @@
         padding: 1.74vw 4.33% 1.39vw;
         position: relative;
         background-color: $red;
-        // @include media('<widescreen') {
-        //     min-height: 332px; 
-        // }
-        // @include media('<desktop') {
-        //     padding: 18px 5.5% 20px;
-        // }
         @include media('>1920px') {
             padding: 25px 4.33% 20px;
         }
@@ -271,9 +248,7 @@
                 left: 50%;
                 transform-origin: left;
                 transform: rotate(10deg) translateX(-50%);
-                background: $black; // box-shadow: 0px 0px 0px 2px $black;
-                //        @include background-svg('
-                // <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml: space="preserve" preserveAspectRatio="none"> <polygon fill="#c5b59d" points="1.4,11 98.6,0 100,91 1.4,100  " /> </svg>');
+                background: $black;
                 @include media('>1920px') {
                     width: 86px;
                     height: 26px;
@@ -292,7 +267,6 @@
             flex-direction: column;
             align-items: center;
             flex-wrap: wrap;
-            // background-image: url(../images/name-holder.svg);
             background-size: contain;
             background-position: 50% 50%;
             background-repeat: no-repeat;
@@ -377,12 +351,6 @@
                 }
             }
         }
-        // &__title-text {
-        //     position: absolute;
-        //     left: 50%;
-        //     top: 50%;
-        //     transform: translate(-50%, -50%);
-        // }
         &__title-decor {
             display: block;
             position: absolute;

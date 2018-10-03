@@ -1,5 +1,5 @@
 var common = {
-    mobileManu: function() {
+    mobileMenu: function() {
         const $opener = $('.menu-opener');
         const $body = $('body');
         $opener.on('click', () => {
@@ -33,10 +33,6 @@ var common = {
             offset: 0,
             mobile: true,
             live: true,
-            callback: function(box) {
-
-
-            },
             scrollContainer: null
         });
 

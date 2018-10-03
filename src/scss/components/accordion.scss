@@ -1,110 +1,110 @@
 .accordion {
-	.tab-pane {
-		position: relative;
-		&__name {
-			display: inline-block;
-			width: 100%;
-			position: relative;
-			line-height: 5vw;
-			font-size: 1.46vw;
-			font-weight: 600;
-			border-bottom: 0.07vw solid $light-gray;
-			@include media('>1920px') {
-				line-height: 72px;
-				font-size: 21px;
-				border-bottom: 1px solid $light-gray;
-			}
-			@include media('<tablet') {
-				line-height: 72px;
-				font-size: 21px;
-				border-bottom: 1px solid $light-gray;
-			}
-			&:hover {
-				cursor: pointer;
-			}
-		}
-		&__open-close {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			right: 0;
-			display: block;
-			width: 0.83vw;
-			height: 0.83vw;
-			right: 0.35vw;
-			@include media('>1920px') {
-				width: 12px;
-				height: 12px;
-				right: 5px;
-			}
-			@include media('<tablet') {
-				width: 12px;
-				height: 12px;
-				right: 5px;
-			}
-			&:before {
-				content: '';
-				position: absolute;
-				top: 0.35vw;
-				left: 0;
-				width: 0.83vw;
-				height: 0.14vw;
-				background-color: $black;
-				@include media('>1920px') {
-					top: 5px;
-					width: 12px;
-					height: 2px;
-				}
-				@include media('<tablet') {
-					top: 5px;
-					width: 12px;
-					height: 2px;
-				}
-			}
-			&:after {
-				@include animate (transform);
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0.35vw;
-				width: 0.14vw;
-				height: 0.83vw;
-				background-color: $black;
-				@include media('>1920px') {
-					left: 5px;
-					width: 2px;
-					height: 12px;
-				}
-				@include media('<tablet') {
-					left: 5px;
-					width: 2px;
-					height: 12px;
-				}
-			}
-		}
-		&.open {
-			.tab-content {
-				max-height: 20.85vw;
-				@include media('>1920px') {
-					max-height: 1000px;
-				}
-				@include media('<tablet') {
-					max-height: 1000px;
-				}
-			}
-			.tab-pane__open-close:after {
-				transform: rotate(90deg);
-			}
-		}
-		&:last-child {
-			.tab-pane__name {
-				border-bottom: 0;
-			}
-		}
-	}
-	.tab-content {
-		@include animate (max-height);
-		max-height: 0;
-		overflow: hidden;
-	}
+    .tab-pane {
+        position: relative;
+        &__name {
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            line-height: 5vw;
+            font-size: 1.46vw;
+            font-weight: 600;
+            border-bottom: 0.07vw solid $light-gray;
+            @include media('>1920px') {
+                line-height: 72px;
+                font-size: 21px;
+                border-bottom: 1px solid $light-gray;
+            }
+            @include media('<tablet') {
+                line-height: 72px;
+                font-size: 21px;
+                border-bottom: 1px solid $light-gray;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &__open-close {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            display: block;
+            width: 0.83vw;
+            height: 0.83vw;
+            right: 0.35vw;
+            @include media('>1920px') {
+                width: 12px;
+                height: 12px;
+                right: 5px;
+            }
+            @include media('<tablet') {
+                width: 12px;
+                height: 12px;
+                right: 5px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0.35vw;
+                left: 0;
+                width: 0.83vw;
+                height: 0.14vw;
+                background-color: $black;
+                @include media('>1920px') {
+                    top: 5px;
+                    width: 12px;
+                    height: 2px;
+                }
+                @include media('<tablet') {
+                    top: 5px;
+                    width: 12px;
+                    height: 2px;
+                }
+            }
+            &:after {
+                @include animate (transform);
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0.35vw;
+                width: 0.14vw;
+                height: 0.83vw;
+                background-color: $black;
+                @include media('>1920px') {
+                    left: 5px;
+                    width: 2px;
+                    height: 12px;
+                }
+                @include media('<tablet') {
+                    left: 5px;
+                    width: 2px;
+                    height: 12px;
+                }
+            }
+        }
+        &.open {
+            .tab-content {
+                max-height: 20.85vw;
+                @include media('>1920px') {
+                    max-height: 1000px;
+                }
+                @include media('<tablet') {
+                    max-height: 1000px;
+                }
+            }
+            .tab-pane__open-close:after {
+                transform: rotate(90deg);
+            }
+        }
+        &:last-child {
+            .tab-pane__name {
+                border-bottom: 0;
+            }
+        }
+    }
+    .tab-content {
+        @include animate (max-height);
+        max-height: 0;
+        overflow: hidden;
+    }
 }

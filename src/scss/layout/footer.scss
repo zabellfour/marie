@@ -85,10 +85,6 @@
         @include media('>1920px') {
             margin-bottom: 30px;
         }
-        // @include media('<desktop') {
-        //     margin: 0 -20px 30px -20px;
-        //     font-size: 14px;
-        // }
         @include media('<tablet') {
             margin-bottom: 15px;
         }
@@ -101,9 +97,6 @@
             @include media('>1920px') {
                 padding: 0 25px;
             }
-            // @include media('<desktop') {
-            //     padding: 0 20px;
-            // }
             @include media('<tablet') {
                 padding: 0 20px;
                 width: 100%;

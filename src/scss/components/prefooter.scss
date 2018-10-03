@@ -35,10 +35,7 @@
         background-repeat: no-repeat;
     }
     &__caption {
-        position: relative; // position: absolute;
-        // top: 50%;
-        // right: 13%;
-        // transform: translateY(-50%);
+        position: relative;
         width: 100%;
         max-width: 50%;
         color: $white;
@@ -49,16 +46,10 @@
             margin-top: 15px;
             padding: 0 10px;
         }
-        @include media('<desktop') {
-            // margin-top: 0;
-            // max-width: 40%;
-        }
         @include media('<tablet') {
-            //desk
             margin-top: 0;
             max-width: 40%;
             padding: 0 10px;
-            //desk
             position: static;
             max-width: 334px;
             margin: 0 auto;
@@ -74,20 +65,12 @@
         font-size: 3.06vw;
         font-weight: 400;
         margin-bottom: 0.35vw;
-        // @include media('<widescreen') {
-        //     font-size: 37px;
-        // }
-        // @include media('<desktop') {
-        //     font-size: 30px;
-        // }
         @include media('>1920px') {
             font-size: 44px;
             margin-bottom: 5px;
         }
         @include media('<tablet') {
-           // desk
            font-size: 30px;
-           //desk
         }
     }
     &__sub-title {
@@ -95,34 +78,21 @@
         font-weight: 600;
         max-width: 25vw;
         margin: 0 auto 2.43vw;
-        // @include media('<widescreen') {
-        //     font-size: 18px;
-        //     margin: 0 auto 20px;
-        // }
-        // @include media('<desktop') {
-            
-        //     font-size: 16px;
-        // }
         @include media('>1920px') {
             font-size: 20px;
             max-width: 360px;
             margin: 0 auto 35px;
         }
         @include media('<tablet') {
-            //desk
             max-width: 360px;
             font-size: 16px;
             margin: 0 auto 20px;
-            //desk
         }
     }
 }
 
 .prefooter-banner__image {
     background-image: url(../images/pre-footer-banner.jpg);
-    @include media('<desktop') {
-  //      background-image: url(../images/pre-footer-banner_768.jpg);
-    }
     @include media('<tablet') {
         background-image: url(../images/pre-footer-banner_480.jpg);
     }

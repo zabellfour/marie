@@ -2,9 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     padding: 8.5% 4.5% 8%;
-    // @include media('<desktop') {
-    //     padding: 4.5% 4.5% 525px;
-    // }
     @include media('<tablet') {
         padding: 4.5% 4.5% 525px;
     }
@@ -19,9 +16,6 @@
         .right-side {
             width: 49%;
             position: relative;
-            // @include media('<desktop') {
-            //     width: 100%;
-            // }
             @include media('<tablet') {
                 width: 100%;
             }

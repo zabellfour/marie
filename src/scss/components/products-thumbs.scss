@@ -1,143 +1,134 @@
 .products-thumbs {
-	padding: 0 4.5%;
-	// @include media('<desktop') {
- //        padding: 0 2.6%;
- //    }
- 	@include media('<tablet') {
+    padding: 0 4.5%;
+    @include media('<tablet') {
         padding: 0 2.6%;
     }
     @include media('<phone') {
         padding: 0 7px;
     }
-	&__holder {
-		padding-bottom: 5.7vw;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		// @include media('<desktop') {
-		// 	padding-bottom: 55px;
-		// }
-		@include media('>1920px') {
-			padding-bottom: 82px;
-		}
-		@include media('<tablet') {
-			padding-bottom: 55px;
-		}
-	}
-	&__title {
-		font-size: 2.08;
-		margin-bottom: 6.9vw;
-		// @include media('<desktop') {
-		// 	margin-bottom: 110px;
-		// }
-		@include media('>1920px') {
-			font-size: 30px;
-			margin-bottom: 100px;
-		}
-		@include media('<tablet') {
-			font-size: 30px;
-			margin-bottom: 110px;
-		}
-	}
-	.product-thumb {
-		width: 24%;
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		padding: 6% 2.75% 5%;
-		background-color: $white;
-		box-shadow: 0px 1.39vw 2.78vw 0.83vw rgba(0, 0, 0, 0.1);
-		position: relative;
-		@include animate(transform);
-		transform: scale(1);
-		&:hover{
-			transform: scale(1.03);
-		}
-		@include media('>1920px') {
-			box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
-		}
-		@include media('<tablet') {
-			box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
-	        width: 32%;
-	        &:last-child {
-	        	display: none;
-	        }
-	    }
-	    @include media('<650px') {
-	    	padding: 10% 2.75% 5%;
-			width: 48%;
-			&:last-child {
-	        	display: none;
-	        }
-			&:nth-child(3) {
-	        	display: none;
-	        }
-	    }
-		.top-title {
-			font-size: 1.11vw;
-			position: absolute;
-			font-weight: 600;
-			top: -2.78vw;
-			left: 50%;
-		    width: 100%;
-		    transform: translateX(-50%);
-			text-align: center;
-			@include media('>1920px') {
-				font-size: 16px;
-				top: -40px;
-			}
-			@include media('<tablet') {
-				font-size: 16px;
-				top: -40px;
-			}
-		}
-		&__inner {
-			width: 100%;
-			padding: 24.5% 11.5% 15%;
-			background-color: $white;
-			box-shadow: 0px 1.39vw 2.78vw 0.83vw rgba(0, 0, 0, 0.1);
-			@include media('>1920px') {
-				box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
-			}
-			@include media('<tablet') {
-				box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
-			}
-		}
-		&__image {
-			margin: 0 auto 3.13vw;
-			@include media('>1920px') {
-				margin: 0 auto 45px;
-			}
-			@include media('<tablet') {
-				margin: 0 auto 30px;
-			}
-			img {
-				width: 100%;
-				height: auto;
-			}
-		}
-		&__text {
-			font-size: 1.04vw;
-			padding: 0 8%;
-			@include media('>1920px') {
-				font-size: 15px;
-			}
-			@include media('<tablet') {
-				font-size: 15px;
-			}
-			.title {
-				font-weight: 600;
-				font-size: 1.18vw;
-				@include media('>1920px') {
-					font-size: 17px;
-				}
-				@include media('<tablet') {
-					font-size: 17px;
-				}
-			}
-			.description {
-				margin: 0;
-			}
-		}
-	}
+    &__holder {
+        padding-bottom: 5.7vw;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include media('>1920px') {
+            padding-bottom: 82px;
+        }
+        @include media('<tablet') {
+            padding-bottom: 55px;
+        }
+    }
+    &__title {
+        font-size: 2.08vw;
+        margin-bottom: 6.9vw;
+        @include media('>1920px') {
+            font-size: 30px;
+            margin-bottom: 100px;
+        }
+        @include media('<tablet') {
+            font-size: 30px;
+            margin-bottom: 80px;
+        }
+    }
+    .product-thumb {
+        width: 24%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 6% 2.75% 5%;
+        background-color: $white;
+        box-shadow: 0px 1.39vw 2.78vw 0.83vw rgba(0, 0, 0, 0.1);
+        position: relative;
+        @include animate(transform);
+        transform: scale(1);
+        &:hover{
+            transform: scale(1.03);
+        }
+        @include media('>1920px') {
+            box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
+        }
+        @include media('<tablet') {
+            box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
+            width: 32%;
+            &:last-child {
+                display: none;
+            }
+        }
+        @include media('<650px') {
+            padding: 10% 2.75% 5%;
+            width: 48%;
+            &:last-child {
+                display: none;
+            }
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+        .top-title {
+            font-size: 1.11vw;
+            position: absolute;
+            font-weight: 600;
+            top: -2.78vw;
+            left: 50%;
+            width: 100%;
+            transform: translateX(-50%);
+            text-align: center;
+            @include media('>1920px') {
+                font-size: 16px;
+                top: -40px;
+            }
+            @include media('<tablet') {
+                font-size: 16px;
+                top: -40px;
+            }
+        }
+        &__inner {
+            width: 100%;
+            padding: 24.5% 11.5% 15%;
+            background-color: $white;
+            box-shadow: 0px 1.39vw 2.78vw 0.83vw rgba(0, 0, 0, 0.1);
+            @include media('>1920px') {
+                box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
+            }
+            @include media('<tablet') {
+                box-shadow: 0px 20px 40px 12px rgba(0, 0, 0, 0.1);
+            }
+        }
+        &__image {
+            margin: 0 auto 3.13vw;
+            @include media('>1920px') {
+                margin: 0 auto 45px;
+            }
+            @include media('<tablet') {
+                margin: 0 auto 30px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__text {
+            font-size: 1.04vw;
+            padding: 0 8%;
+            @include media('>1920px') {
+                font-size: 15px;
+            }
+            @include media('<tablet') {
+                font-size: 15px;
+            }
+            .title {
+                font-weight: 600;
+                font-size: 1.18vw;
+                @include media('>1920px') {
+                    font-size: 17px;
+                }
+                @include media('<tablet') {
+                    font-size: 17px;
+                }
+            }
+            .description {
+                margin: 0;
+            }
+        }
+    }
 }

@@ -11,7 +11,7 @@ import { wrap } from 'module';
 
     // When DOM is ready
     $(() => {
-        common.mobileManu();
+        common.mobileMenu();
         common.heroSlider();
         common.accordion();
         common.animation();
@@ -20,6 +20,7 @@ import { wrap } from 'module';
 
         var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
         if (isIE11) return $('body').addClass('ie');
+
         $(window).on('load', function() {
 
             let productsWrapper = $('.products-wrapper');
@@ -31,10 +32,10 @@ import { wrap } from 'module';
             setLabelHeight();
 
             let resizeId;
+
             $(window).on('resize', function() {
                 clearTimeout(resizeId);
                 resizeId = setTimeout(doneResizing, 500);
-
             });
 
             function doneResizing() {

@@ -3,17 +3,7 @@
     box-shadow: 0 0 3.47vw 0.35vw rgba(0, 0, 0, .5);
     position: absolute;
     right: 9.73vw;
-    top: -2.08vw; // @include media('<1440px') {
-    //     right: 26%;
-    // }
-    // @include media('<widescreen') {
-    //     right: 15%;
-    // }
-    // @include media('<desktop') {
-    //     max-width: 412px;
-    //     right: 150px;
-    //     top: 33px;
-    // }
+    top: -2.08vw;
     @include media('>1920px') {
         max-width: 390px;
         right: 140px;
@@ -37,10 +27,7 @@
         box-shadow: 0 0 0 0.62vw $red;
         border: 0.14vw solid rgba(255, 255, 255, .3);
         font-size: 1.04vw;
-        position: relative; // @include media('<desktop') {
-        //     font-size: 18px;
-        //     padding: 3px 25px 13px;
-        // }
+        position: relative;
         @include media('>1920px') {
             padding: 3px 15px 13px;
             box-shadow: 0 0 0 9px $red;
@@ -55,10 +42,7 @@
         }
         .img-holder {
             max-width: 8.89vw;
-            margin: 0 auto 0.49vw; // @include media('<desktop') {
-            //     max-width: 160px;
-            //     margin: 10px auto 20px;
-            // }
+            margin: 0 auto 0.49vw;
             @include media('>1920px') {
                 max-width: 128px;
                 margin: 0 auto 7px;
@@ -101,26 +85,17 @@
             }
         }
         .btn {
-            // @include media('<desktop') {
-            //     display: none;
-            // }
             @include media('<tablet') {
                 display: none;
             }
         }
         .desktop-text {
-            // @include media('<desktop') {
-            //     display: none;
-            // }
             @include media('<tablet') {
                 display: none;
             }
         }
         .tablet-text {
-            display: none; // @include media('<desktop') {
-            //     display: block;
-            //     margin-bottom: 65px;
-            // }
+            display: none;
             @include media('<tablet') {
                 display: block;
                 margin-bottom: 35px;
