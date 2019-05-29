@@ -24,9 +24,11 @@
         display: none;
         @include media('<tablet') {
             display: block;
+
+            
         }
     }
-    .menu-opener {
+    .menu-opener {  
         background-color: red;
         display: none;
         position: absolute;
